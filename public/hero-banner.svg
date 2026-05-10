@@ -1,0 +1,29 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#0D1320"/>
+  <circle cx="1320" cy="120" r="260" fill="url(#paint0_radial)" fill-opacity="0.65"/>
+  <circle cx="1260" cy="360" r="460" stroke="#24304A" stroke-width="1.5" stroke-dasharray="6 10"/>
+  <circle cx="1260" cy="360" r="300" stroke="#24304A" stroke-width="1.5" stroke-dasharray="6 10"/>
+  <path d="M170 580H1420" stroke="url(#paint1_linear)" stroke-width="2"/>
+  <circle cx="280" cy="510" r="10" fill="#D4A94F"/>
+  <circle cx="760" cy="580" r="10" fill="#61D0FF"/>
+  <circle cx="1220" cy="650" r="10" fill="#C96A5A"/>
+  <text x="164" y="170" fill="#D4A94F" font-family="Georgia, serif" font-size="28" letter-spacing="7">COMPUTING RECOGNITION, INDEXED</text>
+  <text x="160" y="322" fill="#EDF1E7" font-family="Georgia, serif" font-size="100" font-weight="700">Computing</text>
+  <text x="160" y="424" fill="#EDF1E7" font-family="Georgia, serif" font-size="100" font-weight="700">Awards Atlas</text>
+  <text x="160" y="502" fill="#B7C1B7" font-family="Arial, sans-serif" font-size="30">Turing Award, AI, databases, internet, theory, systems, and landmark papers.</text>
+  <text x="160" y="552" fill="#B7C1B7" font-family="Arial, sans-serif" font-size="30">A public GitHub Pages chronology of major awards, laureates, and milestone works.</text>
+  <text x="248" y="478" fill="#D4A94F" font-family="Arial, sans-serif" font-size="24" font-weight="700">1966 · Turing inaugurated</text>
+  <text x="730" y="548" fill="#61D0FF" font-family="Arial, sans-serif" font-size="24" font-weight="700">1978 · Relational data recognized</text>
+  <text x="1190" y="620" fill="#C96A5A" font-family="Arial, sans-serif" font-size="24" font-weight="700">2018 · Deep learning canonized</text>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1320 120) rotate(90) scale(260)">
+      <stop stop-color="#61D0FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#61D0FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="paint1_linear" x1="170" y1="581" x2="1420" y2="581" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1320"/>
+      <stop offset="0.5" stop-color="#61D0FF"/>
+      <stop offset="1" stop-color="#0D1320"/>
+    </linearGradient>
+  </defs>
+</svg>
