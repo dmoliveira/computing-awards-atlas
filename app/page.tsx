@@ -97,6 +97,7 @@ export default function HomePage() {
         navItems={[
           { href: "/#explorer", label: "Timeline" },
           { href: "/awards/", label: "Awards" },
+          { href: "/people/", label: "People" },
           { href: "/#coverage", label: "Coverage" },
           { href: "/#method", label: "Method" },
         ]}

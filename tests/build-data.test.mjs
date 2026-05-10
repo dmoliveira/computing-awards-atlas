@@ -16,6 +16,8 @@ test("build-data generates a usable static dataset", () => {
   assert.ok(payload.events.some((event) => event.id === "turing-2018-deep-learning"));
   assert.ok(payload.events.some((event) => event.id === "acm-prize-2025-zaharia"));
   assert.ok(payload.awards.some((award) => award.slug === "grace-murray-hopper-award" && award.event_count >= 1));
+  assert.ok(payload.people.every((person) => typeof person.slug === "string" && person.slug.length > 0));
+  assert.ok(payload.people.every((person) => !Object.hasOwn(person, "institutions")));
   assert.deepEqual(payload, publicPayload);
   assert.equal(payload.events[0].award_name.length > 0, true);
 });
@@ -37,6 +39,7 @@ test("validateEvent rejects malformed related works", () => {
         title: "Broken work row",
         significance: "Invalid related work URL",
         person_names: ["Example Person"],
+        person_slugs: ["example-person"],
         related_works: [{ title: "Broken Link", type: "paper", year: 2001, url: "notaurl" }],
       }),
     /invalid 'url'/,
@@ -53,8 +56,24 @@ test("validateEvent rejects malformed taxonomy arrays", () => {
         title: "Broken taxonomy row",
         significance: "Invalid topics entry",
         person_names: ["Example Person"],
+        person_slugs: ["example-person"],
         topics: ["algorithms", ""],
       }),
     /non-empty strings in 'topics'/,
+  );
+});
+
+test("validateEvent rejects missing aligned person slugs", () => {
+  assert.throws(
+    () =>
+      validateEvent({
+        id: "bad-person-slugs",
+        year: 2003,
+        award_slug: "turing-award",
+        title: "Broken person slug row",
+        significance: "Missing aligned person slugs",
+        person_names: ["Example Person"],
+      }),
+    /person_slugs/,
   );
 });

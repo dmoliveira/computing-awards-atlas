@@ -26,6 +26,7 @@ export default function AwardsPage() {
           { href: "/", label: "Home" },
           { href: "/#explorer", label: "Timeline" },
           { href: "/awards/", label: "Awards" },
+          { href: "/people/", label: "People" },
           { href: "/#method", label: "Method" },
         ]}
       />

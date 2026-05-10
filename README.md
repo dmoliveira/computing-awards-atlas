@@ -32,6 +32,7 @@ Computing history is fragmented across award pages, conference sites, institutio
 
 - Premium landing page with dark editorial layout.
 - Dedicated awards directory page for browsing award programs and current sample coverage.
+- Dedicated people directory page for browsing sampled laureates, authors, and related recognition coverage.
 - Client-side search across people, awards, topics, institutions, and years.
 - Sortable cards/table explorer for award events.
 - JSONL authoring pipeline with static JSON output for GitHub Pages.

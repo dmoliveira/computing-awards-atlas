@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T13:33:39.256Z",
+  "generated_at": "2026-05-10T14:09:10.373Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -385,6 +385,9 @@
       "person_names": [
         "Matei Zaharia"
       ],
+      "person_slugs": [
+        "matei-zaharia"
+      ],
       "title": "Distributed data systems and computing infrastructure",
       "kind": "laureate",
       "topics": [
@@ -419,6 +422,10 @@
       "person_names": [
         "Eshan Chattopadhyay",
         "David Zuckerman"
+      ],
+      "person_slugs": [
+        "eshan-chattopadhyay",
+        "david-zuckerman"
       ],
       "title": "Explicit two-source extractors and resilient functions",
       "kind": "paper_award",
@@ -455,6 +462,10 @@
         "Ahmed Eldawy",
         "Mohamed F. Mokbel"
       ],
+      "person_slugs": [
+        "ahmed-eldawy",
+        "mohamed-f-mokbel"
+      ],
       "title": "SpatialHadoop and scalable spatial data processing",
       "kind": "paper_award",
       "topics": [
@@ -487,6 +498,9 @@
       "award_slug": "ijcai-research-excellence-award",
       "person_names": [
         "Rina Dechter"
+      ],
+      "person_slugs": [
+        "rina-dechter"
       ],
       "title": "Constraint reasoning and probabilistic inference",
       "kind": "laureate",
@@ -523,6 +537,12 @@
         "Christopher Targett",
         "Javen Shi",
         "Anton van den Hengel"
+      ],
+      "person_slugs": [
+        "julian-mcauley",
+        "christopher-targett",
+        "javen-shi",
+        "anton-van-den-hengel"
       ],
       "title": "Image-based recommendations on styles and substitutes",
       "kind": "paper_award",
@@ -561,6 +581,12 @@
         "J. Andrew Bagnell",
         "Anind K. Dey"
       ],
+      "person_slugs": [
+        "brian-ziebart",
+        "andrew-maas",
+        "j-andrew-bagnell",
+        "anind-k-dey"
+      ],
       "title": "Maximum entropy inverse reinforcement learning",
       "kind": "paper_award",
       "topics": [
@@ -594,6 +620,9 @@
       "person_names": [
         "Ilias Diakonikolas"
       ],
+      "person_slugs": [
+        "ilias-diakonikolas"
+      ],
       "title": "Robust statistics with algorithmic reach",
       "kind": "laureate",
       "topics": [
@@ -626,6 +655,9 @@
       "award_slug": "kanellakis-award",
       "person_names": [
         "Hugo Krawczyk"
+      ],
+      "person_slugs": [
+        "hugo-krawczyk"
       ],
       "title": "Provable security with practical impact",
       "kind": "laureate",
@@ -661,6 +693,9 @@
       "person_names": [
         "Rajeev Alur"
       ],
+      "person_slugs": [
+        "rajeev-alur"
+      ],
       "title": "Timed and hybrid models for system design",
       "kind": "laureate",
       "topics": [
@@ -695,6 +730,10 @@
         "Andrew G. Barto",
         "Richard S. Sutton"
       ],
+      "person_slugs": [
+        "andrew-g-barto",
+        "richard-s-sutton"
+      ],
       "title": "Reinforcement learning foundations",
       "kind": "laureate",
       "topics": [
@@ -728,6 +767,9 @@
       "award_slug": "john-von-neumann-medal",
       "person_names": [
         "Christopher D. Manning"
+      ],
+      "person_slugs": [
+        "christopher-d-manning"
       ],
       "title": "Statistical and neural language understanding",
       "kind": "laureate",
@@ -764,6 +806,12 @@
         "Monica S. Lam",
         "Ravi Sethi",
         "Jeffrey D. Ullman"
+      ],
+      "person_slugs": [
+        "alfred-v-aho",
+        "monica-s-lam",
+        "ravi-sethi",
+        "jeffrey-d-ullman"
       ],
       "title": "Compilers and education at scale",
       "kind": "laureate",
@@ -805,6 +853,15 @@
         "Matt Tolton",
         "Theo Vassilakis"
       ],
+      "person_slugs": [
+        "sergey-melnik",
+        "andrey-gubarev",
+        "jing-jing-long",
+        "geoffrey-romer",
+        "shiva-shivakumar",
+        "matt-tolton",
+        "theo-vassilakis"
+      ],
       "title": "Dremel and interactive web-scale analytics",
       "kind": "paper_award",
       "topics": [
@@ -839,6 +896,11 @@
         "Yoshua Bengio",
         "Geoffrey Hinton",
         "Yann LeCun"
+      ],
+      "person_slugs": [
+        "yoshua-bengio",
+        "geoffrey-hinton",
+        "yann-lecun"
       ],
       "title": "Deep learning renaissance",
       "kind": "laureate",
@@ -881,6 +943,9 @@
       "person_names": [
         "Leslie Lamport"
       ],
+      "person_slugs": [
+        "leslie-lamport"
+      ],
       "title": "Distributed systems theory and practice",
       "kind": "laureate",
       "topics": [
@@ -920,6 +985,9 @@
       "person_names": [
         "Judea Pearl"
       ],
+      "person_slugs": [
+        "judea-pearl"
+      ],
       "title": "Probabilistic reasoning and causal inference",
       "kind": "laureate",
       "topics": [
@@ -953,6 +1021,10 @@
       "person_names": [
         "Vinton G. Cerf",
         "Robert E. Kahn"
+      ],
+      "person_slugs": [
+        "vinton-g-cerf",
+        "robert-e-kahn"
       ],
       "title": "Internet protocol architecture",
       "kind": "laureate",
@@ -988,6 +1060,9 @@
       "person_names": [
         "Jim Gray"
       ],
+      "person_slugs": [
+        "jim-gray"
+      ],
       "title": "Transaction processing and fault tolerance",
       "kind": "laureate",
       "topics": [
@@ -1020,6 +1095,9 @@
       "award_slug": "turing-award",
       "person_names": [
         "Amir Pnueli"
+      ],
+      "person_slugs": [
+        "amir-pnueli"
       ],
       "title": "Temporal logic in program and system verification",
       "kind": "laureate",
@@ -1055,6 +1133,10 @@
         "Edward A. Feigenbaum",
         "Raj Reddy"
       ],
+      "person_slugs": [
+        "edward-a-feigenbaum",
+        "raj-reddy"
+      ],
       "title": "Knowledge-based artificial intelligence",
       "kind": "laureate",
       "topics": [
@@ -1088,6 +1170,9 @@
       "award_slug": "turing-award",
       "person_names": [
         "Fernando J. Corbató"
+      ],
+      "person_slugs": [
+        "fernando-j-corbato"
       ],
       "title": "Time-sharing systems and Multics",
       "kind": "laureate",
@@ -1123,6 +1208,10 @@
         "John E. Hopcroft",
         "Robert E. Tarjan"
       ],
+      "person_slugs": [
+        "john-e-hopcroft",
+        "robert-e-tarjan"
+      ],
       "title": "Efficient data structures and graph algorithms",
       "kind": "laureate",
       "topics": [
@@ -1157,6 +1246,10 @@
       "person_names": [
         "Dennis M. Ritchie",
         "Ken Thompson"
+      ],
+      "person_slugs": [
+        "dennis-m-ritchie",
+        "ken-thompson"
       ],
       "title": "Unix and C as systems foundations",
       "kind": "laureate",
@@ -1197,6 +1290,9 @@
       "person_names": [
         "Edgar F. Codd"
       ],
+      "person_slugs": [
+        "edgar-f-codd"
+      ],
       "title": "Relational model for shared data banks",
       "kind": "laureate",
       "topics": [
@@ -1229,6 +1325,9 @@
       "award_slug": "turing-award",
       "person_names": [
         "Edsger W. Dijkstra"
+      ],
+      "person_slugs": [
+        "edsger-w-dijkstra"
       ],
       "title": "Structured programming and algorithmic clarity",
       "kind": "laureate",
@@ -1263,6 +1362,9 @@
       "person_names": [
         "Richard W. Hamming"
       ],
+      "person_slugs": [
+        "richard-w-hamming"
+      ],
       "title": "Reliable numerical and coding methods",
       "kind": "laureate",
       "topics": [
@@ -1296,6 +1398,9 @@
       "person_names": [
         "Alan J. Perlis"
       ],
+      "person_slugs": [
+        "alan-j-perlis"
+      ],
       "title": "First Turing Award laureate",
       "kind": "laureate",
       "topics": [
@@ -1325,565 +1430,1075 @@
   ],
   "people": [
     {
+      "slug": "ahmed-eldawy",
       "name": "Ahmed Eldawy",
       "award_count": 1,
+      "awards": [
+        "ICDE Influential Paper"
+      ],
       "earliest_year": 2025,
       "latest_year": 2025,
       "topics": [
         "data engineering",
         "databases",
         "geospatial systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2025,
+        "award_name": "ICDE Influential Paper",
+        "title": "SpatialHadoop and scalable spatial data processing",
+        "person_label": "Ahmed Eldawy, Mohamed F. Mokbel"
+      }
     },
     {
+      "slug": "alan-j-perlis",
       "name": "Alan J. Perlis",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1966,
       "latest_year": 1966,
       "topics": [
         "compiler design",
         "education",
         "programming languages"
-      ]
+      ],
+      "latest_event": {
+        "year": 1966,
+        "award_name": "Turing Award",
+        "title": "First Turing Award laureate",
+        "person_label": "Alan J. Perlis"
+      }
     },
     {
+      "slug": "alfred-v-aho",
       "name": "Alfred V. Aho",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "compilers",
         "computer science education",
         "programming languages"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "Turing Award",
+        "title": "Compilers and education at scale",
+        "person_label": "Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman"
+      }
     },
     {
+      "slug": "amir-pnueli",
       "name": "Amir Pnueli",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1996,
       "latest_year": 1996,
       "topics": [
         "formal methods",
         "logic",
         "verification"
-      ]
+      ],
+      "latest_event": {
+        "year": 1996,
+        "award_name": "Turing Award",
+        "title": "Temporal logic in program and system verification",
+        "person_label": "Amir Pnueli"
+      }
     },
     {
+      "slug": "andrew-g-barto",
       "name": "Andrew G. Barto",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2024,
       "latest_year": 2024,
       "topics": [
         "artificial intelligence",
         "control",
         "reinforcement learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "Turing Award",
+        "title": "Reinforcement learning foundations",
+        "person_label": "Andrew G. Barto, Richard S. Sutton"
+      }
     },
     {
+      "slug": "andrew-maas",
       "name": "Andrew Maas",
       "award_count": 1,
+      "awards": [
+        "AAAI Classic Paper"
+      ],
       "earliest_year": 2024,
       "latest_year": 2024,
       "topics": [
         "artificial intelligence",
         "decision making",
         "reinforcement learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "AAAI Classic Paper",
+        "title": "Maximum entropy inverse reinforcement learning",
+        "person_label": "Brian Ziebart, Andrew Maas, J. Andrew Bagnell, Anind K. Dey"
+      }
     },
     {
+      "slug": "andrey-gubarev",
       "name": "Andrey Gubarev",
       "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "data analytics",
         "databases",
         "distributed systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Dremel and interactive web-scale analytics",
+        "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+      }
     },
     {
+      "slug": "anind-k-dey",
       "name": "Anind K. Dey",
       "award_count": 1,
+      "awards": [
+        "AAAI Classic Paper"
+      ],
       "earliest_year": 2024,
       "latest_year": 2024,
       "topics": [
         "artificial intelligence",
         "decision making",
         "reinforcement learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "AAAI Classic Paper",
+        "title": "Maximum entropy inverse reinforcement learning",
+        "person_label": "Brian Ziebart, Andrew Maas, J. Andrew Bagnell, Anind K. Dey"
+      }
     },
     {
+      "slug": "anton-van-den-hengel",
       "name": "Anton van den Hengel",
       "award_count": 1,
+      "awards": [
+        "SIGIR Test of Time"
+      ],
       "earliest_year": 2025,
       "latest_year": 2025,
       "topics": [
         "computer vision",
         "information retrieval",
         "recommendation systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2025,
+        "award_name": "SIGIR Test of Time",
+        "title": "Image-based recommendations on styles and substitutes",
+        "person_label": "Julian McAuley, Christopher Targett, Javen Shi, Anton van den Hengel"
+      }
     },
     {
+      "slug": "brian-ziebart",
       "name": "Brian Ziebart",
       "award_count": 1,
+      "awards": [
+        "AAAI Classic Paper"
+      ],
       "earliest_year": 2024,
       "latest_year": 2024,
       "topics": [
         "artificial intelligence",
         "decision making",
         "reinforcement learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "AAAI Classic Paper",
+        "title": "Maximum entropy inverse reinforcement learning",
+        "person_label": "Brian Ziebart, Andrew Maas, J. Andrew Bagnell, Anind K. Dey"
+      }
     },
     {
+      "slug": "christopher-d-manning",
       "name": "Christopher D. Manning",
       "award_count": 1,
+      "awards": [
+        "von Neumann Medal"
+      ],
       "earliest_year": 2024,
       "latest_year": 2024,
       "topics": [
         "machine learning",
         "natural language processing",
         "representation learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "von Neumann Medal",
+        "title": "Statistical and neural language understanding",
+        "person_label": "Christopher D. Manning"
+      }
     },
     {
+      "slug": "christopher-targett",
       "name": "Christopher Targett",
       "award_count": 1,
+      "awards": [
+        "SIGIR Test of Time"
+      ],
       "earliest_year": 2025,
       "latest_year": 2025,
       "topics": [
         "computer vision",
         "information retrieval",
         "recommendation systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2025,
+        "award_name": "SIGIR Test of Time",
+        "title": "Image-based recommendations on styles and substitutes",
+        "person_label": "Julian McAuley, Christopher Targett, Javen Shi, Anton van den Hengel"
+      }
     },
     {
+      "slug": "david-zuckerman",
       "name": "David Zuckerman",
       "award_count": 1,
+      "awards": [
+        "Gödel Prize"
+      ],
       "earliest_year": 2025,
       "latest_year": 2025,
       "topics": [
         "complexity",
         "randomness extraction",
         "theory"
-      ]
+      ],
+      "latest_event": {
+        "year": 2025,
+        "award_name": "Gödel Prize",
+        "title": "Explicit two-source extractors and resilient functions",
+        "person_label": "Eshan Chattopadhyay, David Zuckerman"
+      }
     },
     {
+      "slug": "dennis-m-ritchie",
       "name": "Dennis M. Ritchie",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1983,
       "latest_year": 1983,
       "topics": [
         "operating systems",
         "programming languages",
         "software tools"
-      ]
+      ],
+      "latest_event": {
+        "year": 1983,
+        "award_name": "Turing Award",
+        "title": "Unix and C as systems foundations",
+        "person_label": "Dennis M. Ritchie, Ken Thompson"
+      }
     },
     {
+      "slug": "edgar-f-codd",
       "name": "Edgar F. Codd",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1978,
       "latest_year": 1978,
       "topics": [
         "data models",
         "databases",
         "query languages"
-      ]
+      ],
+      "latest_event": {
+        "year": 1978,
+        "award_name": "Turing Award",
+        "title": "Relational model for shared data banks",
+        "person_label": "Edgar F. Codd"
+      }
     },
     {
+      "slug": "edsger-w-dijkstra",
       "name": "Edsger W. Dijkstra",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1972,
       "latest_year": 1972,
       "topics": [
         "algorithms",
         "operating systems",
         "programming methodology"
-      ]
+      ],
+      "latest_event": {
+        "year": 1972,
+        "award_name": "Turing Award",
+        "title": "Structured programming and algorithmic clarity",
+        "person_label": "Edsger W. Dijkstra"
+      }
     },
     {
+      "slug": "edward-a-feigenbaum",
       "name": "Edward A. Feigenbaum",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1994,
       "latest_year": 1994,
       "topics": [
         "artificial intelligence",
         "expert systems",
         "knowledge representation"
-      ]
+      ],
+      "latest_event": {
+        "year": 1994,
+        "award_name": "Turing Award",
+        "title": "Knowledge-based artificial intelligence",
+        "person_label": "Edward A. Feigenbaum, Raj Reddy"
+      }
     },
     {
+      "slug": "eshan-chattopadhyay",
       "name": "Eshan Chattopadhyay",
       "award_count": 1,
+      "awards": [
+        "Gödel Prize"
+      ],
       "earliest_year": 2025,
       "latest_year": 2025,
       "topics": [
         "complexity",
         "randomness extraction",
         "theory"
-      ]
+      ],
+      "latest_event": {
+        "year": 2025,
+        "award_name": "Gödel Prize",
+        "title": "Explicit two-source extractors and resilient functions",
+        "person_label": "Eshan Chattopadhyay, David Zuckerman"
+      }
     },
     {
+      "slug": "fernando-j-corbato",
       "name": "Fernando J. Corbató",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1990,
       "latest_year": 1990,
       "topics": [
         "computer systems",
         "operating systems",
         "time sharing"
-      ]
+      ],
+      "latest_event": {
+        "year": 1990,
+        "award_name": "Turing Award",
+        "title": "Time-sharing systems and Multics",
+        "person_label": "Fernando J. Corbató"
+      }
     },
     {
+      "slug": "geoffrey-hinton",
       "name": "Geoffrey Hinton",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2018,
       "latest_year": 2018,
       "topics": [
         "artificial intelligence",
         "computer vision",
         "deep learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2018,
+        "award_name": "Turing Award",
+        "title": "Deep learning renaissance",
+        "person_label": "Yoshua Bengio, Geoffrey Hinton, Yann LeCun"
+      }
     },
     {
+      "slug": "geoffrey-romer",
       "name": "Geoffrey Romer",
       "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "data analytics",
         "databases",
         "distributed systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Dremel and interactive web-scale analytics",
+        "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+      }
     },
     {
+      "slug": "hugo-krawczyk",
       "name": "Hugo Krawczyk",
       "award_count": 1,
+      "awards": [
+        "Kanellakis Award"
+      ],
       "earliest_year": 2024,
       "latest_year": 2024,
       "topics": [
         "cryptography",
         "protocols",
         "security"
-      ]
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "Kanellakis Award",
+        "title": "Provable security with practical impact",
+        "person_label": "Hugo Krawczyk"
+      }
     },
     {
+      "slug": "ilias-diakonikolas",
       "name": "Ilias Diakonikolas",
       "award_count": 1,
+      "awards": [
+        "Grace Hopper Award"
+      ],
       "earliest_year": 2024,
       "latest_year": 2024,
       "topics": [
         "algorithms",
         "machine learning",
         "robust statistics"
-      ]
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "Grace Hopper Award",
+        "title": "Robust statistics with algorithmic reach",
+        "person_label": "Ilias Diakonikolas"
+      }
     },
     {
+      "slug": "j-andrew-bagnell",
       "name": "J. Andrew Bagnell",
       "award_count": 1,
+      "awards": [
+        "AAAI Classic Paper"
+      ],
       "earliest_year": 2024,
       "latest_year": 2024,
       "topics": [
         "artificial intelligence",
         "decision making",
         "reinforcement learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "AAAI Classic Paper",
+        "title": "Maximum entropy inverse reinforcement learning",
+        "person_label": "Brian Ziebart, Andrew Maas, J. Andrew Bagnell, Anind K. Dey"
+      }
     },
     {
+      "slug": "javen-shi",
       "name": "Javen Shi",
       "award_count": 1,
+      "awards": [
+        "SIGIR Test of Time"
+      ],
       "earliest_year": 2025,
       "latest_year": 2025,
       "topics": [
         "computer vision",
         "information retrieval",
         "recommendation systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2025,
+        "award_name": "SIGIR Test of Time",
+        "title": "Image-based recommendations on styles and substitutes",
+        "person_label": "Julian McAuley, Christopher Targett, Javen Shi, Anton van den Hengel"
+      }
     },
     {
+      "slug": "jeffrey-d-ullman",
       "name": "Jeffrey D. Ullman",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "compilers",
         "computer science education",
         "programming languages"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "Turing Award",
+        "title": "Compilers and education at scale",
+        "person_label": "Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman"
+      }
     },
     {
+      "slug": "jim-gray",
       "name": "Jim Gray",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1998,
       "latest_year": 1998,
       "topics": [
         "databases",
         "reliability",
         "transaction processing"
-      ]
+      ],
+      "latest_event": {
+        "year": 1998,
+        "award_name": "Turing Award",
+        "title": "Transaction processing and fault tolerance",
+        "person_label": "Jim Gray"
+      }
     },
     {
+      "slug": "jing-jing-long",
       "name": "Jing Jing Long",
       "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "data analytics",
         "databases",
         "distributed systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Dremel and interactive web-scale analytics",
+        "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+      }
     },
     {
+      "slug": "john-e-hopcroft",
       "name": "John E. Hopcroft",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1986,
       "latest_year": 1986,
       "topics": [
         "algorithms",
         "data structures",
         "graph theory"
-      ]
+      ],
+      "latest_event": {
+        "year": 1986,
+        "award_name": "Turing Award",
+        "title": "Efficient data structures and graph algorithms",
+        "person_label": "John E. Hopcroft, Robert E. Tarjan"
+      }
     },
     {
+      "slug": "judea-pearl",
       "name": "Judea Pearl",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2011,
       "latest_year": 2011,
       "topics": [
         "artificial intelligence",
         "causality",
         "machine learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2011,
+        "award_name": "Turing Award",
+        "title": "Probabilistic reasoning and causal inference",
+        "person_label": "Judea Pearl"
+      }
     },
     {
+      "slug": "julian-mcauley",
       "name": "Julian McAuley",
       "award_count": 1,
+      "awards": [
+        "SIGIR Test of Time"
+      ],
       "earliest_year": 2025,
       "latest_year": 2025,
       "topics": [
         "computer vision",
         "information retrieval",
         "recommendation systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2025,
+        "award_name": "SIGIR Test of Time",
+        "title": "Image-based recommendations on styles and substitutes",
+        "person_label": "Julian McAuley, Christopher Targett, Javen Shi, Anton van den Hengel"
+      }
     },
     {
+      "slug": "ken-thompson",
       "name": "Ken Thompson",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1983,
       "latest_year": 1983,
       "topics": [
         "operating systems",
         "programming languages",
         "software tools"
-      ]
+      ],
+      "latest_event": {
+        "year": 1983,
+        "award_name": "Turing Award",
+        "title": "Unix and C as systems foundations",
+        "person_label": "Dennis M. Ritchie, Ken Thompson"
+      }
     },
     {
+      "slug": "leslie-lamport",
       "name": "Leslie Lamport",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2013,
       "latest_year": 2013,
       "topics": [
         "concurrency",
         "distributed systems",
         "formal specification"
-      ]
+      ],
+      "latest_event": {
+        "year": 2013,
+        "award_name": "Turing Award",
+        "title": "Distributed systems theory and practice",
+        "person_label": "Leslie Lamport"
+      }
     },
     {
+      "slug": "matei-zaharia",
       "name": "Matei Zaharia",
       "award_count": 1,
+      "awards": [
+        "ACM Prize in Computing"
+      ],
       "earliest_year": 2025,
       "latest_year": 2025,
       "topics": [
         "data engineering",
         "distributed systems",
         "machine learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2025,
+        "award_name": "ACM Prize in Computing",
+        "title": "Distributed data systems and computing infrastructure",
+        "person_label": "Matei Zaharia"
+      }
     },
     {
+      "slug": "matt-tolton",
       "name": "Matt Tolton",
       "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "data analytics",
         "databases",
         "distributed systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Dremel and interactive web-scale analytics",
+        "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+      }
     },
     {
+      "slug": "mohamed-f-mokbel",
       "name": "Mohamed F. Mokbel",
       "award_count": 1,
+      "awards": [
+        "ICDE Influential Paper"
+      ],
       "earliest_year": 2025,
       "latest_year": 2025,
       "topics": [
         "data engineering",
         "databases",
         "geospatial systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2025,
+        "award_name": "ICDE Influential Paper",
+        "title": "SpatialHadoop and scalable spatial data processing",
+        "person_label": "Ahmed Eldawy, Mohamed F. Mokbel"
+      }
     },
     {
+      "slug": "monica-s-lam",
       "name": "Monica S. Lam",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "compilers",
         "computer science education",
         "programming languages"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "Turing Award",
+        "title": "Compilers and education at scale",
+        "person_label": "Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman"
+      }
     },
     {
+      "slug": "raj-reddy",
       "name": "Raj Reddy",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1994,
       "latest_year": 1994,
       "topics": [
         "artificial intelligence",
         "expert systems",
         "knowledge representation"
-      ]
+      ],
+      "latest_event": {
+        "year": 1994,
+        "award_name": "Turing Award",
+        "title": "Knowledge-based artificial intelligence",
+        "person_label": "Edward A. Feigenbaum, Raj Reddy"
+      }
     },
     {
+      "slug": "rajeev-alur",
       "name": "Rajeev Alur",
       "award_count": 1,
+      "awards": [
+        "Knuth Prize"
+      ],
       "earliest_year": 2024,
       "latest_year": 2024,
       "topics": [
         "cyber-physical systems",
         "formal methods",
         "verification"
-      ]
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "Knuth Prize",
+        "title": "Timed and hybrid models for system design",
+        "person_label": "Rajeev Alur"
+      }
     },
     {
+      "slug": "ravi-sethi",
       "name": "Ravi Sethi",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "compilers",
         "computer science education",
         "programming languages"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "Turing Award",
+        "title": "Compilers and education at scale",
+        "person_label": "Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman"
+      }
     },
     {
+      "slug": "richard-s-sutton",
       "name": "Richard S. Sutton",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2024,
       "latest_year": 2024,
       "topics": [
         "artificial intelligence",
         "control",
         "reinforcement learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "Turing Award",
+        "title": "Reinforcement learning foundations",
+        "person_label": "Andrew G. Barto, Richard S. Sutton"
+      }
     },
     {
+      "slug": "richard-w-hamming",
       "name": "Richard W. Hamming",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1968,
       "latest_year": 1968,
       "topics": [
         "coding theory",
         "information theory",
         "numerical methods"
-      ]
+      ],
+      "latest_event": {
+        "year": 1968,
+        "award_name": "Turing Award",
+        "title": "Reliable numerical and coding methods",
+        "person_label": "Richard W. Hamming"
+      }
     },
     {
+      "slug": "rina-dechter",
       "name": "Rina Dechter",
       "award_count": 1,
+      "awards": [
+        "IJCAI Research Excellence"
+      ],
       "earliest_year": 2025,
       "latest_year": 2025,
       "topics": [
         "artificial intelligence",
         "constraint satisfaction",
         "probabilistic inference"
-      ]
+      ],
+      "latest_event": {
+        "year": 2025,
+        "award_name": "IJCAI Research Excellence",
+        "title": "Constraint reasoning and probabilistic inference",
+        "person_label": "Rina Dechter"
+      }
     },
     {
+      "slug": "robert-e-kahn",
       "name": "Robert E. Kahn",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2004,
       "latest_year": 2004,
       "topics": [
         "internet",
         "networking",
         "protocols"
-      ]
+      ],
+      "latest_event": {
+        "year": 2004,
+        "award_name": "Turing Award",
+        "title": "Internet protocol architecture",
+        "person_label": "Vinton G. Cerf, Robert E. Kahn"
+      }
     },
     {
+      "slug": "robert-e-tarjan",
       "name": "Robert E. Tarjan",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 1986,
       "latest_year": 1986,
       "topics": [
         "algorithms",
         "data structures",
         "graph theory"
-      ]
+      ],
+      "latest_event": {
+        "year": 1986,
+        "award_name": "Turing Award",
+        "title": "Efficient data structures and graph algorithms",
+        "person_label": "John E. Hopcroft, Robert E. Tarjan"
+      }
     },
     {
+      "slug": "sergey-melnik",
       "name": "Sergey Melnik",
       "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "data analytics",
         "databases",
         "distributed systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Dremel and interactive web-scale analytics",
+        "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+      }
     },
     {
+      "slug": "shiva-shivakumar",
       "name": "Shiva Shivakumar",
       "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "data analytics",
         "databases",
         "distributed systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Dremel and interactive web-scale analytics",
+        "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+      }
     },
     {
+      "slug": "theo-vassilakis",
       "name": "Theo Vassilakis",
       "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
       "earliest_year": 2020,
       "latest_year": 2020,
       "topics": [
         "data analytics",
         "databases",
         "distributed systems"
-      ]
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Dremel and interactive web-scale analytics",
+        "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+      }
     },
     {
+      "slug": "vinton-g-cerf",
       "name": "Vinton G. Cerf",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2004,
       "latest_year": 2004,
       "topics": [
         "internet",
         "networking",
         "protocols"
-      ]
+      ],
+      "latest_event": {
+        "year": 2004,
+        "award_name": "Turing Award",
+        "title": "Internet protocol architecture",
+        "person_label": "Vinton G. Cerf, Robert E. Kahn"
+      }
     },
     {
+      "slug": "yann-lecun",
       "name": "Yann LeCun",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2018,
       "latest_year": 2018,
       "topics": [
         "artificial intelligence",
         "computer vision",
         "deep learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2018,
+        "award_name": "Turing Award",
+        "title": "Deep learning renaissance",
+        "person_label": "Yoshua Bengio, Geoffrey Hinton, Yann LeCun"
+      }
     },
     {
+      "slug": "yoshua-bengio",
       "name": "Yoshua Bengio",
       "award_count": 1,
+      "awards": [
+        "Turing Award"
+      ],
       "earliest_year": 2018,
       "latest_year": 2018,
       "topics": [
         "artificial intelligence",
         "computer vision",
         "deep learning"
-      ]
+      ],
+      "latest_event": {
+        "year": 2018,
+        "award_name": "Turing Award",
+        "title": "Deep learning renaissance",
+        "person_label": "Yoshua Bengio, Geoffrey Hinton, Yann LeCun"
+      }
     }
   ],
   "topics": [
@@ -2127,6 +2742,9 @@
       "person_names": [
         "Matei Zaharia"
       ],
+      "person_slugs": [
+        "matei-zaharia"
+      ],
       "title": "Distributed data systems and computing infrastructure",
       "kind": "laureate",
       "topics": [
@@ -2162,6 +2780,10 @@
         "Eshan Chattopadhyay",
         "David Zuckerman"
       ],
+      "person_slugs": [
+        "eshan-chattopadhyay",
+        "david-zuckerman"
+      ],
       "title": "Explicit two-source extractors and resilient functions",
       "kind": "paper_award",
       "topics": [
@@ -2195,6 +2817,9 @@
       "award_slug": "ijcai-research-excellence-award",
       "person_names": [
         "Rina Dechter"
+      ],
+      "person_slugs": [
+        "rina-dechter"
       ],
       "title": "Constraint reasoning and probabilistic inference",
       "kind": "laureate",
@@ -2232,6 +2857,12 @@
         "J. Andrew Bagnell",
         "Anind K. Dey"
       ],
+      "person_slugs": [
+        "brian-ziebart",
+        "andrew-maas",
+        "j-andrew-bagnell",
+        "anind-k-dey"
+      ],
       "title": "Maximum entropy inverse reinforcement learning",
       "kind": "paper_award",
       "topics": [
@@ -2266,6 +2897,10 @@
         "Andrew G. Barto",
         "Richard S. Sutton"
       ],
+      "person_slugs": [
+        "andrew-g-barto",
+        "richard-s-sutton"
+      ],
       "title": "Reinforcement learning foundations",
       "kind": "laureate",
       "topics": [
@@ -2299,6 +2934,9 @@
       "award_slug": "john-von-neumann-medal",
       "person_names": [
         "Christopher D. Manning"
+      ],
+      "person_slugs": [
+        "christopher-d-manning"
       ],
       "title": "Statistical and neural language understanding",
       "kind": "laureate",
