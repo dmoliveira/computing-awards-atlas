@@ -124,11 +124,27 @@ for (const event of normalizedEvents) {
 }
 
 const awardsWithCounts = awards
-  .map((award) => ({
-    ...award,
-    recipient_count: normalizedEvents.filter((event) => event.award_slug === award.slug).reduce((count, event) => count + event.person_names.length, 0),
-    featured_topics: ensureArray(award.featured_topics),
-  }))
+  .map((award) => {
+    const awardEvents = normalizedEvents.filter((event) => event.award_slug === award.slug);
+    const latestEvent = awardEvents[0];
+    const uniqueRecipients = [...new Set(awardEvents.flatMap((event) => event.person_names))];
+
+    return {
+      ...award,
+      event_count: awardEvents.length,
+      recipient_count: uniqueRecipients.length,
+      featured_topics: ensureArray(award.featured_topics),
+      sample_recipients: uniqueRecipients.slice(0, 4),
+      latest_event:
+        latestEvent !== undefined
+          ? {
+              year: latestEvent.year,
+              title: latestEvent.title,
+              person_label: latestEvent.person_label,
+            }
+          : null,
+    };
+  })
   .sort((left, right) => {
     if (right.seo_priority === left.seo_priority) {
       return left.name.localeCompare(right.name);
@@ -139,7 +155,7 @@ const awardsWithCounts = awards
 const output = {
   generated_at: new Date().toISOString(),
   coverage_note:
-    "MVP sample: curated Turing Award timeline entries plus an expandable catalog of major computing awards and paper-recognition programs.",
+    "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   awards: awardsWithCounts,
   events: normalizedEvents,
   people,

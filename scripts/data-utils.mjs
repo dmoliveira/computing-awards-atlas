@@ -1,5 +1,7 @@
 export const ensureArray = (value) => (Array.isArray(value) ? value : []);
 
+const validSeoPriorities = new Set(["primary", "high", "medium", "low"]);
+
 function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
 }
@@ -38,8 +40,12 @@ export function validateAward(award) {
     throw new Error(`Award ${award.slug ?? "unknown"} must provide integer field 'founded_year'`);
   }
 
-  if (award.official_url && !isValidUrl(award.official_url)) {
-    throw new Error(`Award ${award.slug ?? "unknown"} has invalid 'official_url'`);
+  if (!isValidUrl(award.official_url)) {
+    throw new Error(`Award ${award.slug ?? "unknown"} must provide a valid 'official_url'`);
+  }
+
+  if (!validSeoPriorities.has(award.seo_priority)) {
+    throw new Error(`Award ${award.slug ?? "unknown"} must provide a valid 'seo_priority'`);
   }
 
   if (award.featured_topics !== undefined && !isStringArray(award.featured_topics)) {

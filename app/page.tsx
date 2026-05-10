@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import SearchExplorer from "@/src/components/search-explorer";
 import atlasData from "@/src/generated/awards-atlas.generated.json";
+import { SiteFooter, SiteHeader } from "@/src/components/site-chrome";
 import { getSiteUrl } from "@/src/lib/site";
 
 const siteUrl = getSiteUrl();
@@ -92,26 +93,16 @@ export default function HomePage() {
     <main className="page-shell">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="top-banner">
-        <span>A living chronology of major computing awards, laureates, and eras.</span>
-        <span>Explore by person, prize, institution, topic, or year.</span>
-      </div>
+      <SiteHeader
+        navItems={[
+          { href: "/#explorer", label: "Timeline" },
+          { href: "/awards/", label: "Awards" },
+          { href: "/#coverage", label: "Coverage" },
+          { href: "/#method", label: "Method" },
+        ]}
+      />
 
-      <header className="hero">
-        <nav className="nav-bar" aria-label="Primary">
-          <a href="#top" className="brand-mark">
-            Computing Awards Atlas
-          </a>
-          <div className="nav-links">
-            <a href="#explorer">Timeline</a>
-            <a href="#coverage">Coverage</a>
-            <a href="#method">Method</a>
-            <a href="https://github.com/dmoliveira" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </div>
-        </nav>
-
+      <header className="hero hero-no-top-padding">
         <section className="hero-grid" id="top">
           <div className="hero-copy">
             <p className="eyebrow">Computing recognition, indexed</p>
@@ -258,23 +249,7 @@ export default function HomePage() {
         </article>
       </section>
 
-      <footer className="site-footer">
-        <div>
-          <strong>Computing Awards Atlas</strong>
-          <p>Designed as a public GitHub Pages atlas for computer science recognition history.</p>
-        </div>
-        <div className="footer-links">
-          <a href="https://github.com/dmoliveira" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/dmoliveira/" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          <a href="https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00" target="_blank" rel="noreferrer">
-            Support via Stripe
-          </a>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
