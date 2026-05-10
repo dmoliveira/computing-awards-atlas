@@ -17,11 +17,13 @@ const [indexHtml, awardsHtml, peopleHtml, robotsTxt, sitemapXml] = await Promise
   readFile("out/sitemap.xml", "utf8"),
 ]);
 const turingAwardHtml = await readFile("out/awards/turing-award/index.html", "utf8");
+const andrewBartoHtml = await readFile("out/people/andrew-g-barto/index.html", "utf8");
 
 const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/`;
 const awardsUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/awards/`;
 const peopleUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/people/`;
 const turingAwardUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/awards/turing-award/`;
+const andrewBartoUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/people/andrew-g-barto/`;
 const sitemapUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml`;
 const assetPathMarker = `${process.env.PAGES_BASE_PATH}/_next/`;
 const hostOrigin = new URL(process.env.NEXT_PUBLIC_SITE_URL).origin;
@@ -44,6 +46,10 @@ if (!peopleHtml.includes(peopleUrl)) {
 
 if (!turingAwardHtml.includes(turingAwardUrl)) {
   throw new Error(`Expected award detail URL ${turingAwardUrl} in out/awards/turing-award/index.html`);
+}
+
+if (!andrewBartoHtml.includes(andrewBartoUrl)) {
+  throw new Error(`Expected person detail URL ${andrewBartoUrl} in out/people/andrew-g-barto/index.html`);
 }
 
 if (!robotsTxt.includes(`Sitemap: ${sitemapUrl}`)) {
@@ -70,6 +76,10 @@ if (!sitemapXml.includes(`<loc>${turingAwardUrl}</loc>`)) {
   throw new Error(`Expected award detail location ${turingAwardUrl} in out/sitemap.xml`);
 }
 
+if (!sitemapXml.includes(`<loc>${andrewBartoUrl}</loc>`)) {
+  throw new Error(`Expected person detail location ${andrewBartoUrl} in out/sitemap.xml`);
+}
+
 for (const award of atlasData.awards) {
   const awardUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/awards/${award.slug}/`;
   const detailHtml = await readFile(`out/awards/${award.slug}/index.html`, "utf8");
@@ -83,4 +93,17 @@ for (const award of atlasData.awards) {
   }
 }
 
-console.log(JSON.stringify({ canonicalUrl, awardsUrl, peopleUrl, turingAwardUrl, sitemapUrl, assetPathMarker, hostOrigin }));
+for (const person of atlasData.people) {
+  const personUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/people/${person.slug}/`;
+  const detailHtml = await readFile(`out/people/${person.slug}/index.html`, "utf8");
+
+  if (!detailHtml.includes(personUrl)) {
+    throw new Error(`Expected person detail URL ${personUrl} in out/people/${person.slug}/index.html`);
+  }
+
+  if (!sitemapXml.includes(`<loc>${personUrl}</loc>`)) {
+    throw new Error(`Expected person detail location ${personUrl} in out/sitemap.xml`);
+  }
+}
+
+console.log(JSON.stringify({ canonicalUrl, awardsUrl, peopleUrl, turingAwardUrl, andrewBartoUrl, sitemapUrl, assetPathMarker, hostOrigin }));

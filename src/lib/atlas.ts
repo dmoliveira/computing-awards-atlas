@@ -7,3 +7,11 @@ export function getAwardBySlug(slug: string) {
 export function getEventsForAward(slug: string) {
   return atlasData.events.filter((event) => event.award_slug === slug);
 }
+
+export function getPersonBySlug(slug: string) {
+  return atlasData.people.find((person) => person.slug === slug) ?? null;
+}
+
+export function getEventsForPerson(slug: string) {
+  return atlasData.events.filter((event) => event.person_slugs.includes(slug));
+}

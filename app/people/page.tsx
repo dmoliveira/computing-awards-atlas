@@ -47,7 +47,11 @@ export default function PeoplePage() {
             <div className="person-directory-header">
               <div>
                 <p className="eyebrow">{person.award_count > 1 ? "multi-award coverage" : "current sample"}</p>
-                <h2>{person.name}</h2>
+                <h2>
+                  <Link href={`/people/${person.slug}/`} className="card-title-link">
+                    {person.name}
+                  </Link>
+                </h2>
               </div>
               <span className="year-pill">{person.latest_year}</span>
             </div>
@@ -86,6 +90,9 @@ export default function PeoplePage() {
             </div>
 
             <div className="award-card-actions">
+              <Link href={`/people/${person.slug}/`} className="text-link">
+                Open person page
+              </Link>
               <Link href={`/?q=${encodeURIComponent(person.name)}`} className="text-link">
                 Search this person in the timeline
               </Link>
