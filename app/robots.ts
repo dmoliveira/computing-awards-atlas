@@ -5,6 +5,7 @@ export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
   const siteUrl = getRequiredSiteUrl();
+  const host = new URL(siteUrl).origin;
 
   return {
     rules: {
@@ -12,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     sitemap: `${siteUrl}/sitemap.xml`,
-    host: siteUrl,
+    host,
   };
 }

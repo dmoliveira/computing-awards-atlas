@@ -31,6 +31,7 @@ Computing history is fragmented across award pages, conference sites, institutio
 ## Current MVP scope 🚀
 
 - Premium landing page with dark editorial layout.
+- Dedicated awards directory page for browsing award programs and current sample coverage.
 - Client-side search across people, awards, topics, institutions, and years.
 - Sortable cards/table explorer for award events.
 - JSONL authoring pipeline with static JSON output for GitHub Pages.
@@ -45,6 +46,7 @@ Computing history is fragmented across award pages, conference sites, institutio
   - Kanellakis Award
   - SIGIR / VLDB / ICDE impact-paper programs
   - IJCAI / AAAI AI recognition programs
+  - representative recent laureates and influential-paper winners across those programs
 
 ## What comes next 🧭
 

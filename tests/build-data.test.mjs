@@ -8,11 +8,15 @@ test("build-data generates a usable static dataset", () => {
   execFileSync("node", ["scripts/build-data.mjs"], { stdio: "pipe" });
 
   const payload = JSON.parse(readFileSync("src/generated/awards-atlas.generated.json", "utf8"));
+  const publicPayload = JSON.parse(readFileSync("public/data/awards-atlas.json", "utf8"));
 
   assert.ok(payload.stats.award_count >= 10);
-  assert.ok(payload.stats.event_count >= 10);
+  assert.ok(payload.stats.event_count >= 25);
   assert.ok(payload.awards.some((award) => award.slug === "turing-award"));
   assert.ok(payload.events.some((event) => event.id === "turing-2018-deep-learning"));
+  assert.ok(payload.events.some((event) => event.id === "acm-prize-2025-zaharia"));
+  assert.ok(payload.awards.some((award) => award.slug === "grace-murray-hopper-award" && award.event_count >= 1));
+  assert.deepEqual(payload, publicPayload);
   assert.equal(payload.events[0].award_name.length > 0, true);
 });
 
