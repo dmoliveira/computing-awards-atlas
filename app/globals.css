@@ -382,7 +382,8 @@ h3 {
 .cluster-grid,
 .browse-grid,
 .method-grid,
-.awards-directory-grid {
+.awards-directory-grid,
+.people-directory-grid {
   display: grid;
   gap: 1rem;
 }
@@ -410,7 +411,8 @@ h3 {
 .event-card,
 .cluster-card,
 .browse-card,
-.award-directory-card {
+.award-directory-card,
+.person-directory-card {
   padding: 1.25rem;
 }
 
@@ -422,6 +424,10 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.people-directory-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .award-directory-card {
   border: 1px solid var(--line);
   border-radius: 24px;
@@ -429,7 +435,15 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.person-directory-card {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(22, 32, 51, 0.72);
+  box-shadow: var(--shadow);
+}
+
 .award-directory-header,
+.person-directory-header,
 .directory-stats-row,
 .award-card-actions {
   display: flex;
@@ -565,6 +579,7 @@ tbody tr:hover {
   .browse-grid,
   .method-grid,
   .awards-directory-grid,
+  .people-directory-grid,
   .explorer-controls {
     grid-template-columns: 1fr;
   }

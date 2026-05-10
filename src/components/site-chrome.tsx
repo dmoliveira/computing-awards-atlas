@@ -9,6 +9,7 @@ const defaultNav: NavItem[] = [
   { href: "/", label: "Home" },
   { href: "/#explorer", label: "Timeline" },
   { href: "/awards/", label: "Awards" },
+  { href: "/people/", label: "People" },
   { href: "/#method", label: "Method" },
 ];
 

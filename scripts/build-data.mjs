@@ -90,31 +90,58 @@ const normalizedEvents = events
 
 const peopleMap = new Map();
 for (const event of normalizedEvents) {
-  for (const person of event.person_names) {
-    if (!peopleMap.has(person)) {
-      peopleMap.set(person, {
+  event.person_names.forEach((person, index) => {
+    const personSlug = event.person_slugs[index];
+
+    if (!peopleMap.has(personSlug)) {
+      peopleMap.set(personSlug, {
+        slug: personSlug,
         name: person,
         award_slugs: new Set(),
+        award_names: new Set(),
         topics: new Set(),
         years: [],
+        events: [],
       });
     }
-    const current = peopleMap.get(person);
+
+    const current = peopleMap.get(personSlug);
+
+    if (current.name !== person) {
+      throw new Error(`Person slug '${personSlug}' is reused with conflicting display names '${current.name}' and '${person}'`);
+    }
+
     current.award_slugs.add(event.award_slug);
+    current.award_names.add(event.award_name);
     event.topics.forEach((topic) => current.topics.add(topic));
     current.years.push(event.year);
-  }
+    current.events.push({
+      year: event.year,
+      award_name: event.award_name,
+      title: event.title,
+      person_label: event.person_label,
+    });
+  });
 }
 
-const people = [...peopleMap.entries()]
-  .map(([name, value]) => ({
-    name,
+const people = [...peopleMap.values()]
+  .map((value) => ({
+    slug: value.slug,
+    name: value.name,
     award_count: value.award_slugs.size,
+    awards: [...value.award_names].sort(),
     earliest_year: Math.min(...value.years),
     latest_year: Math.max(...value.years),
     topics: [...value.topics].sort(),
+    latest_event: value.events.sort((left, right) => right.year - left.year || left.award_name.localeCompare(right.award_name))[0],
   }))
   .sort((left, right) => left.name.localeCompare(right.name));
+
+if (new Set(people.map((person) => person.slug)).size !== people.length) {
+  throw new Error("Generated duplicate person slugs in people directory output");
+}
+
+const personDisplayBySlug = new Map(people.map((person) => [person.slug, person.name]));
 
 const topicCounts = new Map();
 for (const event of normalizedEvents) {
@@ -127,14 +154,17 @@ const awardsWithCounts = awards
   .map((award) => {
     const awardEvents = normalizedEvents.filter((event) => event.award_slug === award.slug);
     const latestEvent = awardEvents[0];
-    const uniqueRecipients = [...new Set(awardEvents.flatMap((event) => event.person_names))];
+    const uniqueRecipientSlugs = [...new Set(awardEvents.flatMap((event) => event.person_slugs))];
 
     return {
       ...award,
       event_count: awardEvents.length,
-      recipient_count: uniqueRecipients.length,
+      recipient_count: uniqueRecipientSlugs.length,
       featured_topics: ensureArray(award.featured_topics),
-      sample_recipients: uniqueRecipients.slice(0, 4),
+      sample_recipients: uniqueRecipientSlugs
+        .map((slug) => personDisplayBySlug.get(slug))
+        .filter(Boolean)
+        .slice(0, 4),
       latest_event:
         latestEvent !== undefined
           ? {

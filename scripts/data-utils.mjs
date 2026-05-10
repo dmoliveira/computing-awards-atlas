@@ -76,6 +76,14 @@ export function validateEvent(event) {
     throw new Error(`Event ${event.id} contains an invalid entry in 'person_names'`);
   }
 
+  if (!Array.isArray(event.person_slugs) || event.person_slugs.length !== event.person_names.length) {
+    throw new Error(`Event ${event.id} must include 'person_slugs' aligned with 'person_names'`);
+  }
+
+  if (event.person_slugs.some((slug) => !isNonEmptyString(slug))) {
+    throw new Error(`Event ${event.id} contains an invalid entry in 'person_slugs'`);
+  }
+
   if (event.topics !== undefined && !isStringArray(event.topics)) {
     throw new Error(`Event ${event.id} must use non-empty strings in 'topics'`);
   }
