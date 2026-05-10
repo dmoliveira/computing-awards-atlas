@@ -38,3 +38,19 @@ test("validateEvent rejects malformed related works", () => {
     /invalid 'url'/,
   );
 });
+
+test("validateEvent rejects malformed taxonomy arrays", () => {
+  assert.throws(
+    () =>
+      validateEvent({
+        id: "bad-topics",
+        year: 2002,
+        award_slug: "turing-award",
+        title: "Broken taxonomy row",
+        significance: "Invalid topics entry",
+        person_names: ["Example Person"],
+        topics: ["algorithms", ""],
+      }),
+    /non-empty strings in 'topics'/,
+  );
+});

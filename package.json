@@ -7,10 +7,12 @@
     "dev": "npm run build:data && next dev",
     "build:data": "node scripts/build-data.mjs",
     "build": "npm run build:data && next build",
+    "assert:pages": "node scripts/assert-pages-build.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/*.test.mjs",
-    "validate": "npm run build && npm run typecheck && npm run lint && npm run test"
+    "validate": "npm run build && npm run typecheck && npm run lint && npm run test",
+    "validate:pages": "STATIC_EXPORT=true npm run build && npm run assert:pages && npm run typecheck && npm run lint && npm run test"
   },
   "dependencies": {
     "fuse.js": "^7.1.0",

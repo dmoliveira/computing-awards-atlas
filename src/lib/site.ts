@@ -21,3 +21,19 @@ export function getSiteUrl() {
 
   return null;
 }
+
+export function getRequiredSiteUrl() {
+  const siteUrl = getSiteUrl();
+
+  const requiresStrictSiteUrl = process.env.STATIC_EXPORT === "true" || process.env.GITHUB_ACTIONS === "true";
+
+  if (!requiresStrictSiteUrl) {
+    return siteUrl ?? "http://localhost:3000";
+  }
+
+  if (!siteUrl) {
+    throw new Error("NEXT_PUBLIC_SITE_URL or GitHub repository environment must be set for static export SEO routes.");
+  }
+
+  return siteUrl;
+}

@@ -34,11 +34,11 @@ jobs:
       - name: Install dependencies
         run: npm install --yes
 
-      - name: Validate project
-        run: npm run validate
-
       - name: Set repository base path
         run: echo "PAGES_BASE_PATH=/${GITHUB_REPOSITORY#*/}" >> "$GITHUB_ENV" && echo "NEXT_PUBLIC_SITE_URL=https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}" >> "$GITHUB_ENV"
+
+      - name: Validate project
+        run: npm run validate:pages
 
       - name: Build static site
         run: STATIC_EXPORT=true npm run build

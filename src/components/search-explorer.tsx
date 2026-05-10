@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import Fuse from "fuse.js";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
@@ -66,27 +66,94 @@ const SORT_OPTIONS: { key: SortKey; label: string }[] = [
   { key: "person", label: "Person" },
 ];
 
+const VIEW_OPTIONS: ViewKey[] = ["cards", "table"];
+
+function getValidSort(value: string | null): SortKey {
+  return SORT_OPTIONS.some((option) => option.key === value) ? (value as SortKey) : "year-desc";
+}
+
+function getValidView(value: string | null): ViewKey {
+  return VIEW_OPTIONS.includes(value as ViewKey) ? (value as ViewKey) : "cards";
+}
+
 export default function SearchExplorer({ data }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const query = searchParams.get("q") ?? "";
-  const [sort, setSort] = useState<SortKey>("year-desc");
-  const [view, setView] = useState<ViewKey>("cards");
-  const [activeTopic, setActiveTopic] = useState<string>("all");
+  const rawSort = searchParams.get("sort");
+  const rawView = searchParams.get("view");
+  const sort = getValidSort(rawSort);
+  const view = getValidView(rawView);
+  const topicOptions = new Set(data.topics.map((topic) => topic.topic));
+  const activeTopicParam = searchParams.get("topic");
+  const activeTopic = activeTopicParam && topicOptions.has(activeTopicParam) ? activeTopicParam : "all";
 
-  const updateQuery = (nextValue: string) => {
+  useEffect(() => {
+    const nextParams = new URLSearchParams(searchParams.toString());
+    let changed = false;
+
+    if (query.trim() !== query) {
+      if (query.trim()) {
+        nextParams.set("q", query.trim());
+      } else {
+        nextParams.delete("q");
+      }
+      changed = true;
+    }
+
+    if (sort === "year-desc" && rawSort) {
+      nextParams.delete("sort");
+      changed = true;
+    }
+
+    if (rawSort && sort !== "year-desc" && rawSort !== sort) {
+      nextParams.delete("sort");
+      changed = true;
+    }
+
+    if (view === "cards" && rawView) {
+      nextParams.delete("view");
+      changed = true;
+    }
+
+    if (rawView && view !== "cards" && rawView !== view) {
+      nextParams.delete("view");
+      changed = true;
+    }
+
+    if (activeTopicParam && activeTopic === "all") {
+      nextParams.delete("topic");
+      changed = true;
+    }
+
+    if (!changed) {
+      return;
+    }
+
+    const nextQuery = nextParams.toString();
+    router.replace(nextQuery ? `${pathname}?${nextQuery}` : pathname, { scroll: false });
+  }, [activeTopic, activeTopicParam, pathname, query, rawSort, rawView, router, searchParams, sort, view]);
+
+  const updateParams = (updates: Record<string, string | null>) => {
     const nextParams = new URLSearchParams(searchParams.toString());
 
-    if (nextValue.trim()) {
-      nextParams.set("q", nextValue.trim());
-    } else {
-      nextParams.delete("q");
+    for (const [key, value] of Object.entries(updates)) {
+      if (value && value.trim()) {
+        nextParams.set(key, value.trim());
+      } else {
+        nextParams.delete(key);
+      }
     }
 
     const nextQuery = nextParams.toString();
     router.replace(nextQuery ? `${pathname}?${nextQuery}` : pathname, { scroll: false });
   };
+
+  const updateQuery = (nextValue: string) => updateParams({ q: nextValue });
+  const updateSort = (nextValue: SortKey) => updateParams({ sort: nextValue === "year-desc" ? null : nextValue });
+  const updateView = (nextValue: ViewKey) => updateParams({ view: nextValue === "cards" ? null : nextValue });
+  const updateTopic = (nextValue: string) => updateParams({ topic: nextValue === "all" ? null : nextValue });
 
   const fuse = useMemo(
     () =>
@@ -130,7 +197,7 @@ export default function SearchExplorer({ data }: Props) {
           placeholder="Search Grace Hopper, Turing Award, databases, Bell Labs, 1980s..."
         />
 
-        <select className="sort-select" value={sort} onChange={(event) => setSort(event.target.value as SortKey)}>
+        <select className="sort-select" value={sort} onChange={(event) => updateSort(event.target.value as SortKey)}>
           {SORT_OPTIONS.map((option) => (
             <option value={option.key} key={option.key}>
               Sort: {option.label}
@@ -141,14 +208,14 @@ export default function SearchExplorer({ data }: Props) {
         <div className="view-toggle-group" aria-label="View mode">
           <button
             className={`view-toggle ${view === "cards" ? "view-toggle-active" : ""}`}
-            onClick={() => setView("cards")}
+            onClick={() => updateView("cards")}
             type="button"
           >
             Cards
           </button>
           <button
             className={`view-toggle ${view === "table" ? "view-toggle-active" : ""}`}
-            onClick={() => setView("table")}
+            onClick={() => updateView("table")}
             type="button"
           >
             Table
@@ -160,7 +227,7 @@ export default function SearchExplorer({ data }: Props) {
         <button
           type="button"
           className={`filter-button ${activeTopic === "all" ? "filter-button-active" : ""}`}
-          onClick={() => setActiveTopic("all")}
+          onClick={() => updateTopic("all")}
         >
           All topics
         </button>
@@ -169,7 +236,7 @@ export default function SearchExplorer({ data }: Props) {
             key={topic.topic}
             type="button"
             className={`filter-button ${activeTopic === topic.topic ? "filter-button-active" : ""}`}
-            onClick={() => setActiveTopic(topic.topic)}
+            onClick={() => updateTopic(topic.topic)}
           >
             {topic.topic}
           </button>
