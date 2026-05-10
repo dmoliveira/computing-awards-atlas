@@ -17,6 +17,10 @@ function isValidUrl(value) {
   }
 }
 
+function isStringArray(value) {
+  return Array.isArray(value) && value.every((item) => isNonEmptyString(item));
+}
+
 export function validateAward(award) {
   for (const field of ["slug", "name", "category", "awarding_body", "founded_year", "description"]) {
     if (!(field in award)) {
@@ -36,6 +40,10 @@ export function validateAward(award) {
 
   if (award.official_url && !isValidUrl(award.official_url)) {
     throw new Error(`Award ${award.slug ?? "unknown"} has invalid 'official_url'`);
+  }
+
+  if (award.featured_topics !== undefined && !isStringArray(award.featured_topics)) {
+    throw new Error(`Award ${award.slug ?? "unknown"} must use non-empty strings in 'featured_topics'`);
   }
 }
 
@@ -60,6 +68,14 @@ export function validateEvent(event) {
 
   if (event.person_names.some((name) => !isNonEmptyString(name))) {
     throw new Error(`Event ${event.id} contains an invalid entry in 'person_names'`);
+  }
+
+  if (event.topics !== undefined && !isStringArray(event.topics)) {
+    throw new Error(`Event ${event.id} must use non-empty strings in 'topics'`);
+  }
+
+  if (event.institutions !== undefined && !isStringArray(event.institutions)) {
+    throw new Error(`Event ${event.id} must use non-empty strings in 'institutions'`);
   }
 
   if (event.related_works !== undefined) {

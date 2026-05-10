@@ -94,6 +94,12 @@ npm run dev
 npm run validate
 ```
 
+Pages-mode validation:
+
+```bash
+PAGES_BASE_PATH=/computing-awards-atlas NEXT_PUBLIC_SITE_URL=https://dmoliveira.github.io/computing-awards-atlas npm run validate:pages
+```
+
 This runs:
 
 - data build
