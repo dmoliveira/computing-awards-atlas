@@ -1,6 +1,7 @@
 export const ensureArray = (value) => (Array.isArray(value) ? value : []);
 
 const validSeoPriorities = new Set(["primary", "high", "medium", "low"]);
+const slugPattern = /^[a-z0-9-]+$/;
 
 function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
@@ -12,8 +13,8 @@ function isValidUrl(value) {
   }
 
   try {
-    new URL(value);
-    return true;
+    const parsed = new URL(value);
+    return parsed.protocol === "http:" || parsed.protocol === "https:";
   } catch {
     return false;
   }
@@ -24,13 +25,17 @@ function isStringArray(value) {
 }
 
 export function validateAward(award) {
+  if (!slugPattern.test(award.slug)) {
+    throw new Error(`Award ${award.slug ?? "unknown"} must use a route-safe 'slug'`);
+  }
+
   for (const field of ["slug", "name", "category", "awarding_body", "founded_year", "description"]) {
     if (!(field in award)) {
       throw new Error(`Award ${award.slug ?? "unknown"} is missing required field '${field}'`);
     }
   }
 
-  for (const field of ["slug", "name", "category", "awarding_body", "description"]) {
+  for (const field of ["slug", "name", "category", "awarding_body", "description", "cadence", "scope", "region"]) {
     if (!isNonEmptyString(award[field])) {
       throw new Error(`Award ${award.slug ?? "unknown"} must provide a non-empty string for '${field}'`);
     }
@@ -58,6 +63,10 @@ export function validateEvent(event) {
     throw new Error("Event is missing required string field 'id'");
   }
 
+  if (!slugPattern.test(event.id)) {
+    throw new Error(`Event ${event.id} must use a route-safe 'id'`);
+  }
+
   if (typeof event.year !== "number" || !Number.isInteger(event.year)) {
     throw new Error(`Event ${event.id} is missing integer field 'year'`);
   }
@@ -82,6 +91,10 @@ export function validateEvent(event) {
 
   if (event.person_slugs.some((slug) => !isNonEmptyString(slug))) {
     throw new Error(`Event ${event.id} contains an invalid entry in 'person_slugs'`);
+  }
+
+  if (event.person_slugs.some((slug) => !slugPattern.test(slug))) {
+    throw new Error(`Event ${event.id} contains a non-route-safe entry in 'person_slugs'`);
   }
 
   if (event.topics !== undefined && !isStringArray(event.topics)) {

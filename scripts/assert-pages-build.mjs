@@ -1,4 +1,5 @@
 import { readFile } from "node:fs/promises";
+import atlasData from "../src/generated/awards-atlas.generated.json" with { type: "json" };
 
 const requiredEnv = ["PAGES_BASE_PATH", "NEXT_PUBLIC_SITE_URL"];
 
@@ -15,10 +16,12 @@ const [indexHtml, awardsHtml, peopleHtml, robotsTxt, sitemapXml] = await Promise
   readFile("out/robots.txt", "utf8"),
   readFile("out/sitemap.xml", "utf8"),
 ]);
+const turingAwardHtml = await readFile("out/awards/turing-award/index.html", "utf8");
 
 const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/`;
 const awardsUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/awards/`;
 const peopleUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/people/`;
+const turingAwardUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/awards/turing-award/`;
 const sitemapUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml`;
 const assetPathMarker = `${process.env.PAGES_BASE_PATH}/_next/`;
 const hostOrigin = new URL(process.env.NEXT_PUBLIC_SITE_URL).origin;
@@ -37,6 +40,10 @@ if (!awardsHtml.includes(awardsUrl)) {
 
 if (!peopleHtml.includes(peopleUrl)) {
   throw new Error(`Expected people URL ${peopleUrl} in out/people/index.html`);
+}
+
+if (!turingAwardHtml.includes(turingAwardUrl)) {
+  throw new Error(`Expected award detail URL ${turingAwardUrl} in out/awards/turing-award/index.html`);
 }
 
 if (!robotsTxt.includes(`Sitemap: ${sitemapUrl}`)) {
@@ -59,4 +66,21 @@ if (!sitemapXml.includes(`<loc>${peopleUrl}</loc>`)) {
   throw new Error(`Expected people location ${peopleUrl} in out/sitemap.xml`);
 }
 
-console.log(JSON.stringify({ canonicalUrl, awardsUrl, peopleUrl, sitemapUrl, assetPathMarker, hostOrigin }));
+if (!sitemapXml.includes(`<loc>${turingAwardUrl}</loc>`)) {
+  throw new Error(`Expected award detail location ${turingAwardUrl} in out/sitemap.xml`);
+}
+
+for (const award of atlasData.awards) {
+  const awardUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/awards/${award.slug}/`;
+  const detailHtml = await readFile(`out/awards/${award.slug}/index.html`, "utf8");
+
+  if (!detailHtml.includes(awardUrl)) {
+    throw new Error(`Expected award detail URL ${awardUrl} in out/awards/${award.slug}/index.html`);
+  }
+
+  if (!sitemapXml.includes(`<loc>${awardUrl}</loc>`)) {
+    throw new Error(`Expected award detail location ${awardUrl} in out/sitemap.xml`);
+  }
+}
+
+console.log(JSON.stringify({ canonicalUrl, awardsUrl, peopleUrl, turingAwardUrl, sitemapUrl, assetPathMarker, hostOrigin }));
