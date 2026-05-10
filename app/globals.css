@@ -441,6 +441,12 @@ h3 {
   gap: 1rem;
 }
 
+.person-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .person-directory-card {
   border: 1px solid var(--line);
   border-radius: 24px;
@@ -600,6 +606,7 @@ tbody tr:hover {
   .awards-directory-grid,
   .people-directory-grid,
   .award-events-grid,
+  .person-detail-grid,
   .explorer-controls {
     grid-template-columns: 1fr;
   }

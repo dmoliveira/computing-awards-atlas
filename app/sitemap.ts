@@ -34,5 +34,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.7,
     })),
+    ...atlasData.people.map((person: { slug: string }) => ({
+      url: `${siteUrl}/people/${person.slug}/`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
   ];
 }
