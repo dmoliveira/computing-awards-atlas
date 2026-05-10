@@ -46,7 +46,11 @@ export default function AwardsPage() {
             <div className="award-directory-header">
               <div>
                 <p className="eyebrow">{award.category.replaceAll("_", " ")}</p>
-                <h2>{award.short_name ?? award.name}</h2>
+                <h2>
+                  <Link href={`/awards/${award.slug}/`} className="card-title-link">
+                    {award.short_name ?? award.name}
+                  </Link>
+                </h2>
               </div>
               <span className="year-pill">{award.founded_year}</span>
             </div>
@@ -98,6 +102,9 @@ export default function AwardsPage() {
             ) : null}
 
             <div className="award-card-actions">
+              <Link href={`/awards/${award.slug}/`} className="text-link">
+                Open award page
+              </Link>
               <Link href={`/?q=${encodeURIComponent(award.short_name ?? award.name)}`} className="text-link">
                 Search this award in the timeline
               </Link>

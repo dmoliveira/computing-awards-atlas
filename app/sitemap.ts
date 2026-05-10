@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import atlasData from "@/src/generated/awards-atlas.generated.json";
 import { getRequiredSiteUrl } from "@/src/lib/site";
 
 export const dynamic = "force-static";
@@ -27,5 +28,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    ...atlasData.awards.map((award: { slug: string }) => ({
+      url: `${siteUrl}/awards/${award.slug}/`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
   ];
 }

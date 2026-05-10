@@ -77,3 +77,19 @@ test("validateEvent rejects missing aligned person slugs", () => {
     /person_slugs/,
   );
 });
+
+test("validateEvent rejects non-route-safe person slugs", () => {
+  assert.throws(
+    () =>
+      validateEvent({
+        id: "bad-route-safe-slug",
+        year: 2004,
+        award_slug: "turing-award",
+        title: "Broken route-safe slug",
+        significance: "Contains slash in person slug",
+        person_names: ["Example Person"],
+        person_slugs: ["example/person"],
+      }),
+    /non-route-safe entry in 'person_slugs'/,
+  );
+});
