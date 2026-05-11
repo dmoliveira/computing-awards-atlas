@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import TimelinePageClient from "@/src/components/timeline-page-client";
@@ -51,8 +52,21 @@ function TimelineFallback() {
                   <article className="event-card" key={event.id}>
                     <div className="event-card-header">
                       <div>
-                        <h3>{event.person_label}</h3>
-                        <span className="meta-line">{event.award_name}</span>
+                        <h3>
+                          {event.person_names.map((name, index) => (
+                            <span key={`${event.id}-${event.person_slugs[index]}`}>
+                              {index > 0 ? ", " : null}
+                              <Link href={`/people/${event.person_slugs[index]}/`} className="card-title-link">
+                                {name}
+                              </Link>
+                            </span>
+                          ))}
+                        </h3>
+                        <span className="meta-line">
+                          <Link href={`/awards/${event.award_slug}/`} className="card-title-link">
+                            {event.award_name}
+                          </Link>
+                        </span>
                       </div>
                       <span className="year-pill">{event.year}</span>
                     </div>

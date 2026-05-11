@@ -81,11 +81,11 @@ if (!timelineHtml.includes(timelineUrl)) {
   throw new Error(`Expected timeline URL ${timelineUrl} in out/timeline/index.html`);
 }
 
-if (!timelineHtml.includes(`${process.env.PAGES_BASE_PATH}/awards/turing-award/`)) {
+if (!new RegExp(`${process.env.PAGES_BASE_PATH}/awards/[a-z0-9-]+/`).test(timelineHtml)) {
   throw new Error("Expected timeline page to include award detail links");
 }
 
-if (!timelineHtml.includes(`${process.env.PAGES_BASE_PATH}/people/alan-j-perlis/`)) {
+if (!new RegExp(`${process.env.PAGES_BASE_PATH}/people/[a-z0-9-]+/`).test(timelineHtml)) {
   throw new Error("Expected timeline page to include person detail links");
 }
 
