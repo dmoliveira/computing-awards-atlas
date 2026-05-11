@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T06:57:07.983Z",
+  "generated_at": "2026-05-11T20:55:10.341Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -56,10 +56,11 @@
       "official_url": "https://awards.acm.org/hopper",
       "description": "Highlights a single recent generation-defining contribution from a young computing professional.",
       "seo_priority": "high",
-      "event_count": 1,
-      "recipient_count": 1,
+      "event_count": 2,
+      "recipient_count": 2,
       "sample_recipients": [
-        "Ilias Diakonikolas"
+        "Ilias Diakonikolas",
+        "Prateek Mittal"
       ],
       "latest_event": {
         "year": 2024,
@@ -86,10 +87,11 @@
       "official_url": "https://awards.acm.org/acm-prize",
       "description": "Recognizes early- to mid-career professionals whose work has fundamental impact across computing.",
       "seo_priority": "high",
-      "event_count": 1,
-      "recipient_count": 1,
+      "event_count": 2,
+      "recipient_count": 2,
       "sample_recipients": [
-        "Matei Zaharia"
+        "Matei Zaharia",
+        "Torsten Hoefler"
       ],
       "latest_event": {
         "year": 2025,
@@ -115,10 +117,11 @@
       "official_url": "https://sigact.org/prizes/knuth-prize/",
       "description": "Celebrates landmark achievements in theoretical computer science across a career.",
       "seo_priority": "high",
-      "event_count": 1,
-      "recipient_count": 1,
+      "event_count": 2,
+      "recipient_count": 2,
       "sample_recipients": [
-        "Rajeev Alur"
+        "Rajeev Alur",
+        "Éva Tardos"
       ],
       "latest_event": {
         "year": 2024,
@@ -145,11 +148,12 @@
       "official_url": "https://sigact.org/prizes/godel-prize/",
       "description": "Honors outstanding papers in theoretical computer science with deep long-term influence.",
       "seo_priority": "high",
-      "event_count": 1,
-      "recipient_count": 2,
+      "event_count": 2,
+      "recipient_count": 3,
       "sample_recipients": [
         "Eshan Chattopadhyay",
-        "David Zuckerman"
+        "David Zuckerman",
+        "Ryan Williams"
       ],
       "latest_event": {
         "year": 2025,
@@ -302,10 +306,11 @@
       "official_url": "https://www.ijcai.org/awards",
       "description": "Career award for major contributions to artificial intelligence research.",
       "seo_priority": "medium",
-      "event_count": 1,
-      "recipient_count": 1,
+      "event_count": 2,
+      "recipient_count": 2,
       "sample_recipients": [
-        "Rina Dechter"
+        "Rina Dechter",
+        "Thomas G. Dietterich"
       ],
       "latest_event": {
         "year": 2025,
@@ -364,18 +369,18 @@
       "official_url": "https://www.vldb.org/awards.html",
       "description": "Recognizes database papers whose importance is clear over a ten-year horizon.",
       "seo_priority": "medium",
-      "event_count": 1,
-      "recipient_count": 7,
+      "event_count": 2,
+      "recipient_count": 13,
       "sample_recipients": [
-        "Sergey Melnik",
-        "Andrey Gubarev",
-        "Jing Jing Long",
-        "Geoffrey Romer"
+        "Yucheng Low",
+        "Joseph Gonzalez",
+        "Aapo Kyrola",
+        "Danny Bickson"
       ],
       "latest_event": {
-        "year": 2020,
-        "title": "Dremel and interactive web-scale analytics",
-        "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+        "year": 2023,
+        "title": "Distributed GraphLab for machine learning in the cloud",
+        "person_label": "Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, Joseph M. Hellerstein"
       }
     }
   ],
@@ -640,6 +645,86 @@
       "search_blob": "Maximum entropy inverse reinforcement learning | AAAI Classic Paper Award | AAAI Classic Paper | Revisits AI conference papers whose importance becomes more visible over time. | Brian Ziebart Andrew Maas J. Andrew Bagnell Anind K. Dey | artificial intelligence reinforcement learning decision making | Carnegie Mellon University | Revisits a paper that made entropy-regularized inverse reinforcement learning a lasting tool for imitation, planning, and alignment-style research. | Maximum Entropy Inverse Reinforcement Learning | 2024 | 2020s"
     },
     {
+      "id": "acm-prize-2024-hoefler",
+      "year": 2024,
+      "award_slug": "acm-prize-in-computing",
+      "person_names": [
+        "Torsten Hoefler"
+      ],
+      "person_slugs": [
+        "torsten-hoefler"
+      ],
+      "title": "High-performance computing for the AI era",
+      "kind": "laureate",
+      "topics": [
+        "high-performance computing",
+        "systems",
+        "artificial intelligence"
+      ],
+      "institutions": [
+        "ETH Zürich"
+      ],
+      "significance": "Recognized contributions that advanced large-scale high-performance computing and its role in modern AI systems and infrastructure.",
+      "related_works": [
+        {
+          "title": "Torsten Hoefler research profile",
+          "type": "profile",
+          "year": 2024,
+          "url": "https://spcl.inf.ethz.ch/People/torstenhoefler.html"
+        }
+      ],
+      "award_name": "ACM Prize in Computing",
+      "award_category": "major_award",
+      "official_program_label": "Official awards page / index",
+      "official_program_url": "https://awards.acm.org/acm-prize",
+      "source_scope": "program-level",
+      "citation_specificity": "not-year-specific",
+      "person_label": "Torsten Hoefler",
+      "decade": "2020s",
+      "featured": false,
+      "search_blob": "High-performance computing for the AI era | ACM Prize in Computing | ACM Prize in Computing | Recognizes early- to mid-career professionals whose work has fundamental impact across computing. | Torsten Hoefler | high-performance computing systems artificial intelligence | ETH Zürich | Recognized contributions that advanced large-scale high-performance computing and its role in modern AI systems and infrastructure. | Torsten Hoefler research profile | 2024 | 2020s"
+    },
+    {
+      "id": "godel-2024-williams",
+      "year": 2024,
+      "award_slug": "godel-prize",
+      "person_names": [
+        "Ryan Williams"
+      ],
+      "person_slugs": [
+        "ryan-williams"
+      ],
+      "title": "ACC circuit lower bounds breakthrough",
+      "kind": "paper_award",
+      "topics": [
+        "complexity",
+        "circuit lower bounds",
+        "theory"
+      ],
+      "institutions": [
+        "Massachusetts Institute of Technology"
+      ],
+      "significance": "Recognized a landmark lower-bounds result showing that exponential-time nondeterministic computation cannot be captured by polynomial-size non-uniform ACC circuits.",
+      "related_works": [
+        {
+          "title": "Non-Uniform ACC Circuit Lower Bounds",
+          "type": "paper",
+          "year": 2011,
+          "url": "https://sigact.org/prizes/g%C3%B6del/citation2024.html"
+        }
+      ],
+      "award_name": "Gödel Prize",
+      "award_category": "theory_award",
+      "official_program_label": "Official awards page / index",
+      "official_program_url": "https://sigact.org/prizes/godel-prize/",
+      "source_scope": "program-level",
+      "citation_specificity": "not-year-specific",
+      "person_label": "Ryan Williams",
+      "decade": "2020s",
+      "featured": false,
+      "search_blob": "ACC circuit lower bounds breakthrough | Gödel Prize | Gödel Prize | Honors outstanding papers in theoretical computer science with deep long-term influence. | Ryan Williams | complexity circuit lower bounds theory | Massachusetts Institute of Technology | Recognized a landmark lower-bounds result showing that exponential-time nondeterministic computation cannot be captured by polynomial-size non-uniform ACC circuits. | Non-Uniform ACC Circuit Lower Bounds | 2024 | 2020s"
+    },
+    {
       "id": "hopper-2024-diakonikolas",
       "year": 2024,
       "award_slug": "grace-murray-hopper-award",
@@ -678,6 +763,46 @@
       "decade": "2020s",
       "featured": false,
       "search_blob": "Robust statistics with algorithmic reach | ACM Grace Murray Hopper Award | Grace Hopper Award | Highlights a single recent generation-defining contribution from a young computing professional. | Ilias Diakonikolas | algorithms robust statistics machine learning | University of Wisconsin–Madison | Highlights algorithmic robust statistics as a fast-growing bridge between theory and practical machine learning reliability. | Algorithmic High-Dimensional Robust Statistics | 2024 | 2020s"
+    },
+    {
+      "id": "ijcai-2024-dietterich",
+      "year": 2024,
+      "award_slug": "ijcai-research-excellence-award",
+      "person_names": [
+        "Thomas G. Dietterich"
+      ],
+      "person_slugs": [
+        "thomas-g-dietterich"
+      ],
+      "title": "Machine learning for robust and trustworthy AI",
+      "kind": "laureate",
+      "topics": [
+        "artificial intelligence",
+        "machine learning",
+        "robustness"
+      ],
+      "institutions": [
+        "Oregon State University"
+      ],
+      "significance": "Recognized a career of influential machine learning research spanning ensemble methods, sequential decision-making, and robust AI systems.",
+      "related_works": [
+        {
+          "title": "Machine Learning for Sequential Data: A Review",
+          "type": "article",
+          "year": 2022,
+          "url": "https://www.aaai.org/ojs/index.php/aimagazine/article/view/2756"
+        }
+      ],
+      "award_name": "IJCAI Research Excellence",
+      "award_category": "ai_award",
+      "official_program_label": "Official awards page / index",
+      "official_program_url": "https://www.ijcai.org/awards",
+      "source_scope": "program-level",
+      "citation_specificity": "not-year-specific",
+      "person_label": "Thomas G. Dietterich",
+      "decade": "2020s",
+      "featured": false,
+      "search_blob": "Machine learning for robust and trustworthy AI | IJCAI Research Excellence Award | IJCAI Research Excellence | Career award for major contributions to artificial intelligence research. | Thomas G. Dietterich | artificial intelligence machine learning robustness | Oregon State University | Recognized a career of influential machine learning research spanning ensemble methods, sequential decision-making, and robust AI systems. | Machine Learning for Sequential Data: A Review | 2024 | 2020s"
     },
     {
       "id": "kanellakis-2024-krawczyk",
@@ -892,6 +1017,137 @@
       "person_label": "Christopher D. Manning",
       "decade": "2020s",
       "search_blob": "Statistical and neural language understanding | IEEE John von Neumann Medal | von Neumann Medal | Recognizes career-level leadership and impact spanning computing science and engineering, from core systems to modern computational methods. | Christopher D. Manning | natural language processing machine learning representation learning | Stanford University | Recognized work spanning statistical NLP, large-scale language resources, and neural representation methods that reshaped modern language AI. | GloVe: Global Vectors for Word Representation | 2024 | 2020s"
+    },
+    {
+      "id": "hopper-2023-mittal",
+      "year": 2023,
+      "award_slug": "grace-murray-hopper-award",
+      "person_names": [
+        "Prateek Mittal"
+      ],
+      "person_slugs": [
+        "prateek-mittal"
+      ],
+      "title": "Cross-layer internet privacy and security",
+      "kind": "laureate",
+      "topics": [
+        "security",
+        "privacy",
+        "internet"
+      ],
+      "institutions": [
+        "Princeton University"
+      ],
+      "significance": "Recognized foundational work on protecting internet privacy and security through cross-layer methods spanning networks, anonymity, and machine learning.",
+      "related_works": [
+        {
+          "title": "Prateek Mittal research profile",
+          "type": "profile",
+          "year": 2023,
+          "url": "https://www.cs.princeton.edu/~pmittal/"
+        }
+      ],
+      "award_name": "Grace Hopper Award",
+      "award_category": "major_award",
+      "official_program_label": "Official awards page / index",
+      "official_program_url": "https://awards.acm.org/hopper",
+      "source_scope": "program-level",
+      "citation_specificity": "not-year-specific",
+      "person_label": "Prateek Mittal",
+      "decade": "2020s",
+      "featured": false,
+      "search_blob": "Cross-layer internet privacy and security | ACM Grace Murray Hopper Award | Grace Hopper Award | Highlights a single recent generation-defining contribution from a young computing professional. | Prateek Mittal | security privacy internet | Princeton University | Recognized foundational work on protecting internet privacy and security through cross-layer methods spanning networks, anonymity, and machine learning. | Prateek Mittal research profile | 2023 | 2020s"
+    },
+    {
+      "id": "knuth-2023-tardos",
+      "year": 2023,
+      "award_slug": "knuth-prize",
+      "person_names": [
+        "Éva Tardos"
+      ],
+      "person_slugs": [
+        "eva-tardos"
+      ],
+      "title": "Algorithms, approximation, and game theory",
+      "kind": "laureate",
+      "topics": [
+        "algorithms",
+        "approximation algorithms",
+        "algorithmic game theory"
+      ],
+      "institutions": [
+        "Cornell University"
+      ],
+      "significance": "Recognized career-defining contributions to combinatorial optimization, approximation algorithms, and algorithmic game theory.",
+      "related_works": [
+        {
+          "title": "Algorithm Design",
+          "type": "book",
+          "year": 2005,
+          "url": "https://www.cs.princeton.edu/~wayne/kleinberg-tardos/"
+        }
+      ],
+      "award_name": "Knuth Prize",
+      "award_category": "theory_award",
+      "official_program_label": "Official awards page / index",
+      "official_program_url": "https://sigact.org/prizes/knuth-prize/",
+      "source_scope": "program-level",
+      "citation_specificity": "not-year-specific",
+      "person_label": "Éva Tardos",
+      "decade": "2020s",
+      "featured": false,
+      "search_blob": "Algorithms, approximation, and game theory | Donald E. Knuth Prize | Knuth Prize | Celebrates landmark achievements in theoretical computer science across a career. | Éva Tardos | algorithms approximation algorithms algorithmic game theory | Cornell University | Recognized career-defining contributions to combinatorial optimization, approximation algorithms, and algorithmic game theory. | Algorithm Design | 2023 | 2020s"
+    },
+    {
+      "id": "vldb-2023-distributed-graphlab",
+      "year": 2023,
+      "award_slug": "vldb-ten-year-award",
+      "person_names": [
+        "Yucheng Low",
+        "Joseph Gonzalez",
+        "Aapo Kyrola",
+        "Danny Bickson",
+        "Carlos Guestrin",
+        "Joseph M. Hellerstein"
+      ],
+      "person_slugs": [
+        "yucheng-low",
+        "joseph-gonzalez",
+        "aapo-kyrola",
+        "danny-bickson",
+        "carlos-guestrin",
+        "joseph-m-hellerstein"
+      ],
+      "title": "Distributed GraphLab for machine learning in the cloud",
+      "kind": "paper_award",
+      "topics": [
+        "machine learning systems",
+        "distributed systems",
+        "databases"
+      ],
+      "institutions": [
+        "Carnegie Mellon University",
+        "University of California, Berkeley"
+      ],
+      "significance": "Recognized a test-of-time systems paper that helped shape large-scale graph-parallel machine learning and cloud analytics infrastructure.",
+      "related_works": [
+        {
+          "title": "Distributed GraphLab: A Framework for Machine Learning and Data Mining in the Cloud",
+          "type": "paper",
+          "year": 2012,
+          "url": "https://www.vldb.org/pvldb/vol5/p716_yuchenglow_vldb2012.pdf"
+        }
+      ],
+      "award_name": "VLDB 10-Year Award",
+      "award_category": "paper_award",
+      "official_program_label": "Official awards page / index",
+      "official_program_url": "https://www.vldb.org/awards.html",
+      "source_scope": "program-level",
+      "citation_specificity": "not-year-specific",
+      "person_label": "Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, Joseph M. Hellerstein",
+      "decade": "2020s",
+      "featured": false,
+      "search_blob": "Distributed GraphLab for machine learning in the cloud | VLDB 10-Year Best Paper Award | VLDB 10-Year Award | Recognizes database papers whose importance is clear over a ten-year horizon. | Yucheng Low Joseph Gonzalez Aapo Kyrola Danny Bickson Carlos Guestrin Joseph M. Hellerstein | machine learning systems distributed systems databases | Carnegie Mellon University University of California, Berkeley | Recognized a test-of-time systems paper that helped shape large-scale graph-parallel machine learning and cloud analytics infrastructure. | Distributed GraphLab: A Framework for Machine Learning and Data Mining in the Cloud | 2023 | 2020s"
     },
     {
       "id": "aaai-classic-2020-junker",
@@ -1672,6 +1928,27 @@
   ],
   "people": [
     {
+      "slug": "aapo-kyrola",
+      "name": "Aapo Kyrola",
+      "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
+      "earliest_year": 2023,
+      "latest_year": 2023,
+      "topics": [
+        "databases",
+        "distributed systems",
+        "machine learning systems"
+      ],
+      "latest_event": {
+        "year": 2023,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Distributed GraphLab for machine learning in the cloud",
+        "person_label": "Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, Joseph M. Hellerstein"
+      }
+    },
+    {
       "slug": "ahmed-eldawy",
       "name": "Ahmed Eldawy",
       "award_count": 1,
@@ -1903,6 +2180,27 @@
       }
     },
     {
+      "slug": "carlos-guestrin",
+      "name": "Carlos Guestrin",
+      "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
+      "earliest_year": 2023,
+      "latest_year": 2023,
+      "topics": [
+        "databases",
+        "distributed systems",
+        "machine learning systems"
+      ],
+      "latest_event": {
+        "year": 2023,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Distributed GraphLab for machine learning in the cloud",
+        "person_label": "Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, Joseph M. Hellerstein"
+      }
+    },
+    {
       "slug": "christopher-d-manning",
       "name": "Christopher D. Manning",
       "award_count": 1,
@@ -1942,6 +2240,27 @@
         "award_name": "SIGIR Test of Time",
         "title": "Image-based recommendations on styles and substitutes",
         "person_label": "Julian McAuley, Christopher Targett, Javen Shi, Anton van den Hengel"
+      }
+    },
+    {
+      "slug": "danny-bickson",
+      "name": "Danny Bickson",
+      "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
+      "earliest_year": 2023,
+      "latest_year": 2023,
+      "topics": [
+        "databases",
+        "distributed systems",
+        "machine learning systems"
+      ],
+      "latest_event": {
+        "year": 2023,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Distributed GraphLab for machine learning in the cloud",
+        "person_label": "Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, Joseph M. Hellerstein"
       }
     },
     {
@@ -2068,6 +2387,27 @@
         "award_name": "Gödel Prize",
         "title": "Explicit two-source extractors and resilient functions",
         "person_label": "Eshan Chattopadhyay, David Zuckerman"
+      }
+    },
+    {
+      "slug": "eva-tardos",
+      "name": "Éva Tardos",
+      "award_count": 1,
+      "awards": [
+        "Knuth Prize"
+      ],
+      "earliest_year": 2023,
+      "latest_year": 2023,
+      "topics": [
+        "algorithmic game theory",
+        "algorithms",
+        "approximation algorithms"
+      ],
+      "latest_event": {
+        "year": 2023,
+        "award_name": "Knuth Prize",
+        "title": "Algorithms, approximation, and game theory",
+        "person_label": "Éva Tardos"
       }
     },
     {
@@ -2344,6 +2684,48 @@
       }
     },
     {
+      "slug": "joseph-gonzalez",
+      "name": "Joseph Gonzalez",
+      "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
+      "earliest_year": 2023,
+      "latest_year": 2023,
+      "topics": [
+        "databases",
+        "distributed systems",
+        "machine learning systems"
+      ],
+      "latest_event": {
+        "year": 2023,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Distributed GraphLab for machine learning in the cloud",
+        "person_label": "Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, Joseph M. Hellerstein"
+      }
+    },
+    {
+      "slug": "joseph-m-hellerstein",
+      "name": "Joseph M. Hellerstein",
+      "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
+      "earliest_year": 2023,
+      "latest_year": 2023,
+      "topics": [
+        "databases",
+        "distributed systems",
+        "machine learning systems"
+      ],
+      "latest_event": {
+        "year": 2023,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Distributed GraphLab for machine learning in the cloud",
+        "person_label": "Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, Joseph M. Hellerstein"
+      }
+    },
+    {
       "slug": "judea-pearl",
       "name": "Judea Pearl",
       "award_count": 1,
@@ -2533,6 +2915,27 @@
       }
     },
     {
+      "slug": "prateek-mittal",
+      "name": "Prateek Mittal",
+      "award_count": 1,
+      "awards": [
+        "Grace Hopper Award"
+      ],
+      "earliest_year": 2023,
+      "latest_year": 2023,
+      "topics": [
+        "internet",
+        "privacy",
+        "security"
+      ],
+      "latest_event": {
+        "year": 2023,
+        "award_name": "Grace Hopper Award",
+        "title": "Cross-layer internet privacy and security",
+        "person_label": "Prateek Mittal"
+      }
+    },
+    {
       "slug": "raj-reddy",
       "name": "Raj Reddy",
       "award_count": 1,
@@ -2701,6 +3104,27 @@
       }
     },
     {
+      "slug": "ryan-williams",
+      "name": "Ryan Williams",
+      "award_count": 1,
+      "awards": [
+        "Gödel Prize"
+      ],
+      "earliest_year": 2024,
+      "latest_year": 2024,
+      "topics": [
+        "circuit lower bounds",
+        "complexity",
+        "theory"
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "Gödel Prize",
+        "title": "ACC circuit lower bounds breakthrough",
+        "person_label": "Ryan Williams"
+      }
+    },
+    {
       "slug": "sergey-melnik",
       "name": "Sergey Melnik",
       "award_count": 1,
@@ -2782,6 +3206,48 @@
         "award_name": "VLDB 10-Year Award",
         "title": "Dremel and interactive web-scale analytics",
         "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+      }
+    },
+    {
+      "slug": "thomas-g-dietterich",
+      "name": "Thomas G. Dietterich",
+      "award_count": 1,
+      "awards": [
+        "IJCAI Research Excellence"
+      ],
+      "earliest_year": 2024,
+      "latest_year": 2024,
+      "topics": [
+        "artificial intelligence",
+        "machine learning",
+        "robustness"
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "IJCAI Research Excellence",
+        "title": "Machine learning for robust and trustworthy AI",
+        "person_label": "Thomas G. Dietterich"
+      }
+    },
+    {
+      "slug": "torsten-hoefler",
+      "name": "Torsten Hoefler",
+      "award_count": 1,
+      "awards": [
+        "ACM Prize in Computing"
+      ],
+      "earliest_year": 2024,
+      "latest_year": 2024,
+      "topics": [
+        "artificial intelligence",
+        "high-performance computing",
+        "systems"
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "ACM Prize in Computing",
+        "title": "High-performance computing for the AI era",
+        "person_label": "Torsten Hoefler"
       }
     },
     {
@@ -2930,28 +3396,49 @@
         "title": "Deep learning renaissance",
         "person_label": "Yoshua Bengio, Geoffrey Hinton, Yann LeCun"
       }
+    },
+    {
+      "slug": "yucheng-low",
+      "name": "Yucheng Low",
+      "award_count": 1,
+      "awards": [
+        "VLDB 10-Year Award"
+      ],
+      "earliest_year": 2023,
+      "latest_year": 2023,
+      "topics": [
+        "databases",
+        "distributed systems",
+        "machine learning systems"
+      ],
+      "latest_event": {
+        "year": 2023,
+        "award_name": "VLDB 10-Year Award",
+        "title": "Distributed GraphLab for machine learning in the cloud",
+        "person_label": "Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, Joseph M. Hellerstein"
+      }
     }
   ],
   "topics": [
     {
       "topic": "artificial intelligence",
-      "count": 7
+      "count": 9
     },
     {
       "topic": "databases",
-      "count": 5
+      "count": 6
     },
     {
       "topic": "machine learning",
-      "count": 4
+      "count": 5
     },
     {
       "topic": "algorithms",
-      "count": 3
+      "count": 4
     },
     {
       "topic": "distributed systems",
-      "count": 3
+      "count": 4
     },
     {
       "topic": "operating systems",
@@ -2960,6 +3447,10 @@
     {
       "topic": "programming languages",
       "count": 3
+    },
+    {
+      "topic": "complexity",
+      "count": 2
     },
     {
       "topic": "computer vision",
@@ -2982,6 +3473,14 @@
       "count": 2
     },
     {
+      "topic": "internet",
+      "count": 2
+    },
+    {
+      "topic": "privacy",
+      "count": 2
+    },
+    {
       "topic": "protocols",
       "count": 2
     },
@@ -2994,11 +3493,31 @@
       "count": 2
     },
     {
+      "topic": "security",
+      "count": 2
+    },
+    {
+      "topic": "theory",
+      "count": 2
+    },
+    {
       "topic": "verification",
       "count": 2
     },
     {
+      "topic": "algorithmic game theory",
+      "count": 1
+    },
+    {
+      "topic": "approximation algorithms",
+      "count": 1
+    },
+    {
       "topic": "causality",
+      "count": 1
+    },
+    {
+      "topic": "circuit lower bounds",
       "count": 1
     },
     {
@@ -3011,10 +3530,6 @@
     },
     {
       "topic": "compilers",
-      "count": 1
-    },
-    {
-      "topic": "complexity",
       "count": 1
     },
     {
@@ -3090,11 +3605,11 @@
       "count": 1
     },
     {
-      "topic": "information theory",
+      "topic": "high-performance computing",
       "count": 1
     },
     {
-      "topic": "internet",
+      "topic": "information theory",
       "count": 1
     },
     {
@@ -3103,6 +3618,10 @@
     },
     {
       "topic": "logic",
+      "count": 1
+    },
+    {
+      "topic": "machine learning systems",
       "count": 1
     },
     {
@@ -3119,10 +3638,6 @@
     },
     {
       "topic": "preference reasoning",
-      "count": 1
-    },
-    {
-      "topic": "privacy",
       "count": 1
     },
     {
@@ -3154,7 +3669,7 @@
       "count": 1
     },
     {
-      "topic": "security",
+      "topic": "robustness",
       "count": 1
     },
     {
@@ -3162,7 +3677,7 @@
       "count": 1
     },
     {
-      "topic": "theory",
+      "topic": "systems",
       "count": 1
     },
     {
@@ -3176,8 +3691,8 @@
   ],
   "stats": {
     "award_count": 12,
-    "event_count": 30,
-    "people_count": 60,
+    "event_count": 36,
+    "people_count": 71,
     "year_start": 1966,
     "year_end": 2025
   },

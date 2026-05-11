@@ -16,13 +16,19 @@ test("build-data generates a usable static dataset", () => {
     .map((line) => JSON.parse(line));
 
   assert.ok(payload.stats.award_count >= 10);
-  assert.ok(payload.stats.event_count >= 30);
+  assert.ok(payload.stats.event_count >= 36);
   assert.ok(payload.awards.some((award) => award.slug === "turing-award"));
   assert.ok(payload.events.some((event) => event.id === "turing-2018-deep-learning"));
   assert.ok(payload.events.some((event) => event.id === "acm-prize-2025-zaharia"));
   assert.ok(payload.events.some((event) => event.id === "sigir-tot-2024-explicit-factor-models"));
   assert.ok(payload.events.some((event) => event.id === "icde-2018-k-anonymity-networks"));
   assert.ok(payload.events.some((event) => event.id === "aaai-classic-2020-junker"));
+  assert.ok(payload.events.some((event) => event.id === "acm-prize-2024-hoefler"));
+  assert.ok(payload.events.some((event) => event.id === "hopper-2023-mittal"));
+  assert.ok(payload.events.some((event) => event.id === "godel-2024-williams"));
+  assert.ok(payload.events.some((event) => event.id === "knuth-2023-tardos"));
+  assert.ok(payload.events.some((event) => event.id === "vldb-2023-distributed-graphlab"));
+  assert.ok(payload.events.some((event) => event.id === "ijcai-2024-dietterich"));
   assert.ok(payload.awards.some((award) => award.slug === "grace-murray-hopper-award" && award.event_count >= 1));
   assert.ok(payload.events.every((event) => typeof event.official_program_url === "string" && event.official_program_url.startsWith("http")));
   assert.ok(payload.events.every((event) => typeof event.official_program_label === "string" && event.official_program_label.length > 0));
