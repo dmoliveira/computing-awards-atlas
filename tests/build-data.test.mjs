@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
+import { filterTimelineGroups } from "../src/lib/timeline.ts";
 import { validateEvent } from "../scripts/data-utils.mjs";
 
 test("build-data generates a usable static dataset", () => {
@@ -122,4 +123,63 @@ test("validateEvent rejects non-route-safe person slugs", () => {
       }),
     /non-route-safe entry in 'person_slugs'/,
   );
+});
+
+test("filterTimelineGroups applies query and decade filters", () => {
+  const filtered = filterTimelineGroups(
+    [
+      {
+        decade: "2020s",
+        years: [
+          {
+            year: 2024,
+            events: [
+              {
+                id: "e1",
+                year: 2024,
+                decade: "2020s",
+                award_slug: "turing-award",
+                award_name: "Turing Award",
+                title: "Reinforcement learning foundations",
+                person_names: ["Andrew G. Barto", "Richard S. Sutton"],
+                person_slugs: ["andrew-g-barto", "richard-s-sutton"],
+                person_label: "Andrew G. Barto, Richard S. Sutton",
+                significance: "RL foundations",
+                topics: ["artificial intelligence", "reinforcement learning"],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        decade: "2010s",
+        years: [
+          {
+            year: 2018,
+            events: [
+              {
+                id: "e2",
+                year: 2018,
+                decade: "2010s",
+                award_slug: "turing-award",
+                award_name: "Turing Award",
+                title: "Deep learning renaissance",
+                person_names: ["Yoshua Bengio", "Geoffrey Hinton", "Yann LeCun"],
+                person_slugs: ["yoshua-bengio", "geoffrey-hinton", "yann-lecun"],
+                person_label: "Yoshua Bengio, Geoffrey Hinton, Yann LeCun",
+                significance: "Deep learning",
+                topics: ["artificial intelligence", "deep learning"],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    "deep learning",
+    "2010s",
+  );
+
+  assert.equal(filtered.length, 1);
+  assert.equal(filtered[0].decade, "2010s");
+  assert.equal(filtered[0].years[0].events[0].id, "e2");
 });

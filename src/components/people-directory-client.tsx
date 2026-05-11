@@ -2,6 +2,7 @@
 
 import { useMemo, useSyncExternalStore } from "react";
 import Link from "next/link";
+import { getTimelineQueryHref } from "@/src/lib/site";
 
 type Person = {
   slug: string;
@@ -154,7 +155,7 @@ export default function PeopleDirectoryClient({
                   <span key={`${person.slug}-${award}`}>
                     {index > 0 ? ", " : null}
                     <Link
-                      href={awardSlugByName[award] ? `/awards/${awardSlugByName[award]}/` : { pathname: "/", query: { q: award } }}
+                      href={awardSlugByName[award] ? `/awards/${awardSlugByName[award]}/` : getTimelineQueryHref(award)}
                       className="text-link"
                     >
                       {award}
@@ -165,7 +166,7 @@ export default function PeopleDirectoryClient({
 
               <div className="browse-values">
                 {person.topics.slice(0, 5).map((item) => (
-                  <Link key={`${person.slug}-${item}`} href={{ pathname: "/", query: { q: item } }} className="browse-link-pill">
+                  <Link key={`${person.slug}-${item}`} href={getTimelineQueryHref(item)} className="browse-link-pill">
                     {item}
                   </Link>
                 ))}
@@ -175,11 +176,11 @@ export default function PeopleDirectoryClient({
                 <Link href={`/people/${person.slug}/`} className="text-link">
                   Open person page
                 </Link>
-                <Link href={{ pathname: "/", query: { q: person.name } }} className="text-link">
+                <Link href={getTimelineQueryHref(person.name)} className="text-link">
                   Search this person in the timeline
                 </Link>
                 {person.awards[0] ? (
-                  <Link href={{ pathname: "/", query: { q: person.awards[0] } }} className="text-link">
+                  <Link href={getTimelineQueryHref(person.awards[0])} className="text-link">
                     Jump to related award
                   </Link>
                 ) : null}

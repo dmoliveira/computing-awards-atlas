@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter, SiteHeader } from "@/src/components/site-chrome";
 import { getAwardBySlug, getEventsForAward } from "@/src/lib/atlas";
-import { getSiteUrl, getSocialImageUrl, siteName } from "@/src/lib/site";
+import { getSiteUrl, getSocialImageUrl, getTimelineQueryHref, siteName } from "@/src/lib/site";
 
 const siteUrl = getSiteUrl();
 const socialImageUrl = getSocialImageUrl();
@@ -67,7 +67,7 @@ export default async function AwardDetailPage({ params }: Props) {
       <SiteHeader
         navItems={[
           { href: "/", label: "Home" },
-          { href: "/#explorer", label: "Timeline" },
+          { href: "/timeline/", label: "Timeline" },
           { href: "/awards/", label: "Awards" },
           { href: "/people/", label: "People" },
           { href: "/method/", label: "Method" },
@@ -99,7 +99,7 @@ export default async function AwardDetailPage({ params }: Props) {
         </div>
 
         <div className="award-card-actions">
-          <Link href={{ pathname: "/", query: { q: award.short_name ?? award.name } }} className="text-link">
+          <Link href={getTimelineQueryHref(award.short_name ?? award.name)} className="text-link">
             Search this award in the timeline
           </Link>
           <Link href="/awards/" className="text-link">
@@ -128,7 +128,7 @@ export default async function AwardDetailPage({ params }: Props) {
           <p className="eyebrow">Featured topics</p>
           <div className="browse-values">
             {award.featured_topics.map((topic) => (
-              <Link key={`${award.slug}-${topic}`} href={{ pathname: "/", query: { q: topic } }} className="browse-link-pill">
+              <Link key={`${award.slug}-${topic}`} href={getTimelineQueryHref(topic)} className="browse-link-pill">
                 {topic}
               </Link>
             ))}
@@ -140,7 +140,7 @@ export default async function AwardDetailPage({ params }: Props) {
                 <span key={`${award.slug}-${name}`}>
                   {index > 0 ? ", " : null}
                   <Link
-                    href={personSlugByName[name] ? `/people/${personSlugByName[name]}/` : { pathname: "/", query: { q: name } }}
+                    href={personSlugByName[name] ? `/people/${personSlugByName[name]}/` : getTimelineQueryHref(name)}
                     className="text-link"
                   >
                     {name}

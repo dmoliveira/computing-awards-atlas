@@ -66,7 +66,7 @@ export default function PeoplePage() {
       <SiteHeader
         navItems={[
           { href: "/", label: "Home" },
-          { href: "/#explorer", label: "Timeline" },
+          { href: "/timeline/", label: "Timeline" },
           { href: "/awards/", label: "Awards" },
           { href: "/people/", label: "People" },
           { href: "/method/", label: "Method" },

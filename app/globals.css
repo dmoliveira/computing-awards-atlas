@@ -456,6 +456,22 @@ h3 {
   gap: 1rem;
 }
 
+.timeline-groups,
+.timeline-decade-block,
+.timeline-year-block {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-year-heading {
+  margin: 0;
+  color: var(--gold);
+}
+
+.timeline-heading-row {
+  margin-bottom: 0;
+}
+
 .person-detail-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
