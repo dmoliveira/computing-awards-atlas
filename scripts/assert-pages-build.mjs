@@ -27,21 +27,50 @@ const andrewBartoUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/people/andrew-g-bart
 const sitemapUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml`;
 const assetPathMarker = `${process.env.PAGES_BASE_PATH}/_next/`;
 const hostOrigin = new URL(process.env.NEXT_PUBLIC_SITE_URL).origin;
+const socialImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/hero-banner.svg`;
 
 if (!indexHtml.includes(canonicalUrl)) {
   throw new Error(`Expected canonical URL ${canonicalUrl} in out/index.html`);
+}
+
+if (!indexHtml.includes(socialImageUrl)) {
+  throw new Error(`Expected social image URL ${socialImageUrl} in out/index.html`);
 }
 
 if (!indexHtml.includes(assetPathMarker)) {
   throw new Error(`Expected asset path marker ${assetPathMarker} in out/index.html`);
 }
 
+if (!indexHtml.includes(`${process.env.PAGES_BASE_PATH}/awards/turing-award/`)) {
+  throw new Error("Expected homepage browse index to include at least one award detail link");
+}
+
+if (!indexHtml.includes(`${process.env.PAGES_BASE_PATH}/people/alan-j-perlis/`)) {
+  throw new Error("Expected homepage browse index to include at least one person detail link");
+}
+
 if (!awardsHtml.includes(awardsUrl)) {
   throw new Error(`Expected awards URL ${awardsUrl} in out/awards/index.html`);
 }
 
+if (!awardsHtml.includes(`${process.env.PAGES_BASE_PATH}/awards/turing-award/`)) {
+  throw new Error("Expected awards directory to include at least one award detail link");
+}
+
+if (!awardsHtml.includes(`${process.env.PAGES_BASE_PATH}/?q=Turing%20Award`)) {
+  throw new Error("Expected awards directory to include at least one timeline jump link");
+}
+
 if (!peopleHtml.includes(peopleUrl)) {
   throw new Error(`Expected people URL ${peopleUrl} in out/people/index.html`);
+}
+
+if (!peopleHtml.includes(`${process.env.PAGES_BASE_PATH}/people/andrew-g-barto/`)) {
+  throw new Error("Expected people directory to include at least one person detail link");
+}
+
+if (!peopleHtml.includes(`${process.env.PAGES_BASE_PATH}/?q=Andrew%20G.%20Barto`)) {
+  throw new Error("Expected people directory to include at least one timeline jump link");
 }
 
 if (!turingAwardHtml.includes(turingAwardUrl)) {
@@ -50,6 +79,27 @@ if (!turingAwardHtml.includes(turingAwardUrl)) {
 
 if (!andrewBartoHtml.includes(andrewBartoUrl)) {
   throw new Error(`Expected person detail URL ${andrewBartoUrl} in out/people/andrew-g-barto/index.html`);
+}
+
+if (
+  !turingAwardHtml.includes(`${process.env.NEXT_PUBLIC_SITE_URL}/people/andrew-g-barto/`) &&
+  !turingAwardHtml.includes(`${process.env.PAGES_BASE_PATH}/people/andrew-g-barto/`)
+) {
+  throw new Error("Expected award detail page to link to related person detail pages");
+}
+
+if (
+  !andrewBartoHtml.includes(`${process.env.NEXT_PUBLIC_SITE_URL}/awards/turing-award/`) &&
+  !andrewBartoHtml.includes(`${process.env.PAGES_BASE_PATH}/awards/turing-award/`)
+) {
+  throw new Error("Expected person detail page to link to related award detail pages");
+}
+
+if (
+  !andrewBartoHtml.includes(`${process.env.NEXT_PUBLIC_SITE_URL}/people/richard-s-sutton/`) &&
+  !andrewBartoHtml.includes(`${process.env.PAGES_BASE_PATH}/people/richard-s-sutton/`)
+) {
+  throw new Error("Expected person detail page to link to co-honoree detail pages");
 }
 
 if (!robotsTxt.includes(`Sitemap: ${sitemapUrl}`)) {

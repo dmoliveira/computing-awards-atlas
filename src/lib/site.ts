@@ -1,6 +1,8 @@
 export const siteName = "Computing Awards Atlas";
 export const siteDescription =
   "Search major computing awards, laureates, influential papers, and milestone works across AI, databases, theory, systems, networking, and related fields.";
+export const repositoryUrl = "https://github.com/dmoliveira/computing-awards-atlas";
+const fallbackSiteUrl = "http://localhost:3000";
 
 export function getBasePath() {
   return process.env.NEXT_PUBLIC_BASE_PATH ?? process.env.PAGES_BASE_PATH ?? "";
@@ -36,4 +38,12 @@ export function getRequiredSiteUrl() {
   }
 
   return siteUrl;
+}
+
+export function getEffectiveSiteUrl() {
+  return getSiteUrl() ?? fallbackSiteUrl;
+}
+
+export function getSocialImageUrl() {
+  return `${getEffectiveSiteUrl()}/hero-banner.svg`;
 }
