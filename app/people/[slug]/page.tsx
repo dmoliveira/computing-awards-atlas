@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter, SiteHeader } from "@/src/components/site-chrome";
 import { getEventsForPerson, getPersonBySlug } from "@/src/lib/atlas";
-import { getSiteUrl, getSocialImageUrl, siteName } from "@/src/lib/site";
+import { getSiteUrl, getSocialImageUrl, getTimelineQueryHref, siteName } from "@/src/lib/site";
 
 const siteUrl = getSiteUrl();
 const socialImageUrl = getSocialImageUrl();
@@ -65,7 +65,7 @@ export default async function PersonDetailPage({ params }: Props) {
       <SiteHeader
         navItems={[
           { href: "/", label: "Home" },
-          { href: "/#explorer", label: "Timeline" },
+          { href: "/timeline/", label: "Timeline" },
           { href: "/awards/", label: "Awards" },
           { href: "/people/", label: "People" },
           { href: "/method/", label: "Method" },
@@ -98,7 +98,7 @@ export default async function PersonDetailPage({ params }: Props) {
         </div>
 
         <div className="award-card-actions">
-          <Link href={{ pathname: "/", query: { q: person.name } }} className="text-link">
+          <Link href={getTimelineQueryHref(person.name)} className="text-link">
             Search this person in the timeline
           </Link>
           <Link href="/people/" className="text-link">
@@ -108,7 +108,7 @@ export default async function PersonDetailPage({ params }: Props) {
             Method and sources
           </Link>
           {person.awards[0] ? (
-            <Link href={{ pathname: "/", query: { q: person.awards[0] } }} className="text-link">
+            <Link href={getTimelineQueryHref(person.awards[0])} className="text-link">
               Jump to related award
             </Link>
           ) : null}
@@ -138,7 +138,7 @@ export default async function PersonDetailPage({ params }: Props) {
           <p className="eyebrow">Topics</p>
           <div className="browse-values">
             {person.topics.map((topic) => (
-              <Link key={`${person.slug}-${topic}`} href={{ pathname: "/", query: { q: topic } }} className="browse-link-pill">
+              <Link key={`${person.slug}-${topic}`} href={getTimelineQueryHref(topic)} className="browse-link-pill">
                 {topic}
               </Link>
             ))}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import SearchExplorer from "@/src/components/search-explorer";
 import atlasData from "@/src/generated/awards-atlas.generated.json";
 import { SiteFooter, SiteHeader } from "@/src/components/site-chrome";
-import { getSiteUrl } from "@/src/lib/site";
+import { getSiteUrl, getTimelineQueryHref } from "@/src/lib/site";
 
 const siteUrl = getSiteUrl();
 
@@ -30,9 +30,9 @@ const featuredClusters = [
     title: "AI milestones",
     thesis: "From expert systems to deep learning to reinforcement learning foundations.",
     items: [
-      { label: "Feigenbaum & Reddy", href: { pathname: "/", query: { q: "Edward A. Feigenbaum" } } },
+      { label: "Feigenbaum & Reddy", href: getTimelineQueryHref("Edward A. Feigenbaum") },
       { label: "Pearl", href: "/people/judea-pearl/" },
-      { label: "Bengio · Hinton · LeCun", href: { pathname: "/", query: { q: "deep learning" } } },
+      { label: "Bengio · Hinton · LeCun", href: getTimelineQueryHref("deep learning") },
       { label: "Barto · Sutton", href: "/people/andrew-g-barto/" },
     ],
   },
@@ -41,7 +41,7 @@ const featuredClusters = [
     thesis: "Systems, operating environments, and internet protocols that scaled the field.",
     items: [
       { label: "Corbató", href: "/people/fernando-j-corbato/" },
-      { label: "Ritchie · Thompson", href: { pathname: "/", query: { q: "Unix" } } },
+      { label: "Ritchie · Thompson", href: getTimelineQueryHref("Unix") },
       { label: "Cerf · Kahn", href: "/people/vinton-g-cerf/" },
       { label: "Lamport", href: "/people/leslie-lamport/" },
     ],
@@ -52,7 +52,7 @@ const featuredClusters = [
     items: [
       { label: "Codd", href: "/people/edgar-f-codd/" },
       { label: "Jim Gray", href: "/people/jim-gray/" },
-      { label: "Hopcroft · Tarjan", href: { pathname: "/", query: { q: "graph algorithms" } } },
+      { label: "Hopcroft · Tarjan", href: getTimelineQueryHref("graph algorithms") },
       { label: "Amir Pnueli", href: "/people/amir-pnueli/" },
     ],
   },
@@ -65,13 +65,13 @@ const browseGroups = [
   },
   {
     label: "Topics",
-    values: atlasData.topics.slice(0, 6).map((topic) => ({ label: topic.topic, href: { pathname: "/", query: { q: topic.topic } } })),
+    values: atlasData.topics.slice(0, 6).map((topic) => ({ label: topic.topic, href: getTimelineQueryHref(topic.topic) })),
   },
   {
     label: "Decades",
     values: ["1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => ({
       label: decade,
-      href: { pathname: "/", query: { q: decade } },
+      href: getTimelineQueryHref("", decade),
     })),
   },
   {
@@ -114,7 +114,7 @@ export default function HomePage() {
 
       <SiteHeader
         navItems={[
-          { href: "/#explorer", label: "Timeline" },
+          { href: "/timeline/", label: "Timeline" },
           { href: "/awards/", label: "Awards" },
           { href: "/people/", label: "People" },
           { href: "/#coverage", label: "Coverage" },
@@ -159,7 +159,7 @@ export default function HomePage() {
                 "internet",
                 "1980s",
               ].map((chip) => (
-                <Link key={chip} href={{ pathname: "/", query: { q: chip } }} className="chip browse-link-pill">
+                <Link key={chip} href={getTimelineQueryHref(chip)} className="chip browse-link-pill">
                   {chip}
                 </Link>
               ))}

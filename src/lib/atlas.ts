@@ -15,3 +15,25 @@ export function getPersonBySlug(slug: string) {
 export function getEventsForPerson(slug: string) {
   return atlasData.events.filter((event) => event.person_slugs.includes(slug));
 }
+
+export function getTimelineGroups() {
+  const decades = new Map<string, typeof atlasData.events>();
+
+  for (const event of atlasData.events) {
+    const current = decades.get(event.decade) ?? [];
+    current.push(event);
+    decades.set(event.decade, current);
+  }
+
+  return [...decades.entries()]
+    .sort((left, right) => Number.parseInt(right[0], 10) - Number.parseInt(left[0], 10))
+    .map(([decade, events]) => ({
+      decade,
+      years: [...new Set(events.map((event) => event.year))]
+        .sort((left, right) => right - left)
+        .map((year) => ({
+          year,
+          events: events.filter((event) => event.year === year),
+        })),
+    }));
+}

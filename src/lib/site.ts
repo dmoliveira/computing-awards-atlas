@@ -47,3 +47,13 @@ export function getEffectiveSiteUrl() {
 export function getSocialImageUrl() {
   return `${getEffectiveSiteUrl()}/hero-banner.svg`;
 }
+
+export function getTimelineQueryHref(q: string, decade?: string) {
+  return {
+    pathname: "/timeline/",
+    query: {
+      q,
+      ...(decade ? { decade } : {}),
+    },
+  };
+}

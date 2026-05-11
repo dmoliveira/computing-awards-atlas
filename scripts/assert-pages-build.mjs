@@ -19,6 +19,7 @@ const [indexHtml, awardsHtml, peopleHtml, robotsTxt, sitemapXml] = await Promise
 const turingAwardHtml = await readFile("out/awards/turing-award/index.html", "utf8");
 const andrewBartoHtml = await readFile("out/people/andrew-g-barto/index.html", "utf8");
 const methodHtml = await readFile("out/method/index.html", "utf8");
+const timelineHtml = await readFile("out/timeline/index.html", "utf8");
 
 const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/`;
 const awardsUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/awards/`;
@@ -26,6 +27,7 @@ const peopleUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/people/`;
 const turingAwardUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/awards/turing-award/`;
 const andrewBartoUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/people/andrew-g-barto/`;
 const methodUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/method/`;
+const timelineUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/timeline/`;
 const sitemapUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml`;
 const assetPathMarker = `${process.env.PAGES_BASE_PATH}/_next/`;
 const hostOrigin = new URL(process.env.NEXT_PUBLIC_SITE_URL).origin;
@@ -63,7 +65,7 @@ if (!awardsHtml.includes(`${process.env.PAGES_BASE_PATH}/awards/turing-award/`))
   throw new Error("Expected awards directory to include at least one award detail link");
 }
 
-if (!new RegExp(`${process.env.PAGES_BASE_PATH}/\\?q=Turing(?:%20|\\+)Award`).test(awardsHtml)) {
+if (!new RegExp(`${process.env.PAGES_BASE_PATH}/timeline/\\?q=Turing(?:%20|\\+)Award`).test(awardsHtml)) {
   throw new Error("Expected awards directory to include at least one timeline jump link");
 }
 
@@ -73,6 +75,18 @@ if (!peopleHtml.includes(peopleUrl)) {
 
 if (!methodHtml.includes(methodUrl)) {
   throw new Error(`Expected method URL ${methodUrl} in out/method/index.html`);
+}
+
+if (!timelineHtml.includes(timelineUrl)) {
+  throw new Error(`Expected timeline URL ${timelineUrl} in out/timeline/index.html`);
+}
+
+if (!timelineHtml.includes(`${process.env.PAGES_BASE_PATH}/awards/turing-award/`)) {
+  throw new Error("Expected timeline page to include award detail links");
+}
+
+if (!timelineHtml.includes(`${process.env.PAGES_BASE_PATH}/people/alan-j-perlis/`)) {
+  throw new Error("Expected timeline page to include person detail links");
 }
 
 if (!methodHtml.includes(`${process.env.NEXT_PUBLIC_SITE_URL}/data/awards-atlas.json`)) {
@@ -95,7 +109,7 @@ if (!peopleHtml.includes(`${process.env.PAGES_BASE_PATH}/people/andrew-g-barto/`
   throw new Error("Expected people directory to include at least one person detail link");
 }
 
-if (!new RegExp(`${process.env.PAGES_BASE_PATH}/\\?q=Andrew(?:%20|\\+)G\.(?:%20|\\+)Barto`).test(peopleHtml)) {
+if (!new RegExp(`${process.env.PAGES_BASE_PATH}/timeline/\\?q=Andrew(?:%20|\\+)G\.(?:%20|\\+)Barto`).test(peopleHtml)) {
   throw new Error("Expected people directory to include at least one timeline jump link");
 }
 
@@ -166,6 +180,10 @@ if (!sitemapXml.includes(`<loc>${peopleUrl}</loc>`)) {
 
 if (!sitemapXml.includes(`<loc>${methodUrl}</loc>`)) {
   throw new Error(`Expected method location ${methodUrl} in out/sitemap.xml`);
+}
+
+if (!sitemapXml.includes(`<loc>${timelineUrl}</loc>`)) {
+  throw new Error(`Expected timeline location ${timelineUrl} in out/sitemap.xml`);
 }
 
 if (!sitemapXml.includes(`<loc>${turingAwardUrl}</loc>`)) {

@@ -2,6 +2,7 @@
 
 import { useMemo, useSyncExternalStore } from "react";
 import Link from "next/link";
+import { getTimelineQueryHref } from "@/src/lib/site";
 
 type Award = {
   slug: string;
@@ -167,7 +168,7 @@ export default function AwardsDirectoryClient({
 
               <div className="browse-values">
                 {award.featured_topics.map((topic) => (
-                  <Link key={`${award.slug}-${topic}`} href={{ pathname: "/", query: { q: topic } }} className="browse-link-pill">
+                  <Link key={`${award.slug}-${topic}`} href={getTimelineQueryHref(topic)} className="browse-link-pill">
                     {topic}
                   </Link>
                 ))}
@@ -180,7 +181,7 @@ export default function AwardsDirectoryClient({
                     <span key={`${award.slug}-${name}`}>
                       {index > 0 ? ", " : null}
                       <Link
-                        href={personSlugByName[name] ? `/people/${personSlugByName[name]}/` : { pathname: "/", query: { q: name } }}
+                        href={personSlugByName[name] ? `/people/${personSlugByName[name]}/` : getTimelineQueryHref(name)}
                         className="text-link"
                       >
                         {name}
@@ -194,7 +195,7 @@ export default function AwardsDirectoryClient({
                 <Link href={`/awards/${award.slug}/`} className="text-link">
                   Open award page
                 </Link>
-                <Link href={{ pathname: "/", query: { q: award.short_name ?? award.name } }} className="text-link">
+                <Link href={getTimelineQueryHref(award.short_name ?? award.name)} className="text-link">
                   Search this award in the timeline
                 </Link>
                 <a href={award.official_url} target="_blank" rel="noreferrer" className="text-link">
