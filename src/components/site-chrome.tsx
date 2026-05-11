@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { repositoryUrl } from "@/src/lib/site";
 
 type NavItem = {
   href: string;
@@ -32,7 +33,7 @@ export function SiteHeader({ navItems = defaultNav }: { navItems?: NavItem[] }) 
                 {item.label}
               </Link>
             ))}
-            <a href="https://github.com/dmoliveira" target="_blank" rel="noreferrer">
+            <a href={repositoryUrl} target="_blank" rel="noreferrer">
               GitHub
             </a>
           </div>
@@ -51,7 +52,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-links">
         <a href="https://github.com/dmoliveira" target="_blank" rel="noreferrer">
-          GitHub
+          Maintainer GitHub
         </a>
         <a href="https://www.linkedin.com/in/dmoliveira/" target="_blank" rel="noreferrer">
           LinkedIn

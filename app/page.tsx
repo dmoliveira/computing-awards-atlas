@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Link from "next/link";
 import SearchExplorer from "@/src/components/search-explorer";
 import atlasData from "@/src/generated/awards-atlas.generated.json";
 import { SiteFooter, SiteHeader } from "@/src/components/site-chrome";
@@ -28,36 +29,54 @@ const featuredClusters = [
   {
     title: "AI milestones",
     thesis: "From expert systems to deep learning to reinforcement learning foundations.",
-    items: ["Feigenbaum & Reddy", "Pearl", "Bengio · Hinton · LeCun", "Barto · Sutton"],
+    items: [
+      { label: "Feigenbaum & Reddy", href: { pathname: "/", query: { q: "Edward A. Feigenbaum" } } },
+      { label: "Pearl", href: "/people/judea-pearl/" },
+      { label: "Bengio · Hinton · LeCun", href: { pathname: "/", query: { q: "deep learning" } } },
+      { label: "Barto · Sutton", href: "/people/andrew-g-barto/" },
+    ],
   },
   {
     title: "Infrastructure builders",
     thesis: "Systems, operating environments, and internet protocols that scaled the field.",
-    items: ["Corbató", "Ritchie · Thompson", "Cerf · Kahn", "Lamport"],
+    items: [
+      { label: "Corbató", href: "/people/fernando-j-corbato/" },
+      { label: "Ritchie · Thompson", href: { pathname: "/", query: { q: "Unix" } } },
+      { label: "Cerf · Kahn", href: "/people/vinton-g-cerf/" },
+      { label: "Lamport", href: "/people/leslie-lamport/" },
+    ],
   },
   {
     title: "Data and theory",
     thesis: "Relational models, transaction processing, algorithms, and verification as durable core layers.",
-    items: ["Codd", "Jim Gray", "Hopcroft · Tarjan", "Amir Pnueli"],
+    items: [
+      { label: "Codd", href: "/people/edgar-f-codd/" },
+      { label: "Jim Gray", href: "/people/jim-gray/" },
+      { label: "Hopcroft · Tarjan", href: { pathname: "/", query: { q: "graph algorithms" } } },
+      { label: "Amir Pnueli", href: "/people/amir-pnueli/" },
+    ],
   },
 ];
 
 const browseGroups = [
   {
     label: "Awards",
-    values: atlasData.awards.slice(0, 6).map((award) => award.short_name ?? award.name),
+    values: atlasData.awards.slice(0, 6).map((award) => ({ label: award.short_name ?? award.name, href: `/awards/${award.slug}/` })),
   },
   {
     label: "Topics",
-    values: atlasData.topics.slice(0, 6).map((topic) => topic.topic),
+    values: atlasData.topics.slice(0, 6).map((topic) => ({ label: topic.topic, href: { pathname: "/", query: { q: topic.topic } } })),
   },
   {
     label: "Decades",
-    values: ["1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"],
+    values: ["1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"].map((decade) => ({
+      label: decade,
+      href: { pathname: "/", query: { q: decade } },
+    })),
   },
   {
     label: "People",
-    values: atlasData.people.slice(0, 6).map((person) => person.name),
+    values: atlasData.people.slice(0, 6).map((person) => ({ label: person.name, href: `/people/${person.slug}/` })),
   },
 ];
 
@@ -140,9 +159,9 @@ export default function HomePage() {
                 "internet",
                 "1980s",
               ].map((chip) => (
-                <span key={chip} className="chip">
+                <Link key={chip} href={{ pathname: "/", query: { q: chip } }} className="chip browse-link-pill">
                   {chip}
-                </span>
+                </Link>
               ))}
             </div>
           </div>
@@ -202,7 +221,11 @@ export default function HomePage() {
             <p>{cluster.thesis}</p>
             <ul>
               {cluster.items.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.label}>
+                  <Link href={item.href} className="text-link">
+                    {item.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </article>
@@ -222,7 +245,9 @@ export default function HomePage() {
             <h3>{group.label}</h3>
             <div className="browse-values">
               {group.values.map((value) => (
-                <span key={value}>{value}</span>
+                <Link key={`${group.label}-${value.label}`} href={value.href} className="browse-link-pill">
+                  {value.label}
+                </Link>
               ))}
             </div>
           </article>
@@ -244,7 +269,7 @@ export default function HomePage() {
           <ul className="method-list">
             <li>Broader award recipient coverage by decade and field.</li>
             <li>Conference 10-year / test-of-time paper layers.</li>
-            <li>Dedicated people and award detail pages.</li>
+            <li>Richer provenance, citations, and source-attribution layers.</li>
             <li>Expanded source citations and provenance notes.</li>
           </ul>
         </article>

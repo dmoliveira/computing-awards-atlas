@@ -18,6 +18,14 @@ test("build-data generates a usable static dataset", () => {
   assert.ok(payload.awards.some((award) => award.slug === "grace-murray-hopper-award" && award.event_count >= 1));
   assert.ok(payload.people.every((person) => typeof person.slug === "string" && person.slug.length > 0));
   assert.ok(payload.people.every((person) => !Object.hasOwn(person, "institutions")));
+  assert.ok(
+    payload.events.every((event) => payload.awards.some((award) => award.slug === event.award_slug)),
+    "every event award_slug should resolve to an award",
+  );
+  assert.ok(
+    payload.events.every((event) => event.person_slugs.every((slug) => payload.people.some((person) => person.slug === slug))),
+    "every event person_slug should resolve to a person",
+  );
   assert.deepEqual(payload, publicPayload);
   assert.equal(payload.events[0].award_name.length > 0, true);
 });

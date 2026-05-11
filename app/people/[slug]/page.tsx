@@ -3,9 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter, SiteHeader } from "@/src/components/site-chrome";
 import { getEventsForPerson, getPersonBySlug } from "@/src/lib/atlas";
-import { getSiteUrl } from "@/src/lib/site";
+import { getSiteUrl, getSocialImageUrl, siteName } from "@/src/lib/site";
 
 const siteUrl = getSiteUrl();
+const socialImageUrl = getSocialImageUrl();
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -30,7 +31,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ...(siteUrl
       ? {
           alternates: { canonical: `${siteUrl}/people/${person.slug}/` },
-          openGraph: { url: `${siteUrl}/people/${person.slug}/` },
+          openGraph: {
+            title: `${person.name} | ${siteName}`,
+            description: `Browse representative awards, topics, and related works for ${person.name} in the Computing Awards Atlas.`,
+            url: `${siteUrl}/people/${person.slug}/`,
+            siteName,
+            type: "website",
+            images: [{ url: socialImageUrl }],
+          },
+          twitter: {
+            title: `${person.name} | ${siteName}`,
+            description: `Browse representative awards, topics, and related works for ${person.name} in the Computing Awards Atlas.`,
+            images: [socialImageUrl],
+          },
         }
       : {}),
   };
@@ -45,6 +58,7 @@ export default async function PersonDetailPage({ params }: Props) {
   }
 
   const events = getEventsForPerson(slug);
+  const awardLinks = [...new Map(events.map((event) => [event.award_slug, event.award_name])).entries()];
 
   return (
     <main className="page-shell">
@@ -84,14 +98,14 @@ export default async function PersonDetailPage({ params }: Props) {
         </div>
 
         <div className="award-card-actions">
-          <Link href={`/?q=${encodeURIComponent(person.name)}`} className="text-link">
+          <Link href={{ pathname: "/", query: { q: person.name } }} className="text-link">
             Search this person in the timeline
           </Link>
           <Link href="/people/" className="text-link">
             Back to people directory
           </Link>
           {person.awards[0] ? (
-            <Link href={`/?q=${encodeURIComponent(person.awards[0])}`} className="text-link">
+            <Link href={{ pathname: "/", query: { q: person.awards[0] } }} className="text-link">
               Jump to related award
             </Link>
           ) : null}
@@ -101,7 +115,16 @@ export default async function PersonDetailPage({ params }: Props) {
       <section className="section-block method-grid award-detail-meta-grid">
         <article>
           <p className="eyebrow">Awards</p>
-          <h2>{person.awards.join(" · ")}</h2>
+          <h2>
+            {awardLinks.map(([awardSlug, awardName], index) => (
+              <span key={awardSlug}>
+                {index > 0 ? " · " : null}
+                <Link href={`/awards/${awardSlug}/`} className="card-title-link">
+                  {awardName}
+                </Link>
+              </span>
+            ))}
+          </h2>
           <p className="hero-text compact-copy">
             This page aggregates the award programs currently associated with this person in the atlas sample and links
             them back into the broader timeline explorer.
@@ -112,7 +135,9 @@ export default async function PersonDetailPage({ params }: Props) {
           <p className="eyebrow">Topics</p>
           <div className="browse-values">
             {person.topics.map((topic) => (
-              <span key={`${person.slug}-${topic}`}>{topic}</span>
+              <Link key={`${person.slug}-${topic}`} href={{ pathname: "/", query: { q: topic } }} className="browse-link-pill">
+                {topic}
+              </Link>
             ))}
           </div>
         </article>
@@ -132,15 +157,41 @@ export default async function PersonDetailPage({ params }: Props) {
               <article className="event-card" key={event.id}>
                 <div className="event-card-header">
                   <div>
-                    <h3>{event.award_name}</h3>
+                    <h3>
+                      <Link href={`/awards/${event.award_slug}/`} className="card-title-link">
+                        {event.award_name}
+                      </Link>
+                    </h3>
                     <span className="meta-line">{event.title}</span>
                   </div>
                   <span className="year-pill">{event.year}</span>
                 </div>
 
-                <p className="meta-line compact-copy">
-                  <strong>{event.person_names.length > 1 ? "Co-honorees" : "Recipient"}:</strong> {event.person_label}
-                </p>
+                {event.person_names.length > 1 ? (
+                  <p className="meta-line compact-copy">
+                    <strong>Co-honorees:</strong>{" "}
+                    {event.person_names.map((personName, index) => {
+                      const personSlug = event.person_slugs[index];
+                      const isCurrentPerson = personSlug === person.slug;
+                      return (
+                        <span key={`${event.id}-${personSlug}`}>
+                          {index > 0 ? ", " : null}
+                          {isCurrentPerson ? (
+                            personName
+                          ) : (
+                            <Link href={`/people/${personSlug}/`} className="card-title-link">
+                              {personName}
+                            </Link>
+                          )}
+                        </span>
+                      );
+                    })}
+                  </p>
+                ) : (
+                  <p className="meta-line compact-copy">
+                    <strong>Recipient:</strong> {event.person_label}
+                  </p>
+                )}
                 <p className="event-note">{event.significance}</p>
 
                 <div className="tag-row">

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo } from "react";
 import Fuse from "fuse.js";
+import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type RelatedWork = {
@@ -20,6 +21,7 @@ type EventRecord = {
   award_category: string;
   title: string;
   person_names: string[];
+  person_slugs: string[];
   person_label: string;
   topics: string[];
   institutions: string[];
@@ -186,6 +188,16 @@ export default function SearchExplorer({ data }: Props) {
 
   const topTopics = data.topics.slice(0, 6);
 
+  const renderLinkedPeople = (event: EventRecord) =>
+    event.person_names.map((personName, index) => (
+      <span key={`${event.id}-${event.person_slugs[index]}`}>
+        {index > 0 ? ", " : null}
+        <Link href={`/people/${event.person_slugs[index]}/`} className="card-title-link">
+          {personName}
+        </Link>
+      </span>
+    ));
+
   return (
     <div className="explorer-panel">
       <div className="explorer-controls">
@@ -266,13 +278,17 @@ export default function SearchExplorer({ data }: Props) {
         <div className="cards-grid">
           {filtered.map((event) => (
             <article className="event-card" key={event.id}>
-              <div className="event-card-header">
-                <div>
-                  <h3>{event.person_label}</h3>
-                  <span className="meta-line">{event.award_name}</span>
+                <div className="event-card-header">
+                  <div>
+                    <h3>{renderLinkedPeople(event)}</h3>
+                    <span className="meta-line">
+                      <Link href={`/awards/${event.award_slug}/`} className="card-title-link">
+                        {event.award_name}
+                      </Link>
+                    </span>
+                  </div>
+                  <span className="year-pill">{event.year}</span>
                 </div>
-                <span className="year-pill">{event.year}</span>
-              </div>
               <p className="meta-line">{event.title}</p>
               <div className="tag-row">
                 <span>{event.decade}</span>
@@ -314,8 +330,12 @@ export default function SearchExplorer({ data }: Props) {
               {filtered.map((event) => (
                 <tr key={event.id}>
                   <td>{event.year}</td>
-                  <td>{event.person_label}</td>
-                  <td>{event.award_name}</td>
+                  <td>{renderLinkedPeople(event)}</td>
+                  <td>
+                    <Link href={`/awards/${event.award_slug}/`} className="card-title-link">
+                      {event.award_name}
+                    </Link>
+                  </td>
                   <td>{event.topics.slice(0, 2).join(", ")}</td>
                   <td>{event.related_works[0]?.title ?? event.title}</td>
                 </tr>

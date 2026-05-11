@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Suspense } from "react";
 import atlasData from "@/src/generated/awards-atlas.generated.json";
+import AwardsDirectoryClient from "@/src/components/awards-directory-client";
 import { SiteFooter, SiteHeader } from "@/src/components/site-chrome";
-import { getSiteUrl } from "@/src/lib/site";
+import { getSiteUrl, getSocialImageUrl, siteName } from "@/src/lib/site";
 
 const siteUrl = getSiteUrl();
+const socialImageUrl = getSocialImageUrl();
 
 export const metadata: Metadata = {
   title: "Awards Directory",
@@ -13,12 +15,45 @@ export const metadata: Metadata = {
   ...(siteUrl
     ? {
         alternates: { canonical: `${siteUrl}/awards/` },
-        openGraph: { url: `${siteUrl}/awards/` },
+        openGraph: {
+          title: `Awards Directory | ${siteName}`,
+          description: "Browse major computing award programs, sample laureates, recent representative winners, and related topical coverage.",
+          url: `${siteUrl}/awards/`,
+          siteName,
+          type: "website",
+          images: [{ url: socialImageUrl }],
+        },
+        twitter: {
+          title: `Awards Directory | ${siteName}`,
+          description: "Browse major computing award programs, sample laureates, recent representative winners, and related topical coverage.",
+          images: [socialImageUrl],
+        },
       }
     : {}),
 };
 
+function AwardsDirectoryFallback() {
+  return (
+    <section className="section-block awards-directory-grid">
+      {atlasData.awards.slice(0, 4).map((award) => (
+        <article className="award-directory-card" key={award.slug}>
+          <div className="award-directory-header">
+            <div>
+              <p className="eyebrow">{award.category.replaceAll("_", " ")}</p>
+              <h2>{award.short_name ?? award.name}</h2>
+            </div>
+            <span className="year-pill">{award.founded_year}</span>
+          </div>
+          <p className="hero-text compact-copy">{award.description}</p>
+        </article>
+      ))}
+    </section>
+  );
+}
+
 export default function AwardsPage() {
+  const personSlugByName = Object.fromEntries(atlasData.people.map((person) => [person.name, person.slug]));
+
   return (
     <main className="page-shell">
       <SiteHeader
@@ -40,81 +75,9 @@ export default function AwardsPage() {
         </p>
       </section>
 
-      <section className="section-block awards-directory-grid">
-        {atlasData.awards.map((award) => (
-          <article className="award-directory-card" key={award.slug}>
-            <div className="award-directory-header">
-              <div>
-                <p className="eyebrow">{award.category.replaceAll("_", " ")}</p>
-                <h2>
-                  <Link href={`/awards/${award.slug}/`} className="card-title-link">
-                    {award.short_name ?? award.name}
-                  </Link>
-                </h2>
-              </div>
-              <span className="year-pill">{award.founded_year}</span>
-            </div>
-
-            <p className="hero-text compact-copy">{award.description}</p>
-
-            <div className="directory-stats-row">
-              <div className="stat-card">
-                <strong>{award.event_count}</strong>
-                <span>sample events</span>
-              </div>
-              <div className="stat-card">
-                <strong>{award.recipient_count}</strong>
-                <span>sample recipients</span>
-              </div>
-            </div>
-
-            <p className="meta-line">
-              <strong>Awarding body:</strong> {award.awarding_body}
-            </p>
-            <p className="meta-line">
-              <strong>Scope:</strong> {award.scope}
-            </p>
-
-            {award.latest_event ? (
-              <div className="award-highlight-box">
-                <p className="eyebrow">Latest representative sample</p>
-                <h3>
-                  {award.latest_event.year} · {award.latest_event.person_label}
-                </h3>
-                <p className="meta-line">{award.latest_event.title}</p>
-              </div>
-            ) : (
-              <div className="award-highlight-box award-highlight-muted">
-                <p className="meta-line">Recipient/event samples for this program are still queued for a later coverage pass.</p>
-              </div>
-            )}
-
-            <div className="browse-values">
-              {award.featured_topics.map((topic) => (
-                <span key={`${award.slug}-${topic}`}>{topic}</span>
-              ))}
-            </div>
-
-            {award.sample_recipients.length > 0 ? (
-              <p className="meta-line compact-copy">
-                <strong>Sample names:</strong> {award.sample_recipients.join(", ")}
-              </p>
-            ) : null}
-
-            <div className="award-card-actions">
-              <Link href={`/awards/${award.slug}/`} className="text-link">
-                Open award page
-              </Link>
-              <Link href={`/?q=${encodeURIComponent(award.short_name ?? award.name)}`} className="text-link">
-                Search this award in the timeline
-              </Link>
-              <a href={award.official_url} target="_blank" rel="noreferrer" className="text-link">
-                Official award page
-              </a>
-            </div>
-          </article>
-        ))}
-      </section>
+      <Suspense fallback={<AwardsDirectoryFallback />}>
+        <AwardsDirectoryClient awards={atlasData.awards} personSlugByName={personSlugByName} />
+      </Suspense>
 
       <SiteFooter />
     </main>
