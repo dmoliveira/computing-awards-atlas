@@ -25,8 +25,10 @@ test("build-data generates a usable static dataset", () => {
   assert.ok(payload.events.every((event) => typeof event.official_program_label === "string" && event.official_program_label.length > 0));
   assert.ok(payload.events.every((event) => event.source_scope === "program-level"));
   assert.ok(payload.events.every((event) => event.citation_specificity === "not-year-specific"));
+  assert.ok(payload.events.every((event) => !event.related_works.some((work) => /wikipedia\.org|openlibrary\.org/.test(work.url))));
   assert.ok(publicEventsJsonl.every((event) => event.source_scope === "program-level"));
   assert.ok(publicEventsJsonl.every((event) => event.citation_specificity === "not-year-specific"));
+  assert.ok(publicEventsJsonl.every((event) => !event.related_works.some((work) => /wikipedia\.org|openlibrary\.org/.test(work.url))));
   assert.ok(payload.people.every((person) => typeof person.slug === "string" && person.slug.length > 0));
   assert.ok(payload.people.every((person) => !Object.hasOwn(person, "institutions")));
   assert.ok(

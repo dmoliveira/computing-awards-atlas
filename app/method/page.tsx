@@ -124,7 +124,7 @@ export default function MethodPage() {
             <li>Conference 10-year / test-of-time expansion across more venues</li>
             <li>Stronger provenance surfacing directly in cards and detail pages</li>
             <li>Per-event official citation fields for recipient- and year-specific verification</li>
-            <li>Replace remaining secondary-reference links with more canonical publisher/archive pages</li>
+            <li>Continue replacing remaining secondary-reference links with more canonical publisher/archive pages</li>
           </ul>
         </article>
       </section>
