@@ -9,6 +9,11 @@ test("build-data generates a usable static dataset", () => {
 
   const payload = JSON.parse(readFileSync("src/generated/awards-atlas.generated.json", "utf8"));
   const publicPayload = JSON.parse(readFileSync("public/data/awards-atlas.json", "utf8"));
+  const publicEventsJsonl = readFileSync("public/data/events.jsonl", "utf8")
+    .trim()
+    .split("\n")
+    .filter(Boolean)
+    .map((line) => JSON.parse(line));
 
   assert.ok(payload.stats.award_count >= 10);
   assert.ok(payload.stats.event_count >= 25);
@@ -16,6 +21,12 @@ test("build-data generates a usable static dataset", () => {
   assert.ok(payload.events.some((event) => event.id === "turing-2018-deep-learning"));
   assert.ok(payload.events.some((event) => event.id === "acm-prize-2025-zaharia"));
   assert.ok(payload.awards.some((award) => award.slug === "grace-murray-hopper-award" && award.event_count >= 1));
+  assert.ok(payload.events.every((event) => typeof event.official_program_url === "string" && event.official_program_url.startsWith("http")));
+  assert.ok(payload.events.every((event) => typeof event.official_program_label === "string" && event.official_program_label.length > 0));
+  assert.ok(payload.events.every((event) => event.source_scope === "program-level"));
+  assert.ok(payload.events.every((event) => event.citation_specificity === "not-year-specific"));
+  assert.ok(publicEventsJsonl.every((event) => event.source_scope === "program-level"));
+  assert.ok(publicEventsJsonl.every((event) => event.citation_specificity === "not-year-specific"));
   assert.ok(payload.people.every((person) => typeof person.slug === "string" && person.slug.length > 0));
   assert.ok(payload.people.every((person) => !Object.hasOwn(person, "institutions")));
   assert.ok(

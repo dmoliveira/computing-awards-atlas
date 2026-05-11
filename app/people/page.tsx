@@ -69,7 +69,7 @@ export default function PeoplePage() {
           { href: "/#explorer", label: "Timeline" },
           { href: "/awards/", label: "Awards" },
           { href: "/people/", label: "People" },
-          { href: "/#method", label: "Method" },
+          { href: "/method/", label: "Method" },
         ]}
       />
 

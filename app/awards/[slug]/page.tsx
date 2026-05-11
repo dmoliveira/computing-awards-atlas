@@ -70,7 +70,7 @@ export default async function AwardDetailPage({ params }: Props) {
           { href: "/#explorer", label: "Timeline" },
           { href: "/awards/", label: "Awards" },
           { href: "/people/", label: "People" },
-          { href: "/#method", label: "Method" },
+          { href: "/method/", label: "Method" },
         ]}
       />
 
@@ -104,6 +104,9 @@ export default async function AwardDetailPage({ params }: Props) {
           </Link>
           <Link href="/awards/" className="text-link">
             Back to awards directory
+          </Link>
+          <Link href="/method/" className="text-link">
+            Method and sources
           </Link>
           <a href={award.official_url} target="_blank" rel="noreferrer" className="text-link">
             Official award page
@@ -179,6 +182,13 @@ export default async function AwardDetailPage({ params }: Props) {
                 </div>
 
                 <p className="event-note">{event.significance}</p>
+                <p className="meta-line compact-copy">
+                  <strong>Program-level source:</strong>{" "}
+                  <a href={event.official_program_url} target="_blank" rel="noreferrer">
+                    {event.official_program_label}
+                  </a>
+                  <span> (not a year-specific citation)</span>
+                </p>
 
                 <div className="tag-row">
                   <span>{event.decade}</span>
@@ -188,7 +198,9 @@ export default async function AwardDetailPage({ params }: Props) {
                 </div>
 
                 {event.related_works.length > 0 ? (
-                  <ul className="works-list">
+                  <>
+                    <p className="eyebrow compact-copy">Related work / context</p>
+                    <ul className="works-list">
                     {event.related_works.map((work) => (
                       <li key={`${event.id}-${work.title}`}>
                         <a href={work.url} target="_blank" rel="noreferrer">
@@ -199,7 +211,8 @@ export default async function AwardDetailPage({ params }: Props) {
                         </span>
                       </li>
                     ))}
-                  </ul>
+                    </ul>
+                  </>
                 ) : null}
               </article>
             ))

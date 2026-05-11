@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { ensureArray, validateAward, validateEvent } from "./data-utils.mjs";
 
@@ -62,6 +62,10 @@ const normalizedEvents = events
       ...event,
       award_name: award.short_name ?? award.name,
       award_category: award.category,
+      official_program_label: "Official awards page / index",
+      official_program_url: award.official_url,
+      source_scope: "program-level",
+      citation_specificity: "not-year-specific",
       person_names: personNames,
       person_label: personNames.join(", "),
       topics,
@@ -207,8 +211,11 @@ for (const relativeDir of ["src/generated", "public/data"]) {
 }
 
 const content = `${JSON.stringify(output, null, 2)}\n`;
+const eventsJsonlContent = `${normalizedEvents.map((event) => JSON.stringify(event)).join("\n")}\n`;
 await writeFile(path.join(root, "src/generated/awards-atlas.generated.json"), content, "utf8");
 await writeFile(path.join(root, "public/data/awards-atlas.json"), content, "utf8");
+await copyFile(path.join(root, "data/awards.jsonl"), path.join(root, "public/data/awards.jsonl"));
+await writeFile(path.join(root, "public/data/events.jsonl"), eventsJsonlContent, "utf8");
 
 console.log(
   `Built dataset with ${output.stats.event_count} events, ${output.stats.people_count} people, and ${output.stats.award_count} awards.`,

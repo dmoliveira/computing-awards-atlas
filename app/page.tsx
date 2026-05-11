@@ -118,7 +118,7 @@ export default function HomePage() {
           { href: "/awards/", label: "Awards" },
           { href: "/people/", label: "People" },
           { href: "/#coverage", label: "Coverage" },
-          { href: "/#method", label: "Method" },
+          { href: "/method/", label: "Method" },
         ]}
       />
 
@@ -202,6 +202,10 @@ export default function HomePage() {
             View scope and data notes
           </a>
         </div>
+        <p className="meta-line compact-copy">
+          Official award pages act as the primary program sources in this atlas. Books, papers, software, and articles
+          listed under events are editorial context links that help explain why a recognition matters.
+        </p>
         <Suspense fallback={<ExplorerFallback />}>
           <SearchExplorer data={atlasData} />
         </Suspense>
@@ -272,6 +276,11 @@ export default function HomePage() {
             <li>Richer provenance, citations, and source-attribution layers.</li>
             <li>Expanded source citations and provenance notes.</li>
           </ul>
+          <p className="compact-copy">
+            <Link href="/method/" className="text-link">
+              Open the full method and sources page
+            </Link>
+          </p>
         </article>
       </section>
 

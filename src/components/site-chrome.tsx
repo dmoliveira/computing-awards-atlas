@@ -11,7 +11,7 @@ const defaultNav: NavItem[] = [
   { href: "/#explorer", label: "Timeline" },
   { href: "/awards/", label: "Awards" },
   { href: "/people/", label: "People" },
-  { href: "/#method", label: "Method" },
+  { href: "/method/", label: "Method" },
 ];
 
 export function SiteHeader({ navItems = defaultNav }: { navItems?: NavItem[] }) {

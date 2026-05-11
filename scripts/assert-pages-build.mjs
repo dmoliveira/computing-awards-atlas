@@ -18,12 +18,14 @@ const [indexHtml, awardsHtml, peopleHtml, robotsTxt, sitemapXml] = await Promise
 ]);
 const turingAwardHtml = await readFile("out/awards/turing-award/index.html", "utf8");
 const andrewBartoHtml = await readFile("out/people/andrew-g-barto/index.html", "utf8");
+const methodHtml = await readFile("out/method/index.html", "utf8");
 
 const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/`;
 const awardsUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/awards/`;
 const peopleUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/people/`;
 const turingAwardUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/awards/turing-award/`;
 const andrewBartoUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/people/andrew-g-barto/`;
+const methodUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/method/`;
 const sitemapUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml`;
 const assetPathMarker = `${process.env.PAGES_BASE_PATH}/_next/`;
 const hostOrigin = new URL(process.env.NEXT_PUBLIC_SITE_URL).origin;
@@ -49,6 +51,10 @@ if (!indexHtml.includes(`${process.env.PAGES_BASE_PATH}/people/alan-j-perlis/`))
   throw new Error("Expected homepage browse index to include at least one person detail link");
 }
 
+if (!indexHtml.includes("Official award pages act as the primary program sources in this atlas.")) {
+  throw new Error("Expected homepage to include provenance guidance near the explorer");
+}
+
 if (!awardsHtml.includes(awardsUrl)) {
   throw new Error(`Expected awards URL ${awardsUrl} in out/awards/index.html`);
 }
@@ -65,6 +71,26 @@ if (!peopleHtml.includes(peopleUrl)) {
   throw new Error(`Expected people URL ${peopleUrl} in out/people/index.html`);
 }
 
+if (!methodHtml.includes(methodUrl)) {
+  throw new Error(`Expected method URL ${methodUrl} in out/method/index.html`);
+}
+
+if (!methodHtml.includes(`${process.env.NEXT_PUBLIC_SITE_URL}/data/awards-atlas.json`)) {
+  throw new Error("Expected method page to link to the public JSON dataset snapshot");
+}
+
+if (!methodHtml.includes(`${process.env.NEXT_PUBLIC_SITE_URL}/data/awards.jsonl`)) {
+  throw new Error("Expected method page to link to the published awards.jsonl snapshot");
+}
+
+if (!methodHtml.includes(`${process.env.NEXT_PUBLIC_SITE_URL}/data/events.jsonl`)) {
+  throw new Error("Expected method page to link to the published events.jsonl snapshot");
+}
+
+if (!methodHtml.includes("program-level") || !methodHtml.includes("not-year-specific")) {
+  throw new Error("Expected method page to explain exported provenance scope and specificity");
+}
+
 if (!peopleHtml.includes(`${process.env.PAGES_BASE_PATH}/people/andrew-g-barto/`)) {
   throw new Error("Expected people directory to include at least one person detail link");
 }
@@ -77,8 +103,24 @@ if (!turingAwardHtml.includes(turingAwardUrl)) {
   throw new Error(`Expected award detail URL ${turingAwardUrl} in out/awards/turing-award/index.html`);
 }
 
+if (!turingAwardHtml.includes("Related work / context") || !turingAwardHtml.includes("Official award page")) {
+  throw new Error("Expected award detail page to include provenance labels");
+}
+
+if (!turingAwardHtml.includes("Program-level source:") || !turingAwardHtml.includes("not a year-specific citation")) {
+  throw new Error("Expected award detail page to include clarified program-level provenance labeling");
+}
+
 if (!andrewBartoHtml.includes(andrewBartoUrl)) {
   throw new Error(`Expected person detail URL ${andrewBartoUrl} in out/people/andrew-g-barto/index.html`);
+}
+
+if (!andrewBartoHtml.includes("Related work / context")) {
+  throw new Error("Expected person detail page to include provenance labels");
+}
+
+if (!andrewBartoHtml.includes("Program-level source:") || !andrewBartoHtml.includes("not a year-specific citation")) {
+  throw new Error("Expected person detail page to include clarified program-level provenance labeling");
 }
 
 if (
@@ -120,6 +162,10 @@ if (!sitemapXml.includes(`<loc>${awardsUrl}</loc>`)) {
 
 if (!sitemapXml.includes(`<loc>${peopleUrl}</loc>`)) {
   throw new Error(`Expected people location ${peopleUrl} in out/sitemap.xml`);
+}
+
+if (!sitemapXml.includes(`<loc>${methodUrl}</loc>`)) {
+  throw new Error(`Expected method location ${methodUrl} in out/sitemap.xml`);
 }
 
 if (!sitemapXml.includes(`<loc>${turingAwardUrl}</loc>`)) {
