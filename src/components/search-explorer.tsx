@@ -19,6 +19,10 @@ type EventRecord = {
   award_slug: string;
   award_name: string;
   award_category: string;
+  official_program_label: string;
+  official_program_url: string;
+  source_scope: string;
+  citation_specificity: string;
   title: string;
   person_names: string[];
   person_slugs: string[];
@@ -274,6 +278,11 @@ export default function SearchExplorer({ data }: Props) {
         </div>
       </div>
 
+      <p className="meta-line compact-copy">
+        Program-level source links identify the broader official award page or awards index; they are not year-specific
+        citations for a single row.
+      </p>
+
       {view === "cards" ? (
         <div className="cards-grid">
           {filtered.map((event) => (
@@ -297,8 +306,17 @@ export default function SearchExplorer({ data }: Props) {
                 ))}
               </div>
               <p className="event-note">{event.significance}</p>
+              <p className="meta-line compact-copy">
+                <strong>Program-level source:</strong>{" "}
+                <a href={event.official_program_url} target="_blank" rel="noreferrer">
+                  {event.official_program_label}
+                </a>
+                <span> (not a year-specific citation)</span>
+              </p>
               {event.related_works.length > 0 ? (
-                <ul className="works-list">
+                <>
+                  <p className="eyebrow compact-copy">Related work / context</p>
+                  <ul className="works-list">
                   {event.related_works.slice(0, 2).map((work) => (
                     <li key={`${event.id}-${work.title}`}>
                       <a href={work.url} target="_blank" rel="noreferrer">
@@ -309,7 +327,8 @@ export default function SearchExplorer({ data }: Props) {
                       </span>
                     </li>
                   ))}
-                </ul>
+                  </ul>
+                </>
               ) : null}
             </article>
           ))}
