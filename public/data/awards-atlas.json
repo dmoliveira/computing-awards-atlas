@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T03:32:49.889Z",
+  "generated_at": "2026-05-11T05:03:32.442Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -530,7 +530,7 @@
           "title": "Constraint Processing",
           "type": "book",
           "year": 2003,
-          "url": "https://www.sciencedirect.com/book/9781558608900/constraint-processing"
+          "url": "https://doi.org/10.1016/B978-1-55860-890-0.X5000-2"
         }
       ],
       "featured": true,
@@ -827,7 +827,7 @@
           "title": "GloVe: Global Vectors for Word Representation",
           "type": "paper",
           "year": 2014,
-          "url": "https://nlp.stanford.edu/projects/glove/"
+          "url": "https://doi.org/10.3115/v1/D14-1162"
         }
       ],
       "featured": true,
@@ -874,7 +874,7 @@
           "title": "Compilers: Principles, Techniques, and Tools",
           "type": "book",
           "year": 1986,
-          "url": "https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools"
+          "url": "https://www.informit.com/store/compilers-principles-techniques-and-tools-9780321486813"
         }
       ],
       "award_name": "Turing Award",
@@ -1230,7 +1230,7 @@
           "title": "The Fifth Generation",
           "type": "book",
           "year": 1983,
-          "url": "https://archive.org/details/fifthgenerationa00feig"
+          "url": "https://archive.org/details/fifthgenerationa00feigrich"
         }
       ],
       "featured": true,
@@ -1361,7 +1361,7 @@
           "title": "The C Programming Language",
           "type": "book",
           "year": 1978,
-          "url": "https://en.wikipedia.org/wiki/The_C_Programming_Language"
+          "url": "https://www.informit.com/store/c-programming-language-9780131103627"
         }
       ],
       "featured": true,
@@ -1441,7 +1441,7 @@
           "title": "Go To Statement Considered Harmful",
           "type": "article",
           "year": 1968,
-          "url": "https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf"
+          "url": "https://doi.org/10.1145/362929.362947"
         }
       ],
       "featured": true,
@@ -1521,7 +1521,7 @@
           "title": "Epigrams on Programming",
           "type": "article",
           "year": 1982,
-          "url": "https://www.cs.yale.edu/homes/perlis-alan/quotes.html"
+          "url": "https://doi.org/10.1145/947955.1083808"
         }
       ],
       "featured": true,
@@ -2953,7 +2953,7 @@
           "title": "Constraint Processing",
           "type": "book",
           "year": 2003,
-          "url": "https://www.sciencedirect.com/book/9781558608900/constraint-processing"
+          "url": "https://doi.org/10.1016/B978-1-55860-890-0.X5000-2"
         }
       ],
       "featured": true,
@@ -3082,7 +3082,7 @@
           "title": "GloVe: Global Vectors for Word Representation",
           "type": "paper",
           "year": 2014,
-          "url": "https://nlp.stanford.edu/projects/glove/"
+          "url": "https://doi.org/10.3115/v1/D14-1162"
         }
       ],
       "featured": true,
