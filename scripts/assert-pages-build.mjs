@@ -57,7 +57,7 @@ if (!awardsHtml.includes(`${process.env.PAGES_BASE_PATH}/awards/turing-award/`))
   throw new Error("Expected awards directory to include at least one award detail link");
 }
 
-if (!awardsHtml.includes(`${process.env.PAGES_BASE_PATH}/?q=Turing%20Award`)) {
+if (!new RegExp(`${process.env.PAGES_BASE_PATH}/\\?q=Turing(?:%20|\\+)Award`).test(awardsHtml)) {
   throw new Error("Expected awards directory to include at least one timeline jump link");
 }
 
@@ -69,7 +69,7 @@ if (!peopleHtml.includes(`${process.env.PAGES_BASE_PATH}/people/andrew-g-barto/`
   throw new Error("Expected people directory to include at least one person detail link");
 }
 
-if (!peopleHtml.includes(`${process.env.PAGES_BASE_PATH}/?q=Andrew%20G.%20Barto`)) {
+if (!new RegExp(`${process.env.PAGES_BASE_PATH}/\\?q=Andrew(?:%20|\\+)G\.(?:%20|\\+)Barto`).test(peopleHtml)) {
   throw new Error("Expected people directory to include at least one timeline jump link");
 }
 
