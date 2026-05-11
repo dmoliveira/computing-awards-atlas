@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T05:03:32.442Z",
+  "generated_at": "2026-05-11T06:57:07.983Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -207,8 +207,8 @@
       "official_url": "https://aaai.org/about-aaai/aaai-awards/aaai-classic-paper-award/",
       "description": "Revisits AI conference papers whose importance becomes more visible over time.",
       "seo_priority": "medium",
-      "event_count": 1,
-      "recipient_count": 4,
+      "event_count": 2,
+      "recipient_count": 5,
       "sample_recipients": [
         "Brian Ziebart",
         "Andrew Maas",
@@ -269,11 +269,13 @@
       "official_url": "https://tab.computer.org/tcde/icde_inf_paper.html",
       "description": "Surfaces influential data engineering work through a ten-year retrospective lens.",
       "seo_priority": "medium",
-      "event_count": 1,
-      "recipient_count": 2,
+      "event_count": 2,
+      "recipient_count": 4,
       "sample_recipients": [
         "Ahmed Eldawy",
-        "Mohamed F. Mokbel"
+        "Mohamed F. Mokbel",
+        "Bin Zhou",
+        "Jian Pei"
       ],
       "latest_event": {
         "year": 2025,
@@ -330,8 +332,8 @@
       "official_url": "https://sigir.org/awards/",
       "description": "Highlights influential information retrieval papers years after publication.",
       "seo_priority": "medium",
-      "event_count": 1,
-      "recipient_count": 4,
+      "event_count": 2,
+      "recipient_count": 10,
       "sample_recipients": [
         "Julian McAuley",
         "Christopher Targett",
@@ -759,6 +761,56 @@
       "search_blob": "Timed and hybrid models for system design | Donald E. Knuth Prize | Knuth Prize | Celebrates landmark achievements in theoretical computer science across a career. | Rajeev Alur | formal methods verification cyber-physical systems | University of Pennsylvania | Celebrates foundational models that shaped verification, synthesis, and analysis for modern reactive and cyber-physical systems. | Principles of Cyber-Physical Systems | 2024 | 2020s"
     },
     {
+      "id": "sigir-tot-2024-explicit-factor-models",
+      "year": 2024,
+      "award_slug": "sigir-test-of-time",
+      "person_names": [
+        "Yongfeng Zhang",
+        "Guokun Lai",
+        "Min Zhang",
+        "Yi Zhang",
+        "Yiqun Liu",
+        "Shaoping Ma"
+      ],
+      "person_slugs": [
+        "yongfeng-zhang",
+        "guokun-lai",
+        "min-zhang",
+        "yi-zhang",
+        "yiqun-liu",
+        "shaoping-ma"
+      ],
+      "title": "Explicit factor models for explainable recommendation",
+      "kind": "paper_award",
+      "topics": [
+        "information retrieval",
+        "recommendation systems",
+        "explainability"
+      ],
+      "institutions": [
+        "Tsinghua University"
+      ],
+      "significance": "Recognized early influential work on explainable recommendation that connected phrase-level sentiment signals with transparent latent-factor models.",
+      "related_works": [
+        {
+          "title": "Explicit Factor Models for Explainable Recommendation Based on Phrase-Level Sentiment Analysis",
+          "type": "paper",
+          "year": 2014,
+          "url": "https://dl.acm.org/doi/10.1145/2600428.2609579"
+        }
+      ],
+      "award_name": "SIGIR Test of Time",
+      "award_category": "paper_award",
+      "official_program_label": "Official awards page / index",
+      "official_program_url": "https://sigir.org/awards/",
+      "source_scope": "program-level",
+      "citation_specificity": "not-year-specific",
+      "person_label": "Yongfeng Zhang, Guokun Lai, Min Zhang, Yi Zhang, Yiqun Liu, Shaoping Ma",
+      "decade": "2020s",
+      "featured": false,
+      "search_blob": "Explicit factor models for explainable recommendation | SIGIR Test of Time Award | SIGIR Test of Time | Highlights influential information retrieval papers years after publication. | Yongfeng Zhang Guokun Lai Min Zhang Yi Zhang Yiqun Liu Shaoping Ma | information retrieval recommendation systems explainability | Tsinghua University | Recognized early influential work on explainable recommendation that connected phrase-level sentiment signals with transparent latent-factor models. | Explicit Factor Models for Explainable Recommendation Based on Phrase-Level Sentiment Analysis | 2024 | 2020s"
+    },
+    {
       "id": "turing-2024-barto-sutton",
       "year": 2024,
       "award_slug": "turing-award",
@@ -840,6 +892,46 @@
       "person_label": "Christopher D. Manning",
       "decade": "2020s",
       "search_blob": "Statistical and neural language understanding | IEEE John von Neumann Medal | von Neumann Medal | Recognizes career-level leadership and impact spanning computing science and engineering, from core systems to modern computational methods. | Christopher D. Manning | natural language processing machine learning representation learning | Stanford University | Recognized work spanning statistical NLP, large-scale language resources, and neural representation methods that reshaped modern language AI. | GloVe: Global Vectors for Word Representation | 2024 | 2020s"
+    },
+    {
+      "id": "aaai-classic-2020-junker",
+      "year": 2020,
+      "award_slug": "aaai-classic-paper-award",
+      "person_names": [
+        "Ulrich Junker"
+      ],
+      "person_slugs": [
+        "ulrich-junker"
+      ],
+      "title": "Preferred explanations in over-constrained systems",
+      "kind": "paper_award",
+      "topics": [
+        "artificial intelligence",
+        "constraint satisfaction",
+        "preference reasoning"
+      ],
+      "institutions": [
+        "ILOG"
+      ],
+      "significance": "Recognized influential work on formalizing and computing user-preferred failure explanations in over-constrained problems.",
+      "related_works": [
+        {
+          "title": "QuickXPlain: Preferred Explanations and Relaxations for Over-Constrained Problems",
+          "type": "paper",
+          "year": 2004,
+          "url": "https://aaai.org/Papers/AAAI/2004/AAAI04-027.pdf"
+        }
+      ],
+      "award_name": "AAAI Classic Paper",
+      "award_category": "paper_award",
+      "official_program_label": "Official awards page / index",
+      "official_program_url": "https://aaai.org/about-aaai/aaai-awards/aaai-classic-paper-award/",
+      "source_scope": "program-level",
+      "citation_specificity": "not-year-specific",
+      "person_label": "Ulrich Junker",
+      "decade": "2020s",
+      "featured": false,
+      "search_blob": "Preferred explanations in over-constrained systems | AAAI Classic Paper Award | AAAI Classic Paper | Revisits AI conference papers whose importance becomes more visible over time. | Ulrich Junker | artificial intelligence constraint satisfaction preference reasoning | ILOG | Recognized influential work on formalizing and computing user-preferred failure explanations in over-constrained problems. | QuickXPlain: Preferred Explanations and Relaxations for Over-Constrained Problems | 2020 | 2020s"
     },
     {
       "id": "turing-2020-compilers",
@@ -939,6 +1031,48 @@
       "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis",
       "decade": "2020s",
       "search_blob": "Dremel and interactive web-scale analytics | VLDB 10-Year Best Paper Award | VLDB 10-Year Award | Recognizes database papers whose importance is clear over a ten-year horizon. | Sergey Melnik Andrey Gubarev Jing Jing Long Geoffrey Romer Shiva Shivakumar Matt Tolton Theo Vassilakis | databases data analytics distributed systems | Google | Recognized the columnar interactive-query architecture that influenced modern cloud analytics systems and SQL warehouses. | Dremel: Interactive Analysis of Web-Scale Datasets | 2020 | 2020s"
+    },
+    {
+      "id": "icde-2018-k-anonymity-networks",
+      "year": 2018,
+      "award_slug": "icde-influential-paper-award",
+      "person_names": [
+        "Bin Zhou",
+        "Jian Pei"
+      ],
+      "person_slugs": [
+        "bin-zhou",
+        "jian-pei"
+      ],
+      "title": "Privacy preservation through k-anonymity in social networks",
+      "kind": "paper_award",
+      "topics": [
+        "databases",
+        "privacy",
+        "graph data"
+      ],
+      "institutions": [
+        "Simon Fraser University"
+      ],
+      "significance": "Highlighted influential early work on privacy-preserving publication of social-network data using k-anonymity ideas adapted to graphs.",
+      "related_works": [
+        {
+          "title": "Preserving Privacy in Social Networks Against Neighborhood Attacks",
+          "type": "paper",
+          "year": 2008,
+          "url": "https://doi.org/10.1109/ICDE.2008.4497459"
+        }
+      ],
+      "award_name": "ICDE Influential Paper",
+      "award_category": "paper_award",
+      "official_program_label": "Official awards page / index",
+      "official_program_url": "https://tab.computer.org/tcde/icde_inf_paper.html",
+      "source_scope": "program-level",
+      "citation_specificity": "not-year-specific",
+      "person_label": "Bin Zhou, Jian Pei",
+      "decade": "2010s",
+      "featured": false,
+      "search_blob": "Privacy preservation through k-anonymity in social networks | ICDE 10-Year Influential Paper Award | ICDE Influential Paper | Surfaces influential data engineering work through a ten-year retrospective lens. | Bin Zhou Jian Pei | databases privacy graph data | Simon Fraser University | Highlighted influential early work on privacy-preserving publication of social-network data using k-anonymity ideas adapted to graphs. | Preserving Privacy in Social Networks Against Neighborhood Attacks | 2018 | 2010s"
     },
     {
       "id": "turing-2018-deep-learning",
@@ -1727,6 +1861,27 @@
       }
     },
     {
+      "slug": "bin-zhou",
+      "name": "Bin Zhou",
+      "award_count": 1,
+      "awards": [
+        "ICDE Influential Paper"
+      ],
+      "earliest_year": 2018,
+      "latest_year": 2018,
+      "topics": [
+        "databases",
+        "graph data",
+        "privacy"
+      ],
+      "latest_event": {
+        "year": 2018,
+        "award_name": "ICDE Influential Paper",
+        "title": "Privacy preservation through k-anonymity in social networks",
+        "person_label": "Bin Zhou, Jian Pei"
+      }
+    },
+    {
       "slug": "brian-ziebart",
       "name": "Brian Ziebart",
       "award_count": 1,
@@ -1979,6 +2134,27 @@
       }
     },
     {
+      "slug": "guokun-lai",
+      "name": "Guokun Lai",
+      "award_count": 1,
+      "awards": [
+        "SIGIR Test of Time"
+      ],
+      "earliest_year": 2024,
+      "latest_year": 2024,
+      "topics": [
+        "explainability",
+        "information retrieval",
+        "recommendation systems"
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "SIGIR Test of Time",
+        "title": "Explicit factor models for explainable recommendation",
+        "person_label": "Yongfeng Zhang, Guokun Lai, Min Zhang, Yi Zhang, Yiqun Liu, Shaoping Ma"
+      }
+    },
+    {
       "slug": "hugo-krawczyk",
       "name": "Hugo Krawczyk",
       "award_count": 1,
@@ -2081,6 +2257,27 @@
         "award_name": "Turing Award",
         "title": "Compilers and education at scale",
         "person_label": "Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman"
+      }
+    },
+    {
+      "slug": "jian-pei",
+      "name": "Jian Pei",
+      "award_count": 1,
+      "awards": [
+        "ICDE Influential Paper"
+      ],
+      "earliest_year": 2018,
+      "latest_year": 2018,
+      "topics": [
+        "databases",
+        "graph data",
+        "privacy"
+      ],
+      "latest_event": {
+        "year": 2018,
+        "award_name": "ICDE Influential Paper",
+        "title": "Privacy preservation through k-anonymity in social networks",
+        "person_label": "Bin Zhou, Jian Pei"
       }
     },
     {
@@ -2270,6 +2467,27 @@
         "award_name": "VLDB 10-Year Award",
         "title": "Dremel and interactive web-scale analytics",
         "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+      }
+    },
+    {
+      "slug": "min-zhang",
+      "name": "Min Zhang",
+      "award_count": 1,
+      "awards": [
+        "SIGIR Test of Time"
+      ],
+      "earliest_year": 2024,
+      "latest_year": 2024,
+      "topics": [
+        "explainability",
+        "information retrieval",
+        "recommendation systems"
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "SIGIR Test of Time",
+        "title": "Explicit factor models for explainable recommendation",
+        "person_label": "Yongfeng Zhang, Guokun Lai, Min Zhang, Yi Zhang, Yiqun Liu, Shaoping Ma"
       }
     },
     {
@@ -2504,6 +2722,27 @@
       }
     },
     {
+      "slug": "shaoping-ma",
+      "name": "Shaoping Ma",
+      "award_count": 1,
+      "awards": [
+        "SIGIR Test of Time"
+      ],
+      "earliest_year": 2024,
+      "latest_year": 2024,
+      "topics": [
+        "explainability",
+        "information retrieval",
+        "recommendation systems"
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "SIGIR Test of Time",
+        "title": "Explicit factor models for explainable recommendation",
+        "person_label": "Yongfeng Zhang, Guokun Lai, Min Zhang, Yi Zhang, Yiqun Liu, Shaoping Ma"
+      }
+    },
+    {
       "slug": "shiva-shivakumar",
       "name": "Shiva Shivakumar",
       "award_count": 1,
@@ -2543,6 +2782,27 @@
         "award_name": "VLDB 10-Year Award",
         "title": "Dremel and interactive web-scale analytics",
         "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis"
+      }
+    },
+    {
+      "slug": "ulrich-junker",
+      "name": "Ulrich Junker",
+      "award_count": 1,
+      "awards": [
+        "AAAI Classic Paper"
+      ],
+      "earliest_year": 2020,
+      "latest_year": 2020,
+      "topics": [
+        "artificial intelligence",
+        "constraint satisfaction",
+        "preference reasoning"
+      ],
+      "latest_event": {
+        "year": 2020,
+        "award_name": "AAAI Classic Paper",
+        "title": "Preferred explanations in over-constrained systems",
+        "person_label": "Ulrich Junker"
       }
     },
     {
@@ -2588,6 +2848,69 @@
       }
     },
     {
+      "slug": "yi-zhang",
+      "name": "Yi Zhang",
+      "award_count": 1,
+      "awards": [
+        "SIGIR Test of Time"
+      ],
+      "earliest_year": 2024,
+      "latest_year": 2024,
+      "topics": [
+        "explainability",
+        "information retrieval",
+        "recommendation systems"
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "SIGIR Test of Time",
+        "title": "Explicit factor models for explainable recommendation",
+        "person_label": "Yongfeng Zhang, Guokun Lai, Min Zhang, Yi Zhang, Yiqun Liu, Shaoping Ma"
+      }
+    },
+    {
+      "slug": "yiqun-liu",
+      "name": "Yiqun Liu",
+      "award_count": 1,
+      "awards": [
+        "SIGIR Test of Time"
+      ],
+      "earliest_year": 2024,
+      "latest_year": 2024,
+      "topics": [
+        "explainability",
+        "information retrieval",
+        "recommendation systems"
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "SIGIR Test of Time",
+        "title": "Explicit factor models for explainable recommendation",
+        "person_label": "Yongfeng Zhang, Guokun Lai, Min Zhang, Yi Zhang, Yiqun Liu, Shaoping Ma"
+      }
+    },
+    {
+      "slug": "yongfeng-zhang",
+      "name": "Yongfeng Zhang",
+      "award_count": 1,
+      "awards": [
+        "SIGIR Test of Time"
+      ],
+      "earliest_year": 2024,
+      "latest_year": 2024,
+      "topics": [
+        "explainability",
+        "information retrieval",
+        "recommendation systems"
+      ],
+      "latest_event": {
+        "year": 2024,
+        "award_name": "SIGIR Test of Time",
+        "title": "Explicit factor models for explainable recommendation",
+        "person_label": "Yongfeng Zhang, Guokun Lai, Min Zhang, Yi Zhang, Yiqun Liu, Shaoping Ma"
+      }
+    },
+    {
       "slug": "yoshua-bengio",
       "name": "Yoshua Bengio",
       "award_count": 1,
@@ -2612,11 +2935,11 @@
   "topics": [
     {
       "topic": "artificial intelligence",
-      "count": 6
+      "count": 7
     },
     {
       "topic": "databases",
-      "count": 4
+      "count": 5
     },
     {
       "topic": "machine learning",
@@ -2643,6 +2966,10 @@
       "count": 2
     },
     {
+      "topic": "constraint satisfaction",
+      "count": 2
+    },
+    {
       "topic": "data engineering",
       "count": 2
     },
@@ -2651,7 +2978,15 @@
       "count": 2
     },
     {
+      "topic": "information retrieval",
+      "count": 2
+    },
+    {
       "topic": "protocols",
+      "count": 2
+    },
+    {
+      "topic": "recommendation systems",
       "count": 2
     },
     {
@@ -2695,10 +3030,6 @@
       "count": 1
     },
     {
-      "topic": "constraint satisfaction",
-      "count": 1
-    },
-    {
       "topic": "control",
       "count": 1
     },
@@ -2739,6 +3070,10 @@
       "count": 1
     },
     {
+      "topic": "explainability",
+      "count": 1
+    },
+    {
       "topic": "formal specification",
       "count": 1
     },
@@ -2747,11 +3082,11 @@
       "count": 1
     },
     {
-      "topic": "graph theory",
+      "topic": "graph data",
       "count": 1
     },
     {
-      "topic": "information retrieval",
+      "topic": "graph theory",
       "count": 1
     },
     {
@@ -2783,6 +3118,14 @@
       "count": 1
     },
     {
+      "topic": "preference reasoning",
+      "count": 1
+    },
+    {
+      "topic": "privacy",
+      "count": 1
+    },
+    {
       "topic": "probabilistic inference",
       "count": 1
     },
@@ -2796,10 +3139,6 @@
     },
     {
       "topic": "randomness extraction",
-      "count": 1
-    },
-    {
-      "topic": "recommendation systems",
       "count": 1
     },
     {
@@ -2837,8 +3176,8 @@
   ],
   "stats": {
     "award_count": 12,
-    "event_count": 27,
-    "people_count": 51,
+    "event_count": 30,
+    "people_count": 60,
     "year_start": 1966,
     "year_end": 2025
   },
