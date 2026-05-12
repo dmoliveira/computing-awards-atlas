@@ -122,4 +122,20 @@ export function validateEvent(event) {
       }
     }
   }
+
+  const hasEventSourceLabel = event.event_source_label !== undefined;
+  const hasEventSourceUrl = event.event_source_url !== undefined;
+
+  if (hasEventSourceLabel !== hasEventSourceUrl) {
+    throw new Error(`Event ${event.id} must provide both 'event_source_label' and 'event_source_url' together`);
+  }
+
+  if (hasEventSourceLabel) {
+    if (!isNonEmptyString(event.event_source_label)) {
+      throw new Error(`Event ${event.id} must provide a non-empty string for 'event_source_label'`);
+    }
+    if (!isValidUrl(event.event_source_url)) {
+      throw new Error(`Event ${event.id} has invalid 'event_source_url'`);
+    }
+  }
 }

@@ -21,6 +21,8 @@ type EventRecord = {
   award_category: string;
   official_program_label: string;
   official_program_url: string;
+  event_source_label: string | null;
+  event_source_url: string | null;
   source_scope: string;
   citation_specificity: string;
   title: string;
@@ -307,11 +309,11 @@ export default function SearchExplorer({ data }: Props) {
               </div>
               <p className="event-note">{event.significance}</p>
               <p className="meta-line compact-copy">
-                <strong>Program-level source:</strong>{" "}
-                <a href={event.official_program_url} target="_blank" rel="noreferrer">
-                  {event.official_program_label}
+                <strong>{event.event_source_url ? "Event citation" : "Program-level source"}:</strong>{" "}
+                <a href={event.event_source_url ?? event.official_program_url} target="_blank" rel="noreferrer">
+                  {event.event_source_label ?? event.official_program_label}
                 </a>
-                <span> (not a year-specific citation)</span>
+                <span>{event.event_source_url ? " (year/event-specific)" : " (not a year-specific citation)"}</span>
               </p>
               {event.related_works.length > 0 ? (
                 <>

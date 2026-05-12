@@ -33,12 +33,20 @@ test("build-data generates a usable static dataset", () => {
   assert.ok(payload.awards.some((award) => award.slug === "grace-murray-hopper-award" && award.event_count >= 1));
   assert.ok(payload.events.every((event) => typeof event.official_program_url === "string" && event.official_program_url.startsWith("http")));
   assert.ok(payload.events.every((event) => typeof event.official_program_label === "string" && event.official_program_label.length > 0));
-  assert.ok(payload.events.every((event) => event.source_scope === "program-level"));
-  assert.ok(payload.events.every((event) => event.citation_specificity === "not-year-specific"));
+  assert.ok(payload.events.some((event) => event.source_scope === "event-level"));
+  assert.ok(payload.events.some((event) => event.citation_specificity === "year-specific-or-event-specific"));
   assert.ok(payload.events.every((event) => !event.related_works.some((work) => /wikipedia\.org|openlibrary\.org/.test(work.url))));
-  assert.ok(publicEventsJsonl.every((event) => event.source_scope === "program-level"));
-  assert.ok(publicEventsJsonl.every((event) => event.citation_specificity === "not-year-specific"));
+  assert.ok(publicEventsJsonl.some((event) => event.source_scope === "event-level"));
+  assert.ok(publicEventsJsonl.some((event) => event.citation_specificity === "year-specific-or-event-specific"));
   assert.ok(publicEventsJsonl.every((event) => !event.related_works.some((work) => /wikipedia\.org|openlibrary\.org/.test(work.url))));
+  assert.ok(
+    payload.events.every((event) =>
+      event.event_source_url
+        ? event.source_scope === "event-level" && event.citation_specificity === "year-specific-or-event-specific"
+        : event.source_scope === "program-level" && event.citation_specificity === "not-year-specific",
+    ),
+  );
+  assert.ok(payload.events.every((event) => !event.event_source_url || event.event_source_url !== event.official_program_url));
   assert.ok(payload.people.every((person) => typeof person.slug === "string" && person.slug.length > 0));
   assert.ok(payload.people.every((person) => !Object.hasOwn(person, "institutions")));
   assert.ok(
