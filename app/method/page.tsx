@@ -108,12 +108,12 @@ export default function MethodPage() {
           </p>
           <p className="meta-line compact-copy">
             In page-level UI, program-level source links identify the broader official award page or awards index, while
-            books, papers, software, and articles are editorial context for why a recognition matters. Event-specific
-            year or recipient citations are a deeper provenance enhancement still being expanded.
+            books, papers, software, and articles are editorial context for why a recognition matters. Where available,
+            event citations now point to year- or recipient-specific source material.
           </p>
           <p className="meta-line compact-copy">
-            The exported JSON also marks these links explicitly as <code>program-level</code> and <code>not-year-specific</code>
-            so downstream consumers do not mistake them for event-specific citations.
+            The exported JSON now distinguishes between <code>program-level</code> and <code>event-level</code> source
+            scope so downstream consumers can tell whether a link is a broad award page or a specific award citation.
           </p>
         </article>
 

@@ -57,6 +57,7 @@ const normalizedEvents = events
     const institutions = ensureArray(event.institutions);
     const relatedWorks = ensureArray(event.related_works);
     const decadeStart = Math.floor(event.year / 10) * 10;
+    const hasDistinctEventSource = Boolean(event.event_source_url) && event.event_source_url !== award.official_url;
 
     return {
       ...event,
@@ -64,8 +65,10 @@ const normalizedEvents = events
       award_category: award.category,
       official_program_label: "Official awards page / index",
       official_program_url: award.official_url,
-      source_scope: "program-level",
-      citation_specificity: "not-year-specific",
+      event_source_label: hasDistinctEventSource ? event.event_source_label : null,
+      event_source_url: hasDistinctEventSource ? event.event_source_url : null,
+      source_scope: hasDistinctEventSource ? "event-level" : "program-level",
+      citation_specificity: hasDistinctEventSource ? "year-specific-or-event-specific" : "not-year-specific",
       person_names: personNames,
       person_label: personNames.join(", "),
       topics,

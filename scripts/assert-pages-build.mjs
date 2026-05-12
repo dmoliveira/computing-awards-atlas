@@ -18,6 +18,8 @@ const [indexHtml, awardsHtml, peopleHtml, robotsTxt, sitemapXml] = await Promise
 ]);
 const turingAwardHtml = await readFile("out/awards/turing-award/index.html", "utf8");
 const andrewBartoHtml = await readFile("out/people/andrew-g-barto/index.html", "utf8");
+const acmPrizeHtml = await readFile("out/awards/acm-prize-in-computing/index.html", "utf8");
+const torstenHoeflerHtml = await readFile("out/people/torsten-hoefler/index.html", "utf8");
 const methodHtml = await readFile("out/method/index.html", "utf8");
 const timelineHtml = await readFile("out/timeline/index.html", "utf8");
 
@@ -101,8 +103,12 @@ if (!methodHtml.includes(`${process.env.NEXT_PUBLIC_SITE_URL}/data/events.jsonl`
   throw new Error("Expected method page to link to the published events.jsonl snapshot");
 }
 
-if (!methodHtml.includes("program-level") || !methodHtml.includes("not-year-specific")) {
+if (!methodHtml.includes("program-level") || !methodHtml.includes("event-level")) {
   throw new Error("Expected method page to explain exported provenance scope and specificity");
+}
+
+if (!methodHtml.includes("event-level") || !methodHtml.includes("specific award citation")) {
+  throw new Error("Expected method page to describe event-level citation support");
 }
 
 if (!peopleHtml.includes(`${process.env.PAGES_BASE_PATH}/people/andrew-g-barto/`)) {
@@ -121,8 +127,12 @@ if (!turingAwardHtml.includes("Related work / context") || !turingAwardHtml.incl
   throw new Error("Expected award detail page to include provenance labels");
 }
 
-if (!turingAwardHtml.includes("Program-level source:") || !turingAwardHtml.includes("not a year-specific citation")) {
+if (!turingAwardHtml.includes("not a year-specific citation")) {
   throw new Error("Expected award detail page to include clarified program-level provenance labeling");
+}
+
+if (!acmPrizeHtml.includes("Event citation") || !acmPrizeHtml.includes("year/event-specific")) {
+  throw new Error("Expected at least one award detail page to include event-level citation labeling");
 }
 
 if (!andrewBartoHtml.includes(andrewBartoUrl)) {
@@ -133,8 +143,12 @@ if (!andrewBartoHtml.includes("Related work / context")) {
   throw new Error("Expected person detail page to include provenance labels");
 }
 
-if (!andrewBartoHtml.includes("Program-level source:") || !andrewBartoHtml.includes("not a year-specific citation")) {
+if (!andrewBartoHtml.includes("not a year-specific citation")) {
   throw new Error("Expected person detail page to include clarified program-level provenance labeling");
+}
+
+if (!torstenHoeflerHtml.includes("Event citation") || !torstenHoeflerHtml.includes("year/event-specific")) {
+  throw new Error("Expected at least one person detail page to include event-level citation labeling");
 }
 
 if (

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T23:21:05.891Z",
+  "generated_at": "2026-05-12T02:41:02.428Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -407,6 +407,8 @@
         "Databricks"
       ],
       "significance": "Recognized the systems infrastructure that helped make large-scale data, analytics, and applied AI practical in production environments.",
+      "event_source_label": "2025 ACM Prize in Computing announcement",
+      "event_source_url": "https://www.acm.org/media-center/2026/april/acm-prize-2025",
       "related_works": [
         {
           "title": "Apache Spark",
@@ -420,8 +422,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/acm-prize",
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Matei Zaharia",
       "decade": "2020s",
       "search_blob": "Distributed data systems and computing infrastructure | ACM Prize in Computing | ACM Prize in Computing | Recognizes early- to mid-career professionals whose work has fundamental impact across computing. | Matei Zaharia | distributed systems data engineering machine learning | Stanford University Databricks | Recognized the systems infrastructure that helped make large-scale data, analytics, and applied AI practical in production environments. | Apache Spark | 2025 | 2020s"
@@ -450,6 +452,8 @@
         "University of Texas at Austin"
       ],
       "significance": "Recognized a breakthrough on explicit two-source extractors, resolving a long-open problem in randomness and complexity theory.",
+      "event_source_label": "2025 Gödel Prize citation",
+      "event_source_url": "https://sigact.org/prizes/g%C3%B6del/citation2025.html",
       "related_works": [
         {
           "title": "Explicit Two-Source Extractors and Resilient Functions",
@@ -463,8 +467,8 @@
       "award_category": "theory_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://sigact.org/prizes/godel-prize/",
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Eshan Chattopadhyay, David Zuckerman",
       "decade": "2020s",
       "search_blob": "Explicit two-source extractors and resilient functions | Gödel Prize | Gödel Prize | Honors outstanding papers in theoretical computer science with deep long-term influence. | Eshan Chattopadhyay David Zuckerman | complexity randomness extraction theory | Cornell University University of Texas at Austin | Recognized a breakthrough on explicit two-source extractors, resolving a long-open problem in randomness and complexity theory. | Explicit Two-Source Extractors and Resilient Functions | 2025 | 2020s"
@@ -504,6 +508,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://tab.computer.org/tcde/icde_inf_paper.html",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Ahmed Eldawy, Mohamed F. Mokbel",
@@ -532,6 +538,8 @@
         "University of California, Irvine"
       ],
       "significance": "Recognized a body of work that unified search, inference, and complexity ideas across core symbolic AI problems.",
+      "event_source_label": null,
+      "event_source_url": null,
       "related_works": [
         {
           "title": "Constraint Processing",
@@ -591,6 +599,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://sigir.org/awards/",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Julian McAuley, Christopher Targett, Javen Shi, Anton van den Hengel",
@@ -625,6 +635,8 @@
         "Carnegie Mellon University"
       ],
       "significance": "Revisits a paper that made entropy-regularized inverse reinforcement learning a lasting tool for imitation, planning, and alignment-style research.",
+      "event_source_label": null,
+      "event_source_url": null,
       "related_works": [
         {
           "title": "Maximum Entropy Inverse Reinforcement Learning",
@@ -665,6 +677,8 @@
         "ETH Zürich"
       ],
       "significance": "Recognized contributions that advanced large-scale high-performance computing and its role in modern AI systems and infrastructure.",
+      "event_source_label": "2024 ACM Prize in Computing announcement",
+      "event_source_url": "https://awards.acm.org/about/2024-acm-prize",
       "related_works": [
         {
           "title": "Torsten Hoefler research profile",
@@ -677,8 +691,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/acm-prize",
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Torsten Hoefler",
       "decade": "2020s",
       "featured": false,
@@ -705,6 +719,8 @@
         "Massachusetts Institute of Technology"
       ],
       "significance": "Recognized a landmark lower-bounds result showing that exponential-time nondeterministic computation cannot be captured by polynomial-size non-uniform ACC circuits.",
+      "event_source_label": "2024 Gödel Prize citation",
+      "event_source_url": "https://sigact.org/prizes/g%C3%B6del/citation2024.html",
       "related_works": [
         {
           "title": "Non-Uniform ACC Circuit Lower Bounds",
@@ -717,8 +733,8 @@
       "award_category": "theory_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://sigact.org/prizes/godel-prize/",
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Ryan Williams",
       "decade": "2020s",
       "featured": false,
@@ -745,6 +761,8 @@
         "University of Wisconsin–Madison"
       ],
       "significance": "Highlights algorithmic robust statistics as a fast-growing bridge between theory and practical machine learning reliability.",
+      "event_source_label": "2024 Grace Murray Hopper Award announcement",
+      "event_source_url": "https://www.acm.org/media-center/2025/may/hopper-award-2024",
       "related_works": [
         {
           "title": "Algorithmic High-Dimensional Robust Statistics",
@@ -757,8 +775,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/hopper",
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Ilias Diakonikolas",
       "decade": "2020s",
       "featured": false,
@@ -785,6 +803,8 @@
         "Oregon State University"
       ],
       "significance": "Recognized a career of influential machine learning research spanning ensemble methods, sequential decision-making, and robust AI systems.",
+      "event_source_label": null,
+      "event_source_url": null,
       "related_works": [
         {
           "title": "Machine Learning for Sequential Data: A Review",
@@ -838,6 +858,8 @@
       "award_category": "bridge_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/kanellakis",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Hugo Krawczyk",
@@ -866,6 +888,8 @@
         "University of Pennsylvania"
       ],
       "significance": "Celebrates foundational models that shaped verification, synthesis, and analysis for modern reactive and cyber-physical systems.",
+      "event_source_label": "2024 Knuth Prize citation",
+      "event_source_url": "https://sigact.org/prizes/knuth/citation2024.html",
       "related_works": [
         {
           "title": "Principles of Cyber-Physical Systems",
@@ -878,8 +902,8 @@
       "award_category": "theory_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://sigact.org/prizes/knuth-prize/",
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Rajeev Alur",
       "decade": "2020s",
       "featured": false,
@@ -928,6 +952,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://sigir.org/awards/",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Yongfeng Zhang, Guokun Lai, Min Zhang, Yi Zhang, Yiqun Liu, Shaoping Ma",
@@ -972,6 +998,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Andrew G. Barto, Richard S. Sutton",
@@ -1012,6 +1040,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.ieee.org/about/awards/medals/von-neumann.html",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Christopher D. Manning",
@@ -1039,6 +1069,8 @@
         "Princeton University"
       ],
       "significance": "Recognized foundational work on protecting internet privacy and security through cross-layer methods spanning networks, anonymity, and machine learning.",
+      "event_source_label": "2023 ACM technical awards announcement",
+      "event_source_url": "https://awards.acm.org/about/2023-technical-awards",
       "related_works": [
         {
           "title": "Prateek Mittal research profile",
@@ -1051,8 +1083,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/hopper",
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Prateek Mittal",
       "decade": "2020s",
       "featured": false,
@@ -1079,6 +1111,8 @@
         "Cornell University"
       ],
       "significance": "Recognized career-defining contributions to combinatorial optimization, approximation algorithms, and algorithmic game theory.",
+      "event_source_label": "2023 Knuth Prize citation",
+      "event_source_url": "https://sigact.org/prizes/knuth/citation2023.html",
       "related_works": [
         {
           "title": "Algorithm Design",
@@ -1091,8 +1125,8 @@
       "award_category": "theory_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://sigact.org/prizes/knuth-prize/",
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Éva Tardos",
       "decade": "2020s",
       "featured": false,
@@ -1142,6 +1176,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.vldb.org/awards.html",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, Joseph M. Hellerstein",
@@ -1170,6 +1206,8 @@
         "ILOG"
       ],
       "significance": "Recognized influential work on formalizing and computing user-preferred failure explanations in over-constrained problems.",
+      "event_source_label": null,
+      "event_source_url": null,
       "related_works": [
         {
           "title": "QuickXPlain: Preferred Explanations and Relaxations for Over-Constrained Problems",
@@ -1229,6 +1267,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman",
@@ -1282,6 +1322,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.vldb.org/awards.html",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis",
@@ -1323,6 +1365,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://tab.computer.org/tcde/icde_inf_paper.html",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Bin Zhou, Jian Pei",
@@ -1376,6 +1420,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Yoshua Bengio, Geoffrey Hinton, Yann LeCun",
@@ -1422,6 +1468,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Leslie Lamport",
@@ -1461,6 +1509,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Judea Pearl",
@@ -1505,6 +1555,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Vinton G. Cerf, Robert E. Kahn",
@@ -1544,6 +1596,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Jim Gray",
@@ -1584,6 +1638,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Amir Pnueli",
@@ -1628,6 +1684,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Edward A. Feigenbaum, Raj Reddy",
@@ -1667,6 +1725,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Fernando J. Corbató",
@@ -1710,6 +1770,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "John E. Hopcroft, Robert E. Tarjan",
@@ -1759,6 +1821,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Dennis M. Ritchie, Ken Thompson",
@@ -1799,6 +1863,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Edgar F. Codd",
@@ -1839,6 +1905,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Edsger W. Dijkstra",
@@ -1878,6 +1946,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Richard W. Hamming",
@@ -1919,6 +1989,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Alan J. Perlis",
@@ -3719,6 +3791,8 @@
         "Databricks"
       ],
       "significance": "Recognized the systems infrastructure that helped make large-scale data, analytics, and applied AI practical in production environments.",
+      "event_source_label": "2025 ACM Prize in Computing announcement",
+      "event_source_url": "https://www.acm.org/media-center/2026/april/acm-prize-2025",
       "related_works": [
         {
           "title": "Apache Spark",
@@ -3732,8 +3806,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/acm-prize",
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Matei Zaharia",
       "decade": "2020s",
       "search_blob": "Distributed data systems and computing infrastructure | ACM Prize in Computing | ACM Prize in Computing | Recognizes early- to mid-career professionals whose work has fundamental impact across computing. | Matei Zaharia | distributed systems data engineering machine learning | Stanford University Databricks | Recognized the systems infrastructure that helped make large-scale data, analytics, and applied AI practical in production environments. | Apache Spark | 2025 | 2020s"
@@ -3762,6 +3836,8 @@
         "University of Texas at Austin"
       ],
       "significance": "Recognized a breakthrough on explicit two-source extractors, resolving a long-open problem in randomness and complexity theory.",
+      "event_source_label": "2025 Gödel Prize citation",
+      "event_source_url": "https://sigact.org/prizes/g%C3%B6del/citation2025.html",
       "related_works": [
         {
           "title": "Explicit Two-Source Extractors and Resilient Functions",
@@ -3775,8 +3851,8 @@
       "award_category": "theory_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://sigact.org/prizes/godel-prize/",
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Eshan Chattopadhyay, David Zuckerman",
       "decade": "2020s",
       "search_blob": "Explicit two-source extractors and resilient functions | Gödel Prize | Gödel Prize | Honors outstanding papers in theoretical computer science with deep long-term influence. | Eshan Chattopadhyay David Zuckerman | complexity randomness extraction theory | Cornell University University of Texas at Austin | Recognized a breakthrough on explicit two-source extractors, resolving a long-open problem in randomness and complexity theory. | Explicit Two-Source Extractors and Resilient Functions | 2025 | 2020s"
@@ -3802,6 +3878,8 @@
         "University of California, Irvine"
       ],
       "significance": "Recognized a body of work that unified search, inference, and complexity ideas across core symbolic AI problems.",
+      "event_source_label": null,
+      "event_source_url": null,
       "related_works": [
         {
           "title": "Constraint Processing",
@@ -3848,6 +3926,8 @@
         "Carnegie Mellon University"
       ],
       "significance": "Revisits a paper that made entropy-regularized inverse reinforcement learning a lasting tool for imitation, planning, and alignment-style research.",
+      "event_source_label": null,
+      "event_source_url": null,
       "related_works": [
         {
           "title": "Maximum Entropy Inverse Reinforcement Learning",
@@ -3904,6 +3984,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://awards.acm.org/turing",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Andrew G. Barto, Richard S. Sutton",
@@ -3944,6 +4026,8 @@
       "award_category": "major_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.ieee.org/about/awards/medals/von-neumann.html",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Christopher D. Manning",
