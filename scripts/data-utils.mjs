@@ -10,7 +10,7 @@ const trustedSourceHostsByAward = {
   "knuth-prize": ["sigact.org"],
   "john-von-neumann-medal": ["ieee.org"],
   "kanellakis-award": ["acm.org"],
-  "sigir-test-of-time": ["sigir.org"],
+  "sigir-test-of-time": ["sigir.org", "sigir2025.dei.unipd.it"],
   "vldb-ten-year-award": ["vldb.org", "vldb2020.org"],
   "icde-influential-paper-award": ["tab.computer.org", "ieee-icde.org"],
   "ijcai-research-excellence-award": ["ijcai.org", "ijcai24.org"],
