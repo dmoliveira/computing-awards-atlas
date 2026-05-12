@@ -103,6 +103,14 @@ if (!methodHtml.includes(`${process.env.NEXT_PUBLIC_SITE_URL}/data/events.jsonl`
   throw new Error("Expected method page to link to the published events.jsonl snapshot");
 }
 
+if (!methodHtml.includes("events currently have a distinct source page beyond the general award/program page") || !methodHtml.includes("events still rely only on broader program-level sources")) {
+  throw new Error("Expected method page to surface provenance coverage counts");
+}
+
+if (!methodHtml.includes("Which events still rely on broader program-level sources")) {
+  throw new Error("Expected method page to include a provenance coverage table");
+}
+
 if (!methodHtml.includes("program-level") || !methodHtml.includes("event-level")) {
   throw new Error("Expected method page to explain exported provenance scope and specificity");
 }

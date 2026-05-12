@@ -256,8 +256,21 @@ const output = {
     people_count: people.length,
     year_start: Math.min(...normalizedEvents.map((event) => event.year)),
     year_end: Math.max(...normalizedEvents.map((event) => event.year)),
+    event_level_source_count: normalizedEvents.filter((event) => event.source_scope === "event-level").length,
+    program_level_source_count: normalizedEvents.filter((event) => event.source_scope === "program-level").length,
   },
   featured_events: normalizedEvents.filter((event) => event.featured).slice(0, 6),
+  program_level_events: normalizedEvents
+    .filter((event) => event.source_scope === "program-level")
+    .map((event) => ({
+      id: event.id,
+      year: event.year,
+      award_slug: event.award_slug,
+      award_name: event.award_name,
+      person_label: event.person_label,
+      title: event.title,
+      official_program_url: event.official_program_url,
+    })),
 };
 
 for (const relativeDir of ["src/generated", "public/data"]) {

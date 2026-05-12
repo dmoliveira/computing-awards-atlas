@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T06:49:08.233Z",
+  "generated_at": "2026-05-12T10:42:28.348Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -3805,7 +3805,9 @@
     "event_count": 36,
     "people_count": 71,
     "year_start": 1966,
-    "year_end": 2025
+    "year_end": 2025,
+    "event_level_source_count": 12,
+    "program_level_source_count": 24
   },
   "featured_events": [
     {
@@ -4078,6 +4080,224 @@
       "person_label": "Christopher D. Manning",
       "decade": "2020s",
       "search_blob": "Statistical and neural language understanding | IEEE John von Neumann Medal | von Neumann Medal | Recognizes career-level leadership and impact spanning computing science and engineering, from core systems to modern computational methods. | Christopher D. Manning | natural language processing machine learning representation learning | Stanford University | Recognized work spanning statistical NLP, large-scale language resources, and neural representation methods that reshaped modern language AI. | GloVe: Global Vectors for Word Representation | 2024 | 2020s"
+    }
+  ],
+  "program_level_events": [
+    {
+      "id": "icde-2025-spatialhadoop",
+      "year": 2025,
+      "award_slug": "icde-influential-paper-award",
+      "award_name": "ICDE Influential Paper",
+      "person_label": "Ahmed Eldawy, Mohamed F. Mokbel",
+      "title": "SpatialHadoop and scalable spatial data processing",
+      "official_program_url": "https://tab.computer.org/tcde/icde_inf_paper.html"
+    },
+    {
+      "id": "sigir-tot-2025-image-recs",
+      "year": 2025,
+      "award_slug": "sigir-test-of-time",
+      "award_name": "SIGIR Test of Time",
+      "person_label": "Julian McAuley, Christopher Targett, Javen Shi, Anton van den Hengel",
+      "title": "Image-based recommendations on styles and substitutes",
+      "official_program_url": "https://sigir.org/awards/"
+    },
+    {
+      "id": "aaai-classic-2024-maximum-entropy-irl",
+      "year": 2024,
+      "award_slug": "aaai-classic-paper-award",
+      "award_name": "AAAI Classic Paper",
+      "person_label": "Brian Ziebart, Andrew Maas, J. Andrew Bagnell, Anind K. Dey",
+      "title": "Maximum entropy inverse reinforcement learning",
+      "official_program_url": "https://aaai.org/about-aaai/aaai-awards/aaai-classic-paper-award/"
+    },
+    {
+      "id": "kanellakis-2024-krawczyk",
+      "year": 2024,
+      "award_slug": "kanellakis-award",
+      "award_name": "Kanellakis Award",
+      "person_label": "Hugo Krawczyk",
+      "title": "Provable security with practical impact",
+      "official_program_url": "https://awards.acm.org/kanellakis"
+    },
+    {
+      "id": "sigir-tot-2024-explicit-factor-models",
+      "year": 2024,
+      "award_slug": "sigir-test-of-time",
+      "award_name": "SIGIR Test of Time",
+      "person_label": "Yongfeng Zhang, Guokun Lai, Min Zhang, Yi Zhang, Yiqun Liu, Shaoping Ma",
+      "title": "Explicit factor models for explainable recommendation",
+      "official_program_url": "https://sigir.org/awards/"
+    },
+    {
+      "id": "turing-2024-barto-sutton",
+      "year": 2024,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Andrew G. Barto, Richard S. Sutton",
+      "title": "Reinforcement learning foundations",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "vonneumann-2024-manning",
+      "year": 2024,
+      "award_slug": "john-von-neumann-medal",
+      "award_name": "von Neumann Medal",
+      "person_label": "Christopher D. Manning",
+      "title": "Statistical and neural language understanding",
+      "official_program_url": "https://www.ieee.org/about/awards/medals/von-neumann.html"
+    },
+    {
+      "id": "aaai-classic-2020-junker",
+      "year": 2020,
+      "award_slug": "aaai-classic-paper-award",
+      "award_name": "AAAI Classic Paper",
+      "person_label": "Ulrich Junker",
+      "title": "Preferred explanations in over-constrained systems",
+      "official_program_url": "https://aaai.org/about-aaai/aaai-awards/aaai-classic-paper-award/"
+    },
+    {
+      "id": "turing-2020-compilers",
+      "year": 2020,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman",
+      "title": "Compilers and education at scale",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "icde-2018-k-anonymity-networks",
+      "year": 2018,
+      "award_slug": "icde-influential-paper-award",
+      "award_name": "ICDE Influential Paper",
+      "person_label": "Bin Zhou, Jian Pei",
+      "title": "Privacy preservation through k-anonymity in social networks",
+      "official_program_url": "https://tab.computer.org/tcde/icde_inf_paper.html"
+    },
+    {
+      "id": "turing-2018-deep-learning",
+      "year": 2018,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Yoshua Bengio, Geoffrey Hinton, Yann LeCun",
+      "title": "Deep learning renaissance",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-2013-lamport",
+      "year": 2013,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Leslie Lamport",
+      "title": "Distributed systems theory and practice",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-2011-pearl",
+      "year": 2011,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Judea Pearl",
+      "title": "Probabilistic reasoning and causal inference",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-2004-cerf-kahn",
+      "year": 2004,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Vinton G. Cerf, Robert E. Kahn",
+      "title": "Internet protocol architecture",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-1998-gray",
+      "year": 1998,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Jim Gray",
+      "title": "Transaction processing and fault tolerance",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-1996-pnueli",
+      "year": 1996,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Amir Pnueli",
+      "title": "Temporal logic in program and system verification",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-1994-feigenbaum-reddy",
+      "year": 1994,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Edward A. Feigenbaum, Raj Reddy",
+      "title": "Knowledge-based artificial intelligence",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-1990-corbato",
+      "year": 1990,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Fernando J. Corbató",
+      "title": "Time-sharing systems and Multics",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-1986-hopcroft-tarjan",
+      "year": 1986,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "John E. Hopcroft, Robert E. Tarjan",
+      "title": "Efficient data structures and graph algorithms",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-1983-ritchie-thompson",
+      "year": 1983,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Dennis M. Ritchie, Ken Thompson",
+      "title": "Unix and C as systems foundations",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-1978-codd",
+      "year": 1978,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Edgar F. Codd",
+      "title": "Relational model for shared data banks",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-1972-dijkstra",
+      "year": 1972,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Edsger W. Dijkstra",
+      "title": "Structured programming and algorithmic clarity",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-1968-hamming",
+      "year": 1968,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Richard W. Hamming",
+      "title": "Reliable numerical and coding methods",
+      "official_program_url": "https://awards.acm.org/turing"
+    },
+    {
+      "id": "turing-1966-perlis",
+      "year": 1966,
+      "award_slug": "turing-award",
+      "award_name": "Turing Award",
+      "person_label": "Alan J. Perlis",
+      "title": "First Turing Award laureate",
+      "official_program_url": "https://awards.acm.org/turing"
     }
   ]
 }

@@ -69,6 +69,8 @@ export default function MethodPage() {
             <li>{atlasData.stats.event_count} representative events across laureates and influential-paper recognitions</li>
             <li>{atlasData.stats.people_count} currently modeled people with slug-based identity handling</li>
             <li>Current published snapshot generated at {new Date(atlasData.generated_at).toUTCString()}</li>
+            <li>{atlasData.stats.event_level_source_count} events currently have a distinct source page beyond the general award/program page</li>
+            <li>{atlasData.stats.program_level_source_count} events still rely only on broader program-level sources</li>
           </ul>
         </article>
 
@@ -130,6 +132,47 @@ export default function MethodPage() {
             <li>Per-event official citation fields for recipient- and year-specific verification</li>
             <li>Continue replacing remaining secondary-reference links with more canonical publisher/archive pages</li>
           </ul>
+        </article>
+      </section>
+
+      <section className="section-block method-grid">
+        <article>
+          <p className="eyebrow">Citation coverage</p>
+          <h2>Which events still rely on broader program-level sources</h2>
+          <p className="hero-text compact-copy">
+            The table below lists every current sample event that still relies on a broader official award or awards-index
+            source instead of a narrower event-specific source page.
+          </p>
+        </article>
+
+        <article>
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Person</th>
+                  <th>Award</th>
+                  <th>Event</th>
+                </tr>
+              </thead>
+              <tbody>
+                {atlasData.program_level_events.map((event) => (
+                  <tr key={event.id}>
+                    <td>{event.year}</td>
+                    <td>{event.person_label}</td>
+                    <td>{event.award_name}</td>
+                    <td>
+                      <a href={event.official_program_url} target="_blank" rel="noreferrer">
+                        {event.title}
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="meta-line compact-copy">Program-level rows are not errors; they indicate where the atlas still depends on a broader official award page or awards index rather than a narrower event-specific source.</p>
         </article>
       </section>
 
