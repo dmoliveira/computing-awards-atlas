@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T05:56:16.841Z",
+  "generated_at": "2026-05-12T06:49:08.233Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -646,7 +646,7 @@
           "type": "paper",
           "year": 2008,
           "url": "https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf",
-          "source_quality": "contextual"
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -1429,7 +1429,7 @@
           "type": "book",
           "year": 2016,
           "url": "https://www.deeplearningbook.org/",
-          "source_quality": "contextual"
+          "source_quality": "canonical"
         },
         {
           "title": "Gradient-Based Learning Applied to Document Recognition",
@@ -3974,7 +3974,7 @@
           "type": "paper",
           "year": 2008,
           "url": "https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf",
-          "source_quality": "contextual"
+          "source_quality": "canonical"
         }
       ],
       "featured": true,

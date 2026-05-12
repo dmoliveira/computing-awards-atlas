@@ -41,6 +41,8 @@ test("build-data generates a usable static dataset", () => {
   assert.ok(publicEventsJsonl.some((event) => event.citation_specificity === "year-specific-or-event-specific"));
   assert.ok(publicEventsJsonl.every((event) => !event.related_works.some((work) => /wikipedia\.org|openlibrary\.org/.test(work.url))));
   assert.ok(publicEventsJsonl.every((event) => event.related_works.every((work) => ["canonical", "contextual"].includes(work.source_quality))));
+  assert.ok(publicEventsJsonl.some((event) => event.related_works.some((work) => work.source_quality === "contextual")));
+  assert.ok(publicEventsJsonl.some((event) => event.related_works.some((work) => work.source_quality === "canonical")));
   assert.ok(
     payload.events.every((event) =>
       event.event_source_url
@@ -132,6 +134,45 @@ test("validateEvent rejects non-route-safe person slugs", () => {
         person_slugs: ["example/person"],
       }),
     /non-route-safe entry in 'person_slugs'/,
+  );
+});
+
+test("validateAward rejects untrusted official host", async () => {
+  const { validateAward } = await import("../scripts/data-utils.mjs");
+  assert.throws(
+    () =>
+      validateAward({
+        slug: "turing-award",
+        name: "ACM A.M. Turing Award",
+        category: "major_award",
+        awarding_body: "Association for Computing Machinery",
+        founded_year: 1966,
+        description: "test",
+        cadence: "annual",
+        scope: "computer science",
+        region: "global",
+        official_url: "https://example.com/turing",
+        seo_priority: "primary",
+      }),
+    /trusted official host/,
+  );
+});
+
+test("validateEvent rejects untrusted event source host", () => {
+  assert.throws(
+    () =>
+      validateEvent({
+        id: "bad-event-source-host",
+        year: 2025,
+        award_slug: "godel-prize",
+        title: "Bad source host",
+        significance: "test",
+        person_names: ["Example Person"],
+        person_slugs: ["example-person"],
+        event_source_label: "Bad host",
+        event_source_url: "https://example.com/source",
+      }),
+    /trusted event source host/,
   );
 });
 

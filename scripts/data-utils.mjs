@@ -2,6 +2,20 @@ export const ensureArray = (value) => (Array.isArray(value) ? value : []);
 
 const validSeoPriorities = new Set(["primary", "high", "medium", "low"]);
 const slugPattern = /^[a-z0-9-]+$/;
+const trustedSourceHostsByAward = {
+  "turing-award": ["acm.org"],
+  "acm-prize-in-computing": ["acm.org"],
+  "grace-murray-hopper-award": ["acm.org"],
+  "godel-prize": ["sigact.org"],
+  "knuth-prize": ["sigact.org"],
+  "john-von-neumann-medal": ["ieee.org"],
+  "kanellakis-award": ["acm.org"],
+  "sigir-test-of-time": ["sigir.org"],
+  "vldb-ten-year-award": ["vldb.org", "vldb2020.org"],
+  "icde-influential-paper-award": ["tab.computer.org", "ieee-icde.org"],
+  "ijcai-research-excellence-award": ["ijcai.org", "ijcai24.org"],
+  "aaai-classic-paper-award": ["aaai.org"],
+};
 
 function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
@@ -22,6 +36,20 @@ function isValidUrl(value) {
 
 function isStringArray(value) {
   return Array.isArray(value) && value.every((item) => isNonEmptyString(item));
+}
+
+function hostMatchesPattern(hostname, pattern) {
+  return hostname === pattern || hostname.endsWith(`.${pattern}`);
+}
+
+function usesTrustedHostForAward(awardSlug, url) {
+  const patterns = trustedSourceHostsByAward[awardSlug] ?? [];
+  try {
+    const hostname = new URL(url).hostname.toLowerCase();
+    return patterns.some((pattern) => hostMatchesPattern(hostname, pattern));
+  } catch {
+    return false;
+  }
 }
 
 export function validateAward(award) {
@@ -47,6 +75,10 @@ export function validateAward(award) {
 
   if (!isValidUrl(award.official_url)) {
     throw new Error(`Award ${award.slug ?? "unknown"} must provide a valid 'official_url'`);
+  }
+
+  if (!usesTrustedHostForAward(award.slug, award.official_url)) {
+    throw new Error(`Award ${award.slug ?? "unknown"} must use a trusted official host`);
   }
 
   if (!validSeoPriorities.has(award.seo_priority)) {
@@ -136,6 +168,9 @@ export function validateEvent(event) {
     }
     if (!isValidUrl(event.event_source_url)) {
       throw new Error(`Event ${event.id} has invalid 'event_source_url'`);
+    }
+    if (!usesTrustedHostForAward(event.award_slug, event.event_source_url)) {
+      throw new Error(`Event ${event.id} must use a trusted event source host`);
     }
   }
 }
