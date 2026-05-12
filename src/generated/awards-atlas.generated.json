@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T02:41:02.428Z",
+  "generated_at": "2026-05-12T03:56:05.226Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -538,8 +538,6 @@
         "University of California, Irvine"
       ],
       "significance": "Recognized a body of work that unified search, inference, and complexity ideas across core symbolic AI problems.",
-      "event_source_label": null,
-      "event_source_url": null,
       "related_works": [
         {
           "title": "Constraint Processing",
@@ -553,6 +551,8 @@
       "award_category": "ai_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.ijcai.org/awards",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Rina Dechter",
@@ -635,8 +635,6 @@
         "Carnegie Mellon University"
       ],
       "significance": "Revisits a paper that made entropy-regularized inverse reinforcement learning a lasting tool for imitation, planning, and alignment-style research.",
-      "event_source_label": null,
-      "event_source_url": null,
       "related_works": [
         {
           "title": "Maximum Entropy Inverse Reinforcement Learning",
@@ -650,6 +648,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://aaai.org/about-aaai/aaai-awards/aaai-classic-paper-award/",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Brian Ziebart, Andrew Maas, J. Andrew Bagnell, Anind K. Dey",
@@ -726,7 +726,7 @@
           "title": "Non-Uniform ACC Circuit Lower Bounds",
           "type": "paper",
           "year": 2011,
-          "url": "https://sigact.org/prizes/g%C3%B6del/citation2024.html"
+          "url": "https://doi.org/10.1109/CCC.2011.36"
         }
       ],
       "award_name": "Gödel Prize",
@@ -803,8 +803,6 @@
         "Oregon State University"
       ],
       "significance": "Recognized a career of influential machine learning research spanning ensemble methods, sequential decision-making, and robust AI systems.",
-      "event_source_label": null,
-      "event_source_url": null,
       "related_works": [
         {
           "title": "Machine Learning for Sequential Data: A Review",
@@ -817,6 +815,8 @@
       "award_category": "ai_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.ijcai.org/awards",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Thomas G. Dietterich",
@@ -1206,8 +1206,6 @@
         "ILOG"
       ],
       "significance": "Recognized influential work on formalizing and computing user-preferred failure explanations in over-constrained problems.",
-      "event_source_label": null,
-      "event_source_url": null,
       "related_works": [
         {
           "title": "QuickXPlain: Preferred Explanations and Relaxations for Over-Constrained Problems",
@@ -1220,6 +1218,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://aaai.org/about-aaai/aaai-awards/aaai-classic-paper-award/",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Ulrich Junker",
@@ -3878,8 +3878,6 @@
         "University of California, Irvine"
       ],
       "significance": "Recognized a body of work that unified search, inference, and complexity ideas across core symbolic AI problems.",
-      "event_source_label": null,
-      "event_source_url": null,
       "related_works": [
         {
           "title": "Constraint Processing",
@@ -3893,6 +3891,8 @@
       "award_category": "ai_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.ijcai.org/awards",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Rina Dechter",
@@ -3926,8 +3926,6 @@
         "Carnegie Mellon University"
       ],
       "significance": "Revisits a paper that made entropy-regularized inverse reinforcement learning a lasting tool for imitation, planning, and alignment-style research.",
-      "event_source_label": null,
-      "event_source_url": null,
       "related_works": [
         {
           "title": "Maximum Entropy Inverse Reinforcement Learning",
@@ -3941,6 +3939,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://aaai.org/about-aaai/aaai-awards/aaai-classic-paper-award/",
+      "event_source_label": null,
+      "event_source_url": null,
       "source_scope": "program-level",
       "citation_specificity": "not-year-specific",
       "person_label": "Brian Ziebart, Andrew Maas, J. Andrew Bagnell, Anind K. Dey",

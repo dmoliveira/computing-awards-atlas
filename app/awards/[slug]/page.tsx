@@ -183,7 +183,7 @@ export default async function AwardDetailPage({ params }: Props) {
 
                 <p className="event-note">{event.significance}</p>
                 <p className="meta-line compact-copy">
-                  <strong>{event.event_source_url ? "Event citation" : "Program-level source"}:</strong>{" "}
+                  <strong>{event.event_source_url ? "Event source" : "Program-level source"}:</strong>{" "}
                   <a href={event.event_source_url ?? event.official_program_url} target="_blank" rel="noreferrer">
                     {event.event_source_label ?? event.official_program_label}
                   </a>
