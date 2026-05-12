@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T05:11:22.485Z",
+  "generated_at": "2026-05-12T05:56:16.841Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -541,6 +541,8 @@
         "University of California, Irvine"
       ],
       "significance": "Recognized a body of work that unified search, inference, and complexity ideas across core symbolic AI problems.",
+      "event_source_label": "IJCAI 2025 invited talks",
+      "event_source_url": "https://2025.ijcai.org/invited-talks/",
       "related_works": [
         {
           "title": "Constraint Processing",
@@ -555,10 +557,8 @@
       "award_category": "ai_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.ijcai.org/awards",
-      "event_source_label": null,
-      "event_source_url": null,
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Rina Dechter",
       "decade": "2020s",
       "search_blob": "Constraint reasoning and probabilistic inference | IJCAI Research Excellence Award | IJCAI Research Excellence | Career award for major contributions to artificial intelligence research. | Rina Dechter | artificial intelligence constraint satisfaction probabilistic inference | University of California, Irvine | Recognized a body of work that unified search, inference, and complexity ideas across core symbolic AI problems. | Constraint Processing | 2025 | 2020s"
@@ -812,6 +812,8 @@
         "Oregon State University"
       ],
       "significance": "Recognized a career of influential machine learning research spanning ensemble methods, sequential decision-making, and robust AI systems.",
+      "event_source_label": "IJCAI 2024 keynote speakers",
+      "event_source_url": "https://ijcai24.org/keynote-speakers/",
       "related_works": [
         {
           "title": "Machine Learning for Sequential Data: A Review",
@@ -825,10 +827,8 @@
       "award_category": "ai_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.ijcai.org/awards",
-      "event_source_label": null,
-      "event_source_url": null,
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Thomas G. Dietterich",
       "decade": "2020s",
       "featured": false,
@@ -1181,6 +1181,8 @@
         "University of California, Berkeley"
       ],
       "significance": "Recognized a test-of-time systems paper that helped shape large-scale graph-parallel machine learning and cloud analytics infrastructure.",
+      "event_source_label": "VLDB 2023 conference awards",
+      "event_source_url": "https://vldb.org/2023/?conference-awards",
       "related_works": [
         {
           "title": "Distributed GraphLab: A Framework for Machine Learning and Data Mining in the Cloud",
@@ -1194,10 +1196,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.vldb.org/awards.html",
-      "event_source_label": null,
-      "event_source_url": null,
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, Joseph M. Hellerstein",
       "decade": "2020s",
       "featured": false,
@@ -1329,6 +1329,8 @@
         "Google"
       ],
       "significance": "Recognized the columnar interactive-query architecture that influenced modern cloud analytics systems and SQL warehouses.",
+      "event_source_label": "2020 VLDB Endowment Awards",
+      "event_source_url": "https://vldb2020.org/vldb-endowment-awards.html",
       "related_works": [
         {
           "title": "Dremel: Interactive Analysis of Web-Scale Datasets",
@@ -1343,10 +1345,8 @@
       "award_category": "paper_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.vldb.org/awards.html",
-      "event_source_label": null,
-      "event_source_url": null,
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis",
       "decade": "2020s",
       "search_blob": "Dremel and interactive web-scale analytics | VLDB 10-Year Best Paper Award | VLDB 10-Year Award | Recognizes database papers whose importance is clear over a ten-year horizon. | Sergey Melnik Andrey Gubarev Jing Jing Long Geoffrey Romer Shiva Shivakumar Matt Tolton Theo Vassilakis | databases data analytics distributed systems | Google | Recognized the columnar interactive-query architecture that influenced modern cloud analytics systems and SQL warehouses. | Dremel: Interactive Analysis of Web-Scale Datasets | 2020 | 2020s"
@@ -3919,6 +3919,8 @@
         "University of California, Irvine"
       ],
       "significance": "Recognized a body of work that unified search, inference, and complexity ideas across core symbolic AI problems.",
+      "event_source_label": "IJCAI 2025 invited talks",
+      "event_source_url": "https://2025.ijcai.org/invited-talks/",
       "related_works": [
         {
           "title": "Constraint Processing",
@@ -3933,10 +3935,8 @@
       "award_category": "ai_award",
       "official_program_label": "Official awards page / index",
       "official_program_url": "https://www.ijcai.org/awards",
-      "event_source_label": null,
-      "event_source_url": null,
-      "source_scope": "program-level",
-      "citation_specificity": "not-year-specific",
+      "source_scope": "event-level",
+      "citation_specificity": "year-specific-or-event-specific",
       "person_label": "Rina Dechter",
       "decade": "2020s",
       "search_blob": "Constraint reasoning and probabilistic inference | IJCAI Research Excellence Award | IJCAI Research Excellence | Career award for major contributions to artificial intelligence research. | Rina Dechter | artificial intelligence constraint satisfaction probabilistic inference | University of California, Irvine | Recognized a body of work that unified search, inference, and complexity ideas across core symbolic AI problems. | Constraint Processing | 2025 | 2020s"
