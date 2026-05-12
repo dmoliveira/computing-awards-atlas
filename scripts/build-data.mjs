@@ -22,38 +22,52 @@ const readJsonl = async (relativePath) => {
 const awards = await readJsonl("data/awards.jsonl");
 const events = await readJsonl("data/events.jsonl");
 
-const canonicalHosts = new Set([
+const canonicalHostPatterns = [
   "doi.org",
   "dl.acm.org",
   "ieeexplore.ieee.org",
-  "www.vldb.org",
+  "vldb.org",
   "research.google",
-  "www.sciencedirect.com",
+  "sciencedirect.com",
   "shop.elsevier.com",
   "mitpress.mit.edu",
-  "www.cambridge.org",
-  "www.informit.com",
+  "cambridge.org",
+  "informit.com",
   "aaai.org",
-  "www.aaai.org",
   "sigact.org",
-  "www.ijcai.org",
   "iacr.org",
   "spark.apache.org",
-  "www.latex-project.org",
+  "latex-project.org",
   "aclanthology.org",
-]);
+  "deeplearningbook.org",
+];
 
-const blockedHosts = new Set(["wikipedia.org", "www.wikipedia.org", "openlibrary.org", "www.openlibrary.org"]);
+const contextualHostPatterns = [
+  "archive.org",
+  "cs.yale.edu",
+  "cs.princeton.edu",
+  "spcl.inf.ethz.ch",
+  "incompleteideas.net",
+];
+
+const blockedHostPatterns = ["wikipedia.org", "openlibrary.org"];
+
+function hostMatchesPattern(hostname, pattern) {
+  return hostname === pattern || hostname.endsWith(`.${pattern}`);
+}
 
 function classifyRelatedWorkQuality(url) {
   const host = new URL(url).hostname.toLowerCase();
-  if (blockedHosts.has(host)) {
+  if (blockedHostPatterns.some((pattern) => hostMatchesPattern(host, pattern))) {
     throw new Error(`Blocked low-confidence related work host '${host}' in exported dataset`);
   }
-  if (canonicalHosts.has(host)) {
+  if (canonicalHostPatterns.some((pattern) => hostMatchesPattern(host, pattern))) {
     return "canonical";
   }
-  return "contextual";
+  if (contextualHostPatterns.some((pattern) => hostMatchesPattern(host, pattern))) {
+    return "contextual";
+  }
+  throw new Error(`Unapproved related work host '${host}' in exported dataset`);
 }
 
 const awardSlugSet = new Set();
