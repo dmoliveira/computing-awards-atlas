@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T03:56:05.226Z",
+  "generated_at": "2026-05-12T05:11:22.485Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -414,7 +414,8 @@
           "title": "Apache Spark",
           "type": "software",
           "year": 2014,
-          "url": "https://spark.apache.org/"
+          "url": "https://spark.apache.org/",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -459,7 +460,8 @@
           "title": "Explicit Two-Source Extractors and Resilient Functions",
           "type": "paper",
           "year": 2016,
-          "url": "https://dl.acm.org/doi/10.1145/2897518.2897528"
+          "url": "https://dl.acm.org/doi/10.1145/2897518.2897528",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -501,7 +503,8 @@
           "title": "SpatialHadoop: A MapReduce Framework for Spatial Data",
           "type": "paper",
           "year": 2015,
-          "url": "https://ieeexplore.ieee.org/document/7113349"
+          "url": "https://ieeexplore.ieee.org/document/7113349",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "ICDE Influential Paper",
@@ -543,7 +546,8 @@
           "title": "Constraint Processing",
           "type": "book",
           "year": 2003,
-          "url": "https://doi.org/10.1016/B978-1-55860-890-0.X5000-2"
+          "url": "https://doi.org/10.1016/B978-1-55860-890-0.X5000-2",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -592,7 +596,8 @@
           "title": "Image-based Recommendations on Styles and Substitutes",
           "type": "paper",
           "year": 2015,
-          "url": "https://dl.acm.org/doi/10.1145/2766462.2767755"
+          "url": "https://dl.acm.org/doi/10.1145/2766462.2767755",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "SIGIR Test of Time",
@@ -640,7 +645,8 @@
           "title": "Maximum Entropy Inverse Reinforcement Learning",
           "type": "paper",
           "year": 2008,
-          "url": "https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf"
+          "url": "https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf",
+          "source_quality": "contextual"
         }
       ],
       "featured": true,
@@ -684,7 +690,8 @@
           "title": "Torsten Hoefler research profile",
           "type": "profile",
           "year": 2024,
-          "url": "https://spcl.inf.ethz.ch/People/torstenhoefler.html"
+          "url": "https://spcl.inf.ethz.ch/People/torstenhoefler.html",
+          "source_quality": "contextual"
         }
       ],
       "award_name": "ACM Prize in Computing",
@@ -726,7 +733,8 @@
           "title": "Non-Uniform ACC Circuit Lower Bounds",
           "type": "paper",
           "year": 2011,
-          "url": "https://doi.org/10.1109/CCC.2011.36"
+          "url": "https://doi.org/10.1109/CCC.2011.36",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Gödel Prize",
@@ -768,7 +776,8 @@
           "title": "Algorithmic High-Dimensional Robust Statistics",
           "type": "book",
           "year": 2022,
-          "url": "https://www.cambridge.org/core/books/algorithmic-highdimensional-robust-statistics/EF7F8F5C5E3D6D7AF2F8AA6B3E235E25"
+          "url": "https://www.cambridge.org/core/books/algorithmic-highdimensional-robust-statistics/EF7F8F5C5E3D6D7AF2F8AA6B3E235E25",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Grace Hopper Award",
@@ -808,7 +817,8 @@
           "title": "Machine Learning for Sequential Data: A Review",
           "type": "article",
           "year": 2022,
-          "url": "https://www.aaai.org/ojs/index.php/aimagazine/article/view/2756"
+          "url": "https://www.aaai.org/ojs/index.php/aimagazine/article/view/2756",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "IJCAI Research Excellence",
@@ -851,7 +861,8 @@
           "title": "HMQV: A High-Performance Secure Diffie-Hellman Protocol",
           "type": "paper",
           "year": 2005,
-          "url": "https://iacr.org/archive/crypto2005/36210372/36210372.pdf"
+          "url": "https://iacr.org/archive/crypto2005/36210372/36210372.pdf",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Kanellakis Award",
@@ -895,7 +906,8 @@
           "title": "Principles of Cyber-Physical Systems",
           "type": "book",
           "year": 2015,
-          "url": "https://mitpress.mit.edu/9780262029117/principles-of-cyber-physical-systems/"
+          "url": "https://mitpress.mit.edu/9780262029117/principles-of-cyber-physical-systems/",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Knuth Prize",
@@ -945,7 +957,8 @@
           "title": "Explicit Factor Models for Explainable Recommendation Based on Phrase-Level Sentiment Analysis",
           "type": "paper",
           "year": 2014,
-          "url": "https://dl.acm.org/doi/10.1145/2600428.2609579"
+          "url": "https://dl.acm.org/doi/10.1145/2600428.2609579",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "SIGIR Test of Time",
@@ -990,7 +1003,8 @@
           "title": "Reinforcement Learning: An Introduction",
           "type": "book",
           "year": 1998,
-          "url": "https://incompleteideas.net/book/the-book.html"
+          "url": "https://incompleteideas.net/book/the-book.html",
+          "source_quality": "contextual"
         }
       ],
       "featured": true,
@@ -1032,7 +1046,8 @@
           "title": "GloVe: Global Vectors for Word Representation",
           "type": "paper",
           "year": 2014,
-          "url": "https://doi.org/10.3115/v1/D14-1162"
+          "url": "https://doi.org/10.3115/v1/D14-1162",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -1076,7 +1091,8 @@
           "title": "Prateek Mittal research profile",
           "type": "profile",
           "year": 2023,
-          "url": "https://www.cs.princeton.edu/~pmittal/"
+          "url": "https://www.cs.princeton.edu/~pmittal/",
+          "source_quality": "contextual"
         }
       ],
       "award_name": "Grace Hopper Award",
@@ -1118,7 +1134,8 @@
           "title": "Algorithm Design",
           "type": "book",
           "year": 2005,
-          "url": "https://www.cs.princeton.edu/~wayne/kleinberg-tardos/"
+          "url": "https://www.cs.princeton.edu/~wayne/kleinberg-tardos/",
+          "source_quality": "contextual"
         }
       ],
       "award_name": "Knuth Prize",
@@ -1169,7 +1186,8 @@
           "title": "Distributed GraphLab: A Framework for Machine Learning and Data Mining in the Cloud",
           "type": "paper",
           "year": 2012,
-          "url": "https://www.vldb.org/pvldb/vol5/p716_yuchenglow_vldb2012.pdf"
+          "url": "https://www.vldb.org/pvldb/vol5/p716_yuchenglow_vldb2012.pdf",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "VLDB 10-Year Award",
@@ -1211,7 +1229,8 @@
           "title": "QuickXPlain: Preferred Explanations and Relaxations for Over-Constrained Problems",
           "type": "paper",
           "year": 2004,
-          "url": "https://aaai.org/Papers/AAAI/2004/AAAI04-027.pdf"
+          "url": "https://aaai.org/Papers/AAAI/2004/AAAI04-027.pdf",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "AAAI Classic Paper",
@@ -1260,7 +1279,8 @@
           "title": "Compilers: Principles, Techniques, and Tools",
           "type": "book",
           "year": 1986,
-          "url": "https://www.informit.com/store/compilers-principles-techniques-and-tools-9780321486813"
+          "url": "https://www.informit.com/store/compilers-principles-techniques-and-tools-9780321486813",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Turing Award",
@@ -1314,7 +1334,8 @@
           "title": "Dremel: Interactive Analysis of Web-Scale Datasets",
           "type": "paper",
           "year": 2010,
-          "url": "https://research.google/pubs/dremel-interactive-analysis-of-web-scale-datasets/"
+          "url": "https://research.google/pubs/dremel-interactive-analysis-of-web-scale-datasets/",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -1358,7 +1379,8 @@
           "title": "Preserving Privacy in Social Networks Against Neighborhood Attacks",
           "type": "paper",
           "year": 2008,
-          "url": "https://doi.org/10.1109/ICDE.2008.4497459"
+          "url": "https://doi.org/10.1109/ICDE.2008.4497459",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "ICDE Influential Paper",
@@ -1406,13 +1428,15 @@
           "title": "Deep Learning",
           "type": "book",
           "year": 2016,
-          "url": "https://www.deeplearningbook.org/"
+          "url": "https://www.deeplearningbook.org/",
+          "source_quality": "contextual"
         },
         {
           "title": "Gradient-Based Learning Applied to Document Recognition",
           "type": "paper",
           "year": 1998,
-          "url": "https://ieeexplore.ieee.org/document/726791"
+          "url": "https://ieeexplore.ieee.org/document/726791",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -1454,13 +1478,15 @@
           "title": "Time, Clocks, and the Ordering of Events in a Distributed System",
           "type": "paper",
           "year": 1978,
-          "url": "https://dl.acm.org/doi/10.1145/359545.359563"
+          "url": "https://dl.acm.org/doi/10.1145/359545.359563",
+          "source_quality": "canonical"
         },
         {
           "title": "LaTeX",
           "type": "software",
           "year": 1984,
-          "url": "https://www.latex-project.org/"
+          "url": "https://www.latex-project.org/",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -1502,7 +1528,8 @@
           "title": "Probabilistic Reasoning in Intelligent Systems",
           "type": "book",
           "year": 1988,
-          "url": "https://shop.elsevier.com/books/probabilistic-reasoning-in-intelligent-systems/pearl/978-0-08-051489-5"
+          "url": "https://shop.elsevier.com/books/probabilistic-reasoning-in-intelligent-systems/pearl/978-0-08-051489-5",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Turing Award",
@@ -1547,7 +1574,8 @@
           "title": "A Protocol for Packet Network Intercommunication",
           "type": "paper",
           "year": 1974,
-          "url": "https://dl.acm.org/doi/10.1109/TCOM.1974.1092259"
+          "url": "https://dl.acm.org/doi/10.1109/TCOM.1974.1092259",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -1589,7 +1617,8 @@
           "title": "Transaction Processing: Concepts and Techniques",
           "type": "book",
           "year": 1992,
-          "url": "https://www.sciencedirect.com/book/9781558601901/transaction-processing"
+          "url": "https://www.sciencedirect.com/book/9781558601901/transaction-processing",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Turing Award",
@@ -1631,7 +1660,8 @@
           "title": "The Temporal Logic of Programs",
           "type": "paper",
           "year": 1977,
-          "url": "https://dl.acm.org/doi/10.1109/SFCS.1977.32"
+          "url": "https://dl.acm.org/doi/10.1109/SFCS.1977.32",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Turing Award",
@@ -1676,7 +1706,8 @@
           "title": "The Fifth Generation",
           "type": "book",
           "year": 1983,
-          "url": "https://archive.org/details/fifthgenerationa00feigrich"
+          "url": "https://archive.org/details/fifthgenerationa00feigrich",
+          "source_quality": "contextual"
         }
       ],
       "featured": true,
@@ -1718,7 +1749,8 @@
           "title": "An Experimental Time-Sharing System",
           "type": "paper",
           "year": 1962,
-          "url": "https://dl.acm.org/doi/10.1145/1460833.1460841"
+          "url": "https://dl.acm.org/doi/10.1145/1460833.1460841",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Turing Award",
@@ -1763,7 +1795,8 @@
           "title": "Efficient Planarity Testing",
           "type": "paper",
           "year": 1974,
-          "url": "https://dl.acm.org/doi/10.1145/321850.321852"
+          "url": "https://dl.acm.org/doi/10.1145/321850.321852",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Turing Award",
@@ -1807,13 +1840,15 @@
           "title": "The UNIX Time-Sharing System",
           "type": "paper",
           "year": 1974,
-          "url": "https://dl.acm.org/doi/10.1145/361011.361061"
+          "url": "https://dl.acm.org/doi/10.1145/361011.361061",
+          "source_quality": "canonical"
         },
         {
           "title": "The C Programming Language",
           "type": "book",
           "year": 1978,
-          "url": "https://www.informit.com/store/c-programming-language-9780131103627"
+          "url": "https://www.informit.com/store/c-programming-language-9780131103627",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -1855,7 +1890,8 @@
           "title": "A Relational Model of Data for Large Shared Data Banks",
           "type": "paper",
           "year": 1970,
-          "url": "https://dl.acm.org/doi/10.1145/362384.362685"
+          "url": "https://dl.acm.org/doi/10.1145/362384.362685",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -1897,7 +1933,8 @@
           "title": "Go To Statement Considered Harmful",
           "type": "article",
           "year": 1968,
-          "url": "https://doi.org/10.1145/362929.362947"
+          "url": "https://doi.org/10.1145/362929.362947",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -1939,7 +1976,8 @@
           "title": "Error Detecting and Error Correcting Codes",
           "type": "paper",
           "year": 1950,
-          "url": "https://ieeexplore.ieee.org/document/6772729"
+          "url": "https://ieeexplore.ieee.org/document/6772729",
+          "source_quality": "canonical"
         }
       ],
       "award_name": "Turing Award",
@@ -1981,7 +2019,8 @@
           "title": "Epigrams on Programming",
           "type": "article",
           "year": 1982,
-          "url": "https://doi.org/10.1145/947955.1083808"
+          "url": "https://doi.org/10.1145/947955.1083808",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -3798,7 +3837,8 @@
           "title": "Apache Spark",
           "type": "software",
           "year": 2014,
-          "url": "https://spark.apache.org/"
+          "url": "https://spark.apache.org/",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -3843,7 +3883,8 @@
           "title": "Explicit Two-Source Extractors and Resilient Functions",
           "type": "paper",
           "year": 2016,
-          "url": "https://dl.acm.org/doi/10.1145/2897518.2897528"
+          "url": "https://dl.acm.org/doi/10.1145/2897518.2897528",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -3883,7 +3924,8 @@
           "title": "Constraint Processing",
           "type": "book",
           "year": 2003,
-          "url": "https://doi.org/10.1016/B978-1-55860-890-0.X5000-2"
+          "url": "https://doi.org/10.1016/B978-1-55860-890-0.X5000-2",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,
@@ -3931,7 +3973,8 @@
           "title": "Maximum Entropy Inverse Reinforcement Learning",
           "type": "paper",
           "year": 2008,
-          "url": "https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf"
+          "url": "https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf",
+          "source_quality": "contextual"
         }
       ],
       "featured": true,
@@ -3976,7 +4019,8 @@
           "title": "Reinforcement Learning: An Introduction",
           "type": "book",
           "year": 1998,
-          "url": "https://incompleteideas.net/book/the-book.html"
+          "url": "https://incompleteideas.net/book/the-book.html",
+          "source_quality": "contextual"
         }
       ],
       "featured": true,
@@ -4018,7 +4062,8 @@
           "title": "GloVe: Global Vectors for Word Representation",
           "type": "paper",
           "year": 2014,
-          "url": "https://doi.org/10.3115/v1/D14-1162"
+          "url": "https://doi.org/10.3115/v1/D14-1162",
+          "source_quality": "canonical"
         }
       ],
       "featured": true,

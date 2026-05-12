@@ -22,6 +22,40 @@ const readJsonl = async (relativePath) => {
 const awards = await readJsonl("data/awards.jsonl");
 const events = await readJsonl("data/events.jsonl");
 
+const canonicalHosts = new Set([
+  "doi.org",
+  "dl.acm.org",
+  "ieeexplore.ieee.org",
+  "www.vldb.org",
+  "research.google",
+  "www.sciencedirect.com",
+  "shop.elsevier.com",
+  "mitpress.mit.edu",
+  "www.cambridge.org",
+  "www.informit.com",
+  "aaai.org",
+  "www.aaai.org",
+  "sigact.org",
+  "www.ijcai.org",
+  "iacr.org",
+  "spark.apache.org",
+  "www.latex-project.org",
+  "aclanthology.org",
+]);
+
+const blockedHosts = new Set(["wikipedia.org", "www.wikipedia.org", "openlibrary.org", "www.openlibrary.org"]);
+
+function classifyRelatedWorkQuality(url) {
+  const host = new URL(url).hostname.toLowerCase();
+  if (blockedHosts.has(host)) {
+    throw new Error(`Blocked low-confidence related work host '${host}' in exported dataset`);
+  }
+  if (canonicalHosts.has(host)) {
+    return "canonical";
+  }
+  return "contextual";
+}
+
 const awardSlugSet = new Set();
 const eventIdSet = new Set();
 
@@ -55,7 +89,10 @@ const normalizedEvents = events
     const personNames = ensureArray(event.person_names);
     const topics = ensureArray(event.topics);
     const institutions = ensureArray(event.institutions);
-    const relatedWorks = ensureArray(event.related_works);
+    const relatedWorks = ensureArray(event.related_works).map((work) => ({
+      ...work,
+      source_quality: classifyRelatedWorkQuality(work.url),
+    }));
     const decadeStart = Math.floor(event.year / 10) * 10;
     const hasDistinctEventSource = Boolean(event.event_source_url) && event.event_source_url !== award.official_url;
 

@@ -36,9 +36,11 @@ test("build-data generates a usable static dataset", () => {
   assert.ok(payload.events.some((event) => event.source_scope === "event-level"));
   assert.ok(payload.events.some((event) => event.citation_specificity === "year-specific-or-event-specific"));
   assert.ok(payload.events.every((event) => !event.related_works.some((work) => /wikipedia\.org|openlibrary\.org/.test(work.url))));
+  assert.ok(payload.events.every((event) => event.related_works.every((work) => ["canonical", "contextual"].includes(work.source_quality))));
   assert.ok(publicEventsJsonl.some((event) => event.source_scope === "event-level"));
   assert.ok(publicEventsJsonl.some((event) => event.citation_specificity === "year-specific-or-event-specific"));
   assert.ok(publicEventsJsonl.every((event) => !event.related_works.some((work) => /wikipedia\.org|openlibrary\.org/.test(work.url))));
+  assert.ok(publicEventsJsonl.every((event) => event.related_works.every((work) => ["canonical", "contextual"].includes(work.source_quality))));
   assert.ok(
     payload.events.every((event) =>
       event.event_source_url

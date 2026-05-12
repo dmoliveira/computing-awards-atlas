@@ -115,6 +115,10 @@ export default function MethodPage() {
             The exported JSON now distinguishes between <code>program-level</code> and <code>event-level</code> source
             scope so downstream consumers can tell whether a link is a broad award page or a specific award citation.
           </p>
+          <p className="meta-line compact-copy">
+            Related works are also tagged as <code>canonical</code> or <code>contextual</code> to distinguish stronger
+            publisher/DOI/archive sources from lighter explanatory references.
+          </p>
         </article>
 
         <article>
