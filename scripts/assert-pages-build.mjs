@@ -131,8 +131,8 @@ if (!turingAwardHtml.includes("not a year-specific citation")) {
   throw new Error("Expected award detail page to include clarified program-level provenance labeling");
 }
 
-if (!acmPrizeHtml.includes("Event citation") || !acmPrizeHtml.includes("year/event-specific")) {
-  throw new Error("Expected at least one award detail page to include event-level citation labeling");
+if (!acmPrizeHtml.includes("Event source") || !acmPrizeHtml.includes("year/event-specific")) {
+  throw new Error("Expected at least one award detail page to include event-level source labeling");
 }
 
 if (!andrewBartoHtml.includes(andrewBartoUrl)) {
@@ -147,8 +147,8 @@ if (!andrewBartoHtml.includes("not a year-specific citation")) {
   throw new Error("Expected person detail page to include clarified program-level provenance labeling");
 }
 
-if (!torstenHoeflerHtml.includes("Event citation") || !torstenHoeflerHtml.includes("year/event-specific")) {
-  throw new Error("Expected at least one person detail page to include event-level citation labeling");
+if (!torstenHoeflerHtml.includes("Event source") || !torstenHoeflerHtml.includes("year/event-specific")) {
+  throw new Error("Expected at least one person detail page to include event-level source labeling");
 }
 
 if (
