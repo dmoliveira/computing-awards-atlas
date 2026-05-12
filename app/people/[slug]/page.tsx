@@ -221,7 +221,7 @@ export default async function PersonDetailPage({ params }: Props) {
                           {work.title}
                         </a>{" "}
                         <span>
-                          ({work.type}, {work.year})
+                          ({work.type}, {work.year}, {work.source_quality})
                         </span>
                       </li>
                     ))}

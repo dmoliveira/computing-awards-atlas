@@ -10,6 +10,7 @@ type RelatedWork = {
   type: string;
   year: number;
   url: string;
+  source_quality: string;
 };
 
 type EventRecord = {
@@ -325,7 +326,7 @@ export default function SearchExplorer({ data }: Props) {
                         {work.title}
                       </a>{" "}
                       <span>
-                        ({work.type}, {work.year})
+                        ({work.type}, {work.year}, {work.source_quality})
                       </span>
                     </li>
                   ))}
