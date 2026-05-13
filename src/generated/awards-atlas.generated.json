@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T12:37:36.104Z",
+  "generated_at": "2026-05-13T04:37:11.864Z",
   "coverage_note": "Expanded sample: curated Turing Award history plus representative laureates and influential-paper winners across major computing awards and retrospectives.",
   "awards": [
     {
@@ -25,6 +25,10 @@
       "seo_priority": "primary",
       "event_count": 16,
       "recipient_count": 26,
+      "event_level_source_count": 0,
+      "program_level_source_count": 16,
+      "canonical_related_work_count": 17,
+      "contextual_related_work_count": 2,
       "sample_recipients": [
         "Andrew G. Barto",
         "Richard S. Sutton",
@@ -58,6 +62,10 @@
       "seo_priority": "high",
       "event_count": 2,
       "recipient_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 1,
+      "contextual_related_work_count": 1,
       "sample_recipients": [
         "Ilias Diakonikolas",
         "Prateek Mittal"
@@ -89,6 +97,10 @@
       "seo_priority": "high",
       "event_count": 2,
       "recipient_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 1,
+      "contextual_related_work_count": 1,
       "sample_recipients": [
         "Matei Zaharia",
         "Torsten Hoefler"
@@ -119,6 +131,10 @@
       "seo_priority": "high",
       "event_count": 2,
       "recipient_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 1,
+      "contextual_related_work_count": 1,
       "sample_recipients": [
         "Rajeev Alur",
         "Éva Tardos"
@@ -150,6 +166,10 @@
       "seo_priority": "high",
       "event_count": 2,
       "recipient_count": 3,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0,
       "sample_recipients": [
         "Eshan Chattopadhyay",
         "David Zuckerman",
@@ -184,6 +204,10 @@
       "seo_priority": "high",
       "event_count": 1,
       "recipient_count": 1,
+      "event_level_source_count": 0,
+      "program_level_source_count": 1,
+      "canonical_related_work_count": 1,
+      "contextual_related_work_count": 0,
       "sample_recipients": [
         "Christopher D. Manning"
       ],
@@ -213,6 +237,10 @@
       "seo_priority": "medium",
       "event_count": 2,
       "recipient_count": 5,
+      "event_level_source_count": 0,
+      "program_level_source_count": 2,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0,
       "sample_recipients": [
         "Brian Ziebart",
         "Andrew Maas",
@@ -246,6 +274,10 @@
       "seo_priority": "medium",
       "event_count": 1,
       "recipient_count": 1,
+      "event_level_source_count": 0,
+      "program_level_source_count": 1,
+      "canonical_related_work_count": 1,
+      "contextual_related_work_count": 0,
       "sample_recipients": [
         "Hugo Krawczyk"
       ],
@@ -275,6 +307,10 @@
       "seo_priority": "medium",
       "event_count": 2,
       "recipient_count": 4,
+      "event_level_source_count": 0,
+      "program_level_source_count": 2,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0,
       "sample_recipients": [
         "Ahmed Eldawy",
         "Mohamed F. Mokbel",
@@ -308,6 +344,10 @@
       "seo_priority": "medium",
       "event_count": 2,
       "recipient_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0,
       "sample_recipients": [
         "Rina Dechter",
         "Thomas G. Dietterich"
@@ -339,6 +379,10 @@
       "seo_priority": "medium",
       "event_count": 2,
       "recipient_count": 10,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0,
       "sample_recipients": [
         "Julian McAuley",
         "Christopher Targett",
@@ -371,6 +415,10 @@
       "seo_priority": "medium",
       "event_count": 2,
       "recipient_count": 13,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0,
       "sample_recipients": [
         "Yucheng Low",
         "Joseph Gonzalez",
@@ -4280,6 +4328,116 @@
       "person_label": "Alan J. Perlis",
       "title": "First Turing Award laureate",
       "official_program_url": "https://awards.acm.org/turing"
+    }
+  ],
+  "provenance_by_award": [
+    {
+      "slug": "turing-award",
+      "award_name": "Turing Award",
+      "event_count": 16,
+      "event_level_source_count": 0,
+      "program_level_source_count": 16,
+      "canonical_related_work_count": 17,
+      "contextual_related_work_count": 2
+    },
+    {
+      "slug": "grace-murray-hopper-award",
+      "award_name": "Grace Hopper Award",
+      "event_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 1,
+      "contextual_related_work_count": 1
+    },
+    {
+      "slug": "acm-prize-in-computing",
+      "award_name": "ACM Prize in Computing",
+      "event_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 1,
+      "contextual_related_work_count": 1
+    },
+    {
+      "slug": "knuth-prize",
+      "award_name": "Knuth Prize",
+      "event_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 1,
+      "contextual_related_work_count": 1
+    },
+    {
+      "slug": "godel-prize",
+      "award_name": "Gödel Prize",
+      "event_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0
+    },
+    {
+      "slug": "john-von-neumann-medal",
+      "award_name": "von Neumann Medal",
+      "event_count": 1,
+      "event_level_source_count": 0,
+      "program_level_source_count": 1,
+      "canonical_related_work_count": 1,
+      "contextual_related_work_count": 0
+    },
+    {
+      "slug": "aaai-classic-paper-award",
+      "award_name": "AAAI Classic Paper",
+      "event_count": 2,
+      "event_level_source_count": 0,
+      "program_level_source_count": 2,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0
+    },
+    {
+      "slug": "kanellakis-award",
+      "award_name": "Kanellakis Award",
+      "event_count": 1,
+      "event_level_source_count": 0,
+      "program_level_source_count": 1,
+      "canonical_related_work_count": 1,
+      "contextual_related_work_count": 0
+    },
+    {
+      "slug": "icde-influential-paper-award",
+      "award_name": "ICDE Influential Paper",
+      "event_count": 2,
+      "event_level_source_count": 0,
+      "program_level_source_count": 2,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0
+    },
+    {
+      "slug": "ijcai-research-excellence-award",
+      "award_name": "IJCAI Research Excellence",
+      "event_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0
+    },
+    {
+      "slug": "sigir-test-of-time",
+      "award_name": "SIGIR Test of Time",
+      "event_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0
+    },
+    {
+      "slug": "vldb-ten-year-award",
+      "award_name": "VLDB 10-Year Award",
+      "event_count": 2,
+      "event_level_source_count": 2,
+      "program_level_source_count": 0,
+      "canonical_related_work_count": 2,
+      "contextual_related_work_count": 0
     }
   ]
 }
