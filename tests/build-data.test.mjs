@@ -40,6 +40,12 @@ test("build-data generates a usable static dataset", () => {
     payload.stats.event_count,
   );
   assert.equal(payload.program_level_events.length, payload.stats.program_level_source_count);
+  assert.equal(payload.provenance_by_award.length, payload.stats.award_count);
+  assert.ok(
+    payload.provenance_by_award.every(
+      (row) => row.event_level_source_count + row.program_level_source_count === row.event_count,
+    ),
+  );
   assert.ok(payload.events.every((event) => !event.related_works.some((work) => /wikipedia\.org|openlibrary\.org/.test(work.url))));
   assert.ok(payload.events.every((event) => event.related_works.every((work) => ["canonical", "contextual"].includes(work.source_quality))));
   assert.ok(publicEventsJsonl.some((event) => event.source_scope === "event-level"));

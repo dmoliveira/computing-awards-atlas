@@ -101,6 +101,46 @@ export default function MethodPage() {
 
       <section className="section-block method-grid">
         <article>
+          <p className="eyebrow">Per-award provenance dashboard</p>
+          <h2>Coverage quality by award program</h2>
+          <p className="hero-text compact-copy">
+            This dashboard helps prioritize where the atlas still needs narrower event sources and where related-work
+            context is already grounded in stronger canonical references.
+          </p>
+        </article>
+
+        <article>
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Award</th>
+                  <th>Events</th>
+                  <th>Event-level</th>
+                  <th>Program-level</th>
+                  <th>Canonical</th>
+                  <th>Contextual</th>
+                </tr>
+              </thead>
+              <tbody>
+                {atlasData.provenance_by_award.map((row) => (
+                  <tr key={row.slug}>
+                    <td>{row.award_name}</td>
+                    <td>{row.event_count}</td>
+                    <td>{row.event_level_source_count}</td>
+                    <td>{row.program_level_source_count}</td>
+                    <td>{row.canonical_related_work_count}</td>
+                    <td>{row.contextual_related_work_count}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section className="section-block method-grid">
+        <article>
           <p className="eyebrow">Provenance approach</p>
           <h2>Official award pages plus representative related works</h2>
           <p className="hero-text compact-copy">

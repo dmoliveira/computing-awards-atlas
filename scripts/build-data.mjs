@@ -213,11 +213,25 @@ const awardsWithCounts = awards
     const awardEvents = normalizedEvents.filter((event) => event.award_slug === award.slug);
     const latestEvent = awardEvents[0];
     const uniqueRecipientSlugs = [...new Set(awardEvents.flatMap((event) => event.person_slugs))];
+    const eventLevelSourceCount = awardEvents.filter((event) => event.source_scope === "event-level").length;
+    const programLevelSourceCount = awardEvents.filter((event) => event.source_scope === "program-level").length;
+    const canonicalRelatedWorkCount = awardEvents.reduce(
+      (count, event) => count + event.related_works.filter((work) => work.source_quality === "canonical").length,
+      0,
+    );
+    const contextualRelatedWorkCount = awardEvents.reduce(
+      (count, event) => count + event.related_works.filter((work) => work.source_quality === "contextual").length,
+      0,
+    );
 
     return {
       ...award,
       event_count: awardEvents.length,
       recipient_count: uniqueRecipientSlugs.length,
+      event_level_source_count: eventLevelSourceCount,
+      program_level_source_count: programLevelSourceCount,
+      canonical_related_work_count: canonicalRelatedWorkCount,
+      contextual_related_work_count: contextualRelatedWorkCount,
       featured_topics: ensureArray(award.featured_topics),
       sample_recipients: uniqueRecipientSlugs
         .map((slug) => personDisplayBySlug.get(slug))
@@ -271,6 +285,15 @@ const output = {
       title: event.title,
       official_program_url: event.official_program_url,
     })),
+  provenance_by_award: awardsWithCounts.map((award) => ({
+    slug: award.slug,
+    award_name: award.short_name ?? award.name,
+    event_count: award.event_count,
+    event_level_source_count: award.event_level_source_count,
+    program_level_source_count: award.program_level_source_count,
+    canonical_related_work_count: award.canonical_related_work_count,
+    contextual_related_work_count: award.contextual_related_work_count,
+  })),
 };
 
 for (const relativeDir of ["src/generated", "public/data"]) {

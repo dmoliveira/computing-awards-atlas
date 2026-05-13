@@ -111,6 +111,10 @@ if (!methodHtml.includes("Which events still rely on broader program-level sourc
   throw new Error("Expected method page to include a provenance coverage table");
 }
 
+if (!methodHtml.includes("Per-award provenance dashboard") || !methodHtml.includes("Coverage quality by award program")) {
+  throw new Error("Expected method page to include a per-award provenance dashboard");
+}
+
 if (!methodHtml.includes("program-level") || !methodHtml.includes("event-level")) {
   throw new Error("Expected method page to explain exported provenance scope and specificity");
 }
